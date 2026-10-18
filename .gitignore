@@ -1,5 +1,7 @@
 # Virtual environment
 venv/
+env/
+ENV/
 
 # Secrets
 .env
@@ -7,12 +9,41 @@ venv/
 # Python cache
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.Python
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
 
 # Local database
 database/*.db
+backend/database/*.db
+
+# ML models and generated data
+backend/ml/*.pkl
+backend/data/cleaned_data.csv
+backend/data/raw_charging_sessions.csv
+backend/data/demand_data.csv
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
 
 # Editor / OS files
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
+*.swp
+*.swo
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Logs
+*.log

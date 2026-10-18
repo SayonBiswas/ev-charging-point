@@ -1,0 +1,11 @@
+station_id,station_name,latitude,longitude,charger_type,charger_rating_kw,total_connectors,address,is_operational,city
+1,Station Patia,20.3000,85.8200,AC,22,4,Patia Road,TRUE,Bhubaneswar
+2,Station KIIT,20.3050,85.8150,DC,50,6,KIIT University Campus,TRUE,Bhubaneswar
+3,Station Nayapalli,20.2900,85.8300,AC,22,4,Nayapalli Square,TRUE,Bhubaneswar
+4,Station Rasulgarh,20.2800,85.8400,DC,50,8,Rasulgarh Industrial Area,TRUE,Bhubaneswar
+5,Station Bomikhal,20.2850,85.8350,AC,22,4,Bomikhal Road,TRUE,Bhubaneswar
+6,Station Unit 1 Market,20.2950,85.8250,AC,7.4,2,Unit 1 Market,TRUE,Bhubaneswar
+7,Station Master Canteen,20.2920,85.8280,DC,50,6,Master Canteen Square,TRUE,Bhubaneswar
+8,Station Kalpana Square,20.2880,85.8320,AC,22,4,Kalpana Square,TRUE,Bhubaneswar
+9,Station Vani Vihar,20.2980,85.8180,AC,7.4,2,Vani Vihar College,TRUE,Bhubaneswar
+10,Station BJB Nagar,20.2930,85.8220,AC,22,4,BJB Nagar,TRUE,Bhubaneswar
