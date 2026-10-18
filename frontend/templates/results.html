@@ -1,0 +1,50 @@
+<!-- frontend/templates/results.html -->
+<!-- Results page with verdict and station recommendations -->
+
+{% extends "base.html" %}
+
+{% block title %}Results - EV Charging System{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>Trip: {{ start_name }} → {{ destination }}</h2>
+    <p class="trip-info">Current battery: {{ battery_pct }}%</p>
+    
+    {% if needs_charge == 1 %}
+    <div class="alert warning" role="alert">
+        ⚠️ Battery predicted to run low on this trip. Charge recommended.
+    </div>
+    {% else %}
+    <div class="alert success" role="alert">
+        ✅ Battery should be sufficient for this trip. Optional charge stations shown below.
+    </div>
+    {% endif %}
+    
+    <h3>Recommended Charging Stations On Your Route</h3>
+    
+    {% if stations %}
+    <div class="stations-list">
+        {% for station in stations %}
+        <div class="station-card">
+            <h4>{{ loop.index }}. {{ station.name }}</h4>
+            <p class="station-address">📍 {{ station.address }} — {{ "%.2f"|format(station.distance_from_car_km) }} km from you</p>
+            <p class="station-charger">⚡ {{ station.charger_type }} · {{ station.charger_rating_kw }} kW</p>
+            <p class="station-times">⏳ Wait: {{ "%.1f"|format(station.wait_minutes) }} min  🔋 Charge: {{ "%.1f"|format(station.charge_time_min) }} min</p>
+            <p class="station-cost">💰 ₹{{ "%.2f"|format(station.cost) }}</p>
+            <a href="https://www.google.com/maps/dir/?api=1&destination={{ station.latitude }},{{ station.longitude }}" 
+               target="_blank" rel="noopener noreferrer" class="btn btn-directions">Get Directions →</a>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-state">
+        <p>No charging stations found on this route corridor.</p>
+    </div>
+    {% endif %}
+    
+    <div class="action-buttons">
+        <a href="/dashboard" class="btn btn-secondary">Plan Another Trip</a>
+        <a href="/history" class="btn btn-secondary">View History</a>
+    </div>
+</div>
+{% endblock %}

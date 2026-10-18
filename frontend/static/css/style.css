@@ -1,0 +1,399 @@
+/* frontend/static/css/style.css */
+/* Stylesheet for EV Charging System - Based on DESIGN.md specifications */
+
+/* CSS Variables */
+:root {
+    --primary: #16a34a;
+    --primary-dark: #15803d;
+    --bg: #f3f4f6;
+    --surface: #ffffff;
+    --text: #111827;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --warning-bg: #fef3c7;
+    --warning-text: #92400e;
+    --success-bg: #dcfce7;
+    --success-text: #166534;
+    --error: #dc2626;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text);
+    background-color: var(--bg);
+    min-height: 100vh;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--surface);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 16px;
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.nav-menu a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.15s;
+}
+
+.nav-menu a:hover {
+    color: var(--primary);
+}
+
+.nav-menu a:active {
+    color: var(--primary-dark);
+}
+
+/* Main Content */
+.main-content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+/* Cards */
+.card {
+    background-color: var(--surface);
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.auth-card {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.card h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: var(--text);
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: border-color 0.15s, outline 0.15s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+}
+
+.form-group input:disabled,
+.form-group select:disabled {
+    background-color: var(--bg);
+    cursor: not-allowed;
+}
+
+.form-group .hint {
+    display: block;
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 4px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.15s, opacity 0.15s;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--surface);
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-primary:active {
+    background-color: var(--primary-dark);
+}
+
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    background-color: var(--surface);
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    width: auto;
+    margin-right: 12px;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary);
+    color: var(--surface);
+}
+
+.btn-directions {
+    background-color: var(--primary);
+    color: var(--surface);
+    width: 100%;
+    margin-top: 12px;
+}
+
+.btn-directions:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Error Messages */
+.error-message {
+    background-color: #fee2e2;
+    color: var(--error);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+/* Alerts */
+.alert {
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.alert.warning {
+    background-color: var(--warning-bg);
+    color: var(--warning-text);
+}
+
+.alert.success {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+}
+
+/* Auth Links */
+.auth-link {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+.auth-link a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+}
+
+/* Trip Info */
+.trip-info {
+    color: var(--muted);
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+/* Station Cards */
+.stations-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.station-card {
+    background-color: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    transition: box-shadow 0.15s;
+}
+
+.station-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.station-card h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.station-card p {
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.station-address {
+    color: var(--muted);
+}
+
+.station-charger,
+.station-times,
+.station-cost {
+    font-weight: 500;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+/* History Table */
+.table-container {
+    overflow-x: auto;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.history-table th,
+.history-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.history-table th {
+    background-color: var(--bg);
+    font-weight: 600;
+    color: var(--text);
+    position: sticky;
+    top: 0;
+}
+
+.history-table tr:hover {
+    background-color: var(--bg);
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 32px;
+    color: var(--muted);
+}
+
+.empty-state p {
+    margin-bottom: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .nav-container {
+        height: auto;
+        padding: 12px 16px;
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .nav-menu {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .main-content {
+        padding: 16px;
+    }
+    
+    .card {
+        padding: 16px;
+    }
+    
+    .card h2 {
+        font-size: 20px;
+    }
+    
+    .btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .btn-secondary {
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    .station-card {
+        padding: 12px;
+    }
+}
