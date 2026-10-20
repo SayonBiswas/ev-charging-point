@@ -1,117 +1,133 @@
 <!-- frontend/templates/dashboard.html -->
-<!-- Dashboard with trip input form -->
+<!-- Dashboard with Route Waypoints and Vehicle Telemetry cards -->
 
 {% extends "base.html" %}
 
-{% block title %}Dashboard - EV Charging System{% endblock %}
+{% block title %}Plan Trip - VoltRoute{% endblock %}
 
 {% block content %}
-<div class="card">
-    <h2>Plan Your EV Trip in Bhubaneswar</h2>
-    {% if error %}
-    <div class="error-message" role="alert" aria-live="polite">{{ error }}</div>
-    {% endif %}
-    
-    <form method="post" action="/predict" id="trip-form">
-        <div class="form-group">
-            <label for="start_name">Starting Location Name:</label>
-            <input type="text" id="start_name" name="start_name" required placeholder="e.g., KIIT University">
+<div class="dashboard-grid">
+    <!-- Route Waypoints Card -->
+    <div class="card">
+        <h2 class="t-headline">Route Waypoints</h2>
+
+        {% if error %}
+        <div class="alert error" role="alert" aria-live="polite">
+            <span class="material-symbols-outlined">error</span>
+            <span>{{ error }}</span>
         </div>
-        
-        <div class="form-group">
-            <label for="dest_name">Destination Name:</label>
-            <input type="text" id="dest_name" name="dest_name" required placeholder="e.g., Railway Station">
+        {% endif %}
+
+        <form method="post" action="/predict" id="trip-form">
+            <div class="input-wrap">
+                <label for="start_name">Starting Point</label>
+                <span class="material-symbols-outlined input-icon">location_on</span>
+                <input type="text" id="start_name" name="start_name" required placeholder="e.g., KIIT University">
+            </div>
+
+            <div class="row row-between" style="margin-bottom: 16px;">
+                <button type="button" class="icon-btn" id="use-gps" aria-label="Use current location">
+                    <span class="material-symbols-outlined">my_location</span>
+                </button>
+                <button type="button" class="icon-btn" id="swap-waypoints" aria-label="Swap start and destination">
+                    <span class="material-symbols-outlined">swap_vert</span>
+                </button>
+            </div>
+
+            <div class="input-wrap">
+                <label for="dest_name">Destination</label>
+                <span class="material-symbols-outlined input-icon">flag</span>
+                <input type="text" id="dest_name" name="dest_name" required placeholder="e.g., Railway Station">
+                <button type="button" class="icon-btn" id="clear-dest" style="right: 12px; top: 38px;" aria-label="Clear destination">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+
+            <div class="chips">
+                <button type="button" class="chip" data-preset="kiit" data-lat="20.3050" data-lon="85.8150">KIIT</button>
+                <button type="button" class="chip" data-preset="railway" data-lat="20.2920" data-lon="85.8280">Railway Station</button>
+                <button type="button" class="chip" data-preset="master_canteen" data-lat="20.2920" data-lon="85.8280">Master Canteen</button>
+                <button type="button" class="chip" data-preset="airport" data-lat="20.2700" data-lon="85.8200">Airport</button>
+                <button type="button" class="chip" data-preset="patia" data-lat="20.3000" data-lon="85.8200">Patia</button>
+            </div>
+
+            <p class="hint-line">Tap a preset to auto-fill destination</p>
+
+            <div class="input-wrap">
+                <label for="distance_km">Distance (km)</label>
+                <span class="material-symbols-outlined input-icon">straighten</span>
+                <input type="number" id="distance_km" name="distance_km" required min="0" step="0.1" placeholder="Enter distance">
+            </div>
+
+            <!-- Hidden fields for coordinates -->
+            <input type="hidden" id="car_lat" name="car_lat" value="20.2961">
+            <input type="hidden" id="car_lon" name="car_lon" value="85.8245">
+            <input type="hidden" id="dest_lat" name="dest_lat" value="">
+            <input type="hidden" id="dest_lon" name="dest_lon" value="">
+        </form>
+    </div>
+
+    <!-- Vehicle Telemetry Card -->
+    <div class="card">
+        <h2 class="t-headline">Vehicle Telemetry</h2>
+
+        <div class="inset">
+            <div class="row row-between">
+                <span class="t-label">Battery</span>
+                <span class="metric" id="battery-value">50%</span>
+            </div>
+
+            <div class="gauge" data-level="ok" id="battery-gauge">
+                <div class="gauge-bar" style="width: 50%;" id="battery-bar"></div>
+            </div>
+
+            <div class="row row-between">
+                <span class="badge badge-ok" id="battery-badge">Good</span>
+                <span class="material-symbols-outlined" id="battery-icon">battery_charging_full</span>
+            </div>
+
+            <input type="range" id="battery_pct" name="battery_pct" min="1" max="100" value="50" form="trip-form">
         </div>
-        
-        <div class="form-group">
-            <label for="preset_destination">Select Destination (optional):</label>
-            <select id="preset_destination" name="preset_destination">
-                <option value="">-- Choose a preset --</option>
-                <option value="kiit" data-lat="20.3050" data-lon="85.8150">KIIT University</option>
-                <option value="railway" data-lat="20.2920" data-lon="85.8280">Railway Station</option>
-                <option value="airport" data-lat="20.2700" data-lon="85.8200">Bhubaneswar Airport</option>
-                <option value="master_canteen" data-lat="20.2920" data-lon="85.8280">Master Canteen</option>
-                <option value="patia" data-lat="20.3000" data-lon="85.8200">Patia</option>
-            </select>
+
+        <div class="inset" style="margin-top: 16px;">
+            <div class="row row-between">
+                <span class="t-label">Speed</span>
+                <span class="metric" id="speed-value">60 km/h</span>
+            </div>
+
+            <input type="range" id="speed_kmh" name="speed_kmh" min="20" max="120" value="60" class="accent-warn" form="trip-form">
         </div>
-        
-        <div class="form-group">
-            <label for="battery_pct">Current Battery %:</label>
-            <input type="number" id="battery_pct" name="battery_pct" required min="1" max="100" placeholder="Enter battery percentage">
+
+        <div class="input-wrap" style="margin-top: 16px;">
+            <label for="temp_celsius">Temperature (°C)</label>
+            <span class="material-symbols-outlined input-icon">thermostat</span>
+            <input type="number" id="temp_celsius" name="temp_celsius" value="30" min="-10" max="60" form="trip-form">
         </div>
-        
-        <div class="form-group">
-            <label for="distance_km">Distance to Destination (km):</label>
-            <input type="number" id="distance_km" name="distance_km" required min="0" step="0.1" placeholder="Enter distance in km">
+
+        <div class="row row-between" style="margin-top: 16px;">
+            <span class="t-label">Air Conditioning</span>
+            <label class="switch">
+                <input type="checkbox" id="ac_on" name="ac_on" value="1" form="trip-form">
+                <span class="switch-track"></span>
+            </label>
         </div>
-        
-        <div class="form-group">
-            <label for="speed_kmh">Current Speed (km/h):</label>
-            <input type="number" id="speed_kmh" name="speed_kmh" value="60" min="1" max="200">
+
+        <div class="live-preview">
+            <div class="t-label">Live Preview</div>
+            <div class="row row-between">
+                <span id="preview-text">Battery looks sufficient</span>
+                <span class="material-symbols-outlined" id="preview-icon">check_circle</span>
+            </div>
         </div>
-        
-        <div class="form-group">
-            <label for="temp_celsius">Outside Temperature (°C):</label>
-            <input type="number" id="temp_celsius" name="temp_celsius" value="30" min="-10" max="60">
-        </div>
-        
-        <div class="form-group">
-            <label for="ac_on">AC Running?</label>
-            <select id="ac_on" name="ac_on">
-                <option value="0">No</option>
-                <option value="1">Yes</option>
-            </select>
-        </div>
-        
-        <!-- Hidden fields for coordinates -->
-        <input type="hidden" id="car_lat" name="car_lat" value="20.2961">
-        <input type="hidden" id="car_lon" name="car_lon" value="85.8245">
-        <input type="hidden" id="dest_lat" name="dest_lat" value="">
-        <input type="hidden" id="dest_lon" name="dest_lon" value="">
-        
-        <button type="submit" class="btn btn-primary" id="submit-btn">Find Charging Stations →</button>
-    </form>
+
+        <button type="submit" class="btn btn-primary btn-lg" form="trip-form" id="submit-btn">
+            <span class="material-symbols-outlined">route</span>
+            Find Charging Stations
+        </button>
+    </div>
 </div>
 {% endblock %}
 
 {% block scripts %}
-<script>
-// Preset destination coordinates
-const presetDestinations = {
-    kiit: { lat: 20.3050, lon: 85.8150 },
-    railway: { lat: 20.2920, lon: 85.8280 },
-    airport: { lat: 20.2700, lon: 85.8200 },
-    master_canteen: { lat: 20.2920, lon: 85.8280 },
-    patia: { lat: 20.3000, lon: 85.8200 }
-};
-
-// Handle preset destination selection
-document.getElementById('preset_destination').addEventListener('change', function() {
-    const selected = this.value;
-    if (selected && presetDestinations[selected]) {
-        document.getElementById('dest_lat').value = presetDestinations[selected].lat;
-        document.getElementById('dest_lon').value = presetDestinations[selected].lon;
-    }
-});
-
-// Get user's location
-if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-        function(position) {
-            document.getElementById('car_lat').value = position.coords.latitude;
-            document.getElementById('car_lon').value = position.coords.longitude;
-        },
-        function(error) {
-            console.log('Geolocation denied or failed, using default City Center');
-        }
-    );
-}
-
-// Disable submit button on form submit
-document.getElementById('trip-form').addEventListener('submit', function() {
-    const btn = document.getElementById('submit-btn');
-    btn.disabled = true;
-    btn.textContent = 'Finding stations…';
-});
-</script>
+<script src="/static/js/dashboard.js"></script>
 {% endblock %}

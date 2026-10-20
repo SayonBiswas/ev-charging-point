@@ -3,48 +3,108 @@
 
 {% extends "base.html" %}
 
-{% block title %}Results - EV Charging System{% endblock %}
+{% block title %}Results - VoltRoute{% endblock %}
 
 {% block content %}
-<div class="card">
-    <h2>Trip: {{ start_name }} → {{ destination }}</h2>
-    <p class="trip-info">Current battery: {{ battery_pct }}%</p>
-    
+<div class="card trip-card">
+    <h2 class="t-title">{{ start_name }} → {{ destination }}</h2>
+
+    <div class="row row-between" style="margin-bottom: 16px;">
+        <span class="t-label">Current Battery</span>
+        <span class="metric">{{ battery_pct }}%</span>
+    </div>
+
     {% if needs_charge == 1 %}
     <div class="alert warning" role="alert">
-        ⚠️ Battery predicted to run low on this trip. Charge recommended.
+        <span class="material-symbols-outlined">warning</span>
+        <span>Charging stop recommended</span>
     </div>
     {% else %}
     <div class="alert success" role="alert">
-        ✅ Battery should be sufficient for this trip. Optional charge stations shown below.
+        <span class="material-symbols-outlined">check_circle</span>
+        <span>Battery looks sufficient</span>
     </div>
     {% endif %}
-    
-    <h3>Recommended Charging Stations On Your Route</h3>
-    
-    {% if stations %}
-    <div class="stations-list">
-        {% for station in stations %}
-        <div class="station-card">
-            <h4>{{ loop.index }}. {{ station.name }}</h4>
-            <p class="station-address">📍 {{ station.address }} — {{ "%.2f"|format(station.distance_from_car_km) }} km from you</p>
-            <p class="station-charger">⚡ {{ station.charger_type }} · {{ station.charger_rating_kw }} kW</p>
-            <p class="station-times">⏳ Wait: {{ "%.1f"|format(station.wait_minutes) }} min  🔋 Charge: {{ "%.1f"|format(station.charge_time_min) }} min</p>
-            <p class="station-cost">💰 ₹{{ "%.2f"|format(station.cost) }}</p>
-            <a href="https://www.google.com/maps/dir/?api=1&destination={{ station.latitude }},{{ station.longitude }}" 
-               target="_blank" rel="noopener noreferrer" class="btn btn-directions">Get Directions →</a>
-        </div>
-        {% endfor %}
-    </div>
-    {% else %}
-    <div class="empty-state">
-        <p>No charging stations found on this route corridor.</p>
-    </div>
-    {% endif %}
-    
-    <div class="action-buttons">
-        <a href="/dashboard" class="btn btn-secondary">Plan Another Trip</a>
-        <a href="/history" class="btn btn-secondary">View History</a>
-    </div>
 </div>
+
+<h3 class="t-headline">Recommended Charging Stations <span class="t-micro" style="color: var(--text-muted); font-weight: 400;">({{ stations|length }} found)</span></h3>
+
+{% if stations %}
+<div class="stations-list">
+    {% for station in stations %}
+    <div class="station-card{% if loop.first %} recommended{% endif %}">
+        <div class="station-header">
+            <div>
+                <h4 class="station-name">{{ station.name }}</h4>
+                <p class="station-address">{{ station.address }}</p>
+            </div>
+            {% if loop.first %}
+            <span class="badge badge-rec">Top Pick</span>
+            {% else %}
+            <span class="badge badge-ok">#{{ loop.index }}</span>
+            {% endif %}
+        </div>
+
+        <div class="station-cost">₹{{ "%.2f"|format(station.cost) }}</div>
+
+        <div class="station-specs">
+            <div class="station-spec">
+                <div class="t-micro">Distance</div>
+                <div class="metric">{{ "%.1f"|format(station.distance_from_car_km) }} km</div>
+            </div>
+            <div class="station-spec">
+                <div class="t-micro">Wait Time</div>
+                <div class="metric">{{ "%.0f"|format(station.wait_minutes) }} min</div>
+            </div>
+            <div class="station-spec">
+                <div class="t-micro">Charge Time</div>
+                <div class="metric">{{ "%.0f"|format(station.charge_time_min) }} min</div>
+            </div>
+        </div>
+
+        <div class="row row-between" style="margin-bottom: 12px;">
+            {% if station.charger_type == 'DC' %}
+            <span class="badge badge-dc">
+                <span class="material-symbols-outlined" style="font-size: 14px;">bolt</span>
+                DC
+            </span>
+            {% else %}
+            <span class="badge badge-ac">
+                <span class="material-symbols-outlined" style="font-size: 14px;">bolt</span>
+                AC
+            </span>
+            {% endif %}
+            <span class="t-label">{{ station.charger_rating_kw }} kW</span>
+        </div>
+
+        <a href="https://www.google.com/maps/dir/?api=1&destination={{ station.latitude }},{{ station.longitude }}"
+           target="_blank" rel="noopener noreferrer" class="btn btn-directions">
+            <span class="material-symbols-outlined">directions</span>
+            Get Directions
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<div class="card empty-state">
+    <span class="material-symbols-outlined" style="font-size: 48px; color: var(--text-muted); margin-bottom: 16px;">ev_station</span>
+    <p>No charging stations found on this route corridor.</p>
+    <a href="/dashboard" class="btn btn-primary">Plan Another Trip</a>
+</div>
+{% endif %}
+
+<div class="action-buttons">
+    <a href="/dashboard" class="btn btn-ghost">
+        <span class="material-symbols-outlined">add_route</span>
+        Plan Another Trip
+    </a>
+    <a href="/history" class="btn btn-ghost">
+        <span class="material-symbols-outlined">history</span>
+        View History
+    </a>
+</div>
+
+<p class="hint-line" style="text-align: center; margin-top: 24px;">
+    * Figures are estimates based on current conditions
+</p>
 {% endblock %}

@@ -68,7 +68,7 @@ async def home(request: Request):
 @app.get("/login", response_class=HTMLResponse)
 async def login_page(request: Request):
     """Login page"""
-    return templates.TemplateResponse("login.html", {"request": request})
+    return templates.TemplateResponse("login.html", {"request": request, "show_nav": False})
 
 @app.post("/login")
 async def login(
@@ -82,7 +82,7 @@ async def login(
     if not user or not verify_password(password, user.password_hash):
         return templates.TemplateResponse(
             "login.html",
-            {"request": request, "error": "Invalid email or password."}
+            {"request": request, "error": "Invalid email or password.", "show_nav": False}
         )
     
     access_token_expires = timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)
@@ -103,7 +103,7 @@ async def login(
 @app.get("/register", response_class=HTMLResponse)
 async def register_page(request: Request):
     """Registration page"""
-    return templates.TemplateResponse("register.html", {"request": request})
+    return templates.TemplateResponse("register.html", {"request": request, "show_nav": False})
 
 @app.post("/register")
 async def register(
@@ -118,28 +118,28 @@ async def register(
     if len(password) < 8:
         return templates.TemplateResponse(
             "register.html",
-            {"request": request, "error": "Password must be at least 8 characters."}
+            {"request": request, "error": "Password must be at least 8 characters.", "show_nav": False}
         )
-    
+
     # Check password is not too long (bcrypt limitation: 72 bytes)
     if len(password.encode('utf-8')) > 72:
         return templates.TemplateResponse(
             "register.html",
-            {"request": request, "error": "Password is too long. Maximum 72 characters allowed."}
+            {"request": request, "error": "Password is too long. Maximum 72 characters allowed.", "show_nav": False}
         )
-    
+
     # Check if email already exists
     if db.query(User).filter(User.email == email).first():
         return templates.TemplateResponse(
             "register.html",
-            {"request": request, "error": "Email already registered."}
+            {"request": request, "error": "Email already registered.", "show_nav": False}
         )
-    
+
     # Check if username already exists
     if db.query(User).filter(User.username == username).first():
         return templates.TemplateResponse(
             "register.html",
-            {"request": request, "error": "Username already exists."}
+            {"request": request, "error": "Username already exists.", "show_nav": False}
         )
     
     # Create user
@@ -169,7 +169,7 @@ async def dashboard(request: Request, db: Session = Depends(get_db)):
     user = db.query(User).filter(User.email == user_email).first()
     return templates.TemplateResponse(
         "dashboard.html",
-        {"request": request, "user": user}
+        {"request": request, "user": user, "show_nav": True}
     )
 
 # ==================== Prediction Routes ====================
@@ -199,13 +199,13 @@ async def predict_route(
     if battery_pct < 1 or battery_pct > 100:
         return templates.TemplateResponse(
             "dashboard.html",
-            {"request": request, "user": None, "error": "Battery % must be between 1 and 100."}
+            {"request": request, "user": None, "error": "Battery % must be between 1 and 100.", "show_nav": True}
         )
-    
+
     if distance_km <= 0:
         return templates.TemplateResponse(
             "dashboard.html",
-            {"request": request, "user": None, "error": "Distance must be greater than 0."}
+            {"request": request, "user": None, "error": "Distance must be greater than 0.", "show_nav": True}
         )
     
     # Use default destination coordinates if not provided
@@ -282,7 +282,8 @@ async def predict_route(
             "destination": dest_name,
             "battery_pct": battery_pct,
             "needs_charge": needs_charge,
-            "stations": stations_with_details
+            "stations": stations_with_details,
+            "show_nav": True
         }
     )
 
@@ -301,7 +302,7 @@ async def history(request: Request, db: Session = Depends(get_db)):
     
     return templates.TemplateResponse(
         "history.html",
-        {"request": request, "user": None, "trips": trips}
+        {"request": request, "user": None, "trips": trips, "show_nav": True}
     )
 
 # ==================== Health Check ====================

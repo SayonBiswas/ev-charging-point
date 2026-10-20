@@ -1,31 +1,64 @@
 <!-- frontend/templates/login.html -->
-<!-- Login page for authentication -->
+<!-- Login page with brand header and segmented switch -->
 
 {% extends "base.html" %}
 
-{% block title %}Login - EV Charging System{% endblock %}
+{% block title %}Sign In - VoltRoute{% endblock %}
 
 {% block content %}
-<div class="auth-container">
-    <div class="auth-card">
-        <h2>Login</h2>
-        {% if error %}
-        <div class="error-message" role="alert" aria-live="polite">{{ error }}</div>
-        {% endif %}
-        <form method="post" action="/login">
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required placeholder="Enter your email">
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required placeholder="Enter your password">
-            </div>
-            <button type="submit" class="btn btn-primary">Login</button>
-        </form>
-        <p class="auth-link">
-            Don't have an account? <a href="/register">Register here</a>
-        </p>
-    </div>
+<div class="auth-brand">
+    <div class="brand-mark">⚡</div>
+    <h1 class="t-display">VoltRoute</h1>
+    <p class="tagline">Intelligent EV Charging & Route Optimization</p>
 </div>
+
+<div class="card auth-card">
+    <div class="segmented">
+        <a href="/login" class="active">Sign In</a>
+        <a href="/register">Create Account</a>
+    </div>
+
+    {% if error %}
+    <div class="alert error" role="alert" aria-live="polite">
+        <span class="material-symbols-outlined">error</span>
+        <span>{{ error }}</span>
+    </div>
+    {% endif %}
+
+    <form method="post" action="/login">
+        <div class="input-wrap">
+            <label for="email">Email</label>
+            <span class="material-symbols-outlined input-icon">email</span>
+            <input type="email" id="email" name="email" required placeholder="Enter your email" autocomplete="email">
+        </div>
+
+        <div class="input-wrap">
+            <label for="password">Password</label>
+            <span class="material-symbols-outlined input-icon">lock</span>
+            <input type="password" id="password" name="password" required placeholder="Enter your password" autocomplete="current-password">
+            <button type="button" class="show-password" id="toggle-password" aria-label="Show password">
+                <span class="material-symbols-outlined">visibility</span>
+            </button>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg">Sign In</button>
+    </form>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.getElementById('toggle-password').addEventListener('click', function() {
+    const passwordInput = document.getElementById('password');
+    const icon = this.querySelector('.material-symbols-outlined');
+
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        icon.textContent = 'visibility_off';
+    } else {
+        passwordInput.type = 'password';
+        icon.textContent = 'visibility';
+    }
+});
+</script>
 {% endblock %}

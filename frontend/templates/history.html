@@ -1,14 +1,14 @@
 <!-- frontend/templates/history.html -->
-<!-- Trip history page -->
+<!-- Trip history page with dark table and battery badges -->
 
 {% extends "base.html" %}
 
-{% block title %}History - EV Charging System{% endblock %}
+{% block title %}History - VoltRoute{% endblock %}
 
 {% block content %}
 <div class="card">
-    <h2>Trip History</h2>
-    
+    <h2 class="t-headline">Trip History</h2>
+
     {% if trips %}
     <div class="table-container">
         <table class="history-table">
@@ -17,7 +17,7 @@
                     <th>Date & Time</th>
                     <th>From</th>
                     <th>To</th>
-                    <th>Battery %</th>
+                    <th>Battery</th>
                     <th>Recommended Station</th>
                 </tr>
             </thead>
@@ -27,7 +27,15 @@
                     <td>{{ trip.created_at.strftime('%Y-%m-%d %H:%M') }}</td>
                     <td>{{ trip.start_loc }}</td>
                     <td>{{ trip.destination }}</td>
-                    <td>{{ trip.battery_pct }}%</td>
+                    <td>
+                        {% if trip.battery_pct < 20 %}
+                        <span class="badge badge-bad">{{ trip.battery_pct }}%</span>
+                        {% elif trip.battery_pct < 40 %}
+                        <span class="badge badge-warn">{{ trip.battery_pct }}%</span>
+                        {% else %}
+                        <span class="badge badge-ok">{{ trip.battery_pct }}%</span>
+                        {% endif %}
+                    </td>
                     <td>{{ trip.station_rec if trip.station_rec else 'None' }}</td>
                 </tr>
                 {% endfor %}
@@ -36,8 +44,12 @@
     </div>
     {% else %}
     <div class="empty-state">
+        <span class="material-symbols-outlined" style="font-size: 48px; color: var(--text-muted); margin-bottom: 16px;">history</span>
         <p>No trips yet. Plan your first trip!</p>
-        <a href="/dashboard" class="btn btn-primary">Plan a Trip</a>
+        <a href="/dashboard" class="btn btn-primary">
+            <span class="material-symbols-outlined">add_route</span>
+            Plan a Trip
+        </a>
     </div>
     {% endif %}
 </div>
