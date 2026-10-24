@@ -5,14 +5,14 @@
 |---|---|
 | Document version | 1.0 |
 | Based on | PRD v1.0, SRS v1.0 |
-| Architecture style | Monolith, server-rendered (FastAPI + Jinja2) |
+| Architecture style | Monolith, Streamlit single-page app |
 
 ---
 
 ## 1. Architecture Goals
 
 1. **Simple and demonstrable:** one process, one command to run, no external services.
-2. **Secure by default:** hashed passwords, httpOnly JWT cookie, secrets in `.env`, ORM-only DB access.
+2. **Secure by default:** hashed passwords, Streamlit session state, secrets in `.env`, ORM-only DB access.
 3. **Fast responses:** models and station data are loaded once at startup.
 4. **Replaceable parts:** ML models, station data, and database can be swapped without rewriting the app.
 
@@ -25,12 +25,10 @@
 | Layer | Choice | Reason |
 |---|---|---|
 | Language | Python 3.9+ | One language for web and ML |
-| Web framework | FastAPI | Fast, typed, auto-generated `/docs` |
-| Server | Uvicorn | ASGI server, `reload` for development |
-| Templating / Frontend | Jinja2 + HTML + CSS + vanilla JS | No build step; easy to explain in a lab |
+| Web framework | Streamlit | Fast prototyping, built-in UI components |
 | Database | SQLite | Zero setup; file-based |
 | ORM | SQLAlchemy | Prevents SQL injection; clean models |
-| Auth | passlib (bcrypt) + python-jose (JWT) | Standard, well-tested |
+| Auth | passlib (bcrypt) + Streamlit session state | Standard password hashing, simple session management |
 | ML | scikit-learn (RandomForest), XGBoost (regressor) | Classification and regression |
 | Data handling | pandas, numpy | CSV loading, filtering |
 | Model storage | joblib `.pkl` files | Simple persistence |
@@ -43,17 +41,17 @@
 ```
 ┌────────────────────────────────────────────────────────────────┐
 │                          USER BROWSER                           │
-│  HTML pages (Jinja2-rendered) · style.css · main.js             │
-│  Geolocation API · cookie: access_token (httpOnly JWT)          │
+│  Streamlit UI (auto-rendered) · Geolocation API                 │
+│  Session state (managed by Streamlit)                           │
 └───────────────┬──────────────────────────────▲─────────────────┘
-                │ HTTP (forms, GET/POST)       │ HTML responses
+                │ WebSocket / HTTP             │ UI updates
                 ▼                              │
 ┌────────────────────────────────────────────────────────────────┐
-│                  FASTAPI APPLICATION (Uvicorn)                  │
+│                  STREAMLIT APPLICATION                          │
 │                                                                 │
 │  ┌───────────┐  ┌───────────┐  ┌───────────┐  ┌──────────────┐  │
 │  │  main.py  │→ │  auth.py  │  │  utils.py │  │ predictor.py │  │
-│  │  routes   │  │ hash/JWT  │  │ haversine │  │  ML wrapper  │  │
+│  │  views    │  │ hash/state│  │ haversine │  │  ML wrapper  │  │
 │  └─────┬─────┘  └───────────┘  │ corridor  │  └──────┬───────┘  │
 │        │                       └─────┬─────┘         │          │
 │        ▼                             ▼               ▼          │
@@ -78,22 +76,19 @@
 
 | Component | File | Responsibility |
 |---|---|---|
-| **App entry** | `run.py` | Starts Uvicorn on port 8000 with reload |
-| **Routes / controller** | `app/main.py` | All HTTP routes, orchestrates auth, prediction, DB, templates |
+| **App entry** | `run.py` | Starts Streamlit on port 8501 |
+| **Main app** | `app/main.py` | All Streamlit views, orchestrates auth, prediction, DB |
 | **Configuration** | `app/config.py` | Reads secrets and settings from `.env` |
-| **Authentication** | `app/auth.py` | Password hashing, token creation, cookie-based user lookup |
+| **Authentication** | `app/auth.py` | Password hashing, session state management |
 | **Data models** | `app/models.py` | Engine, session factory, `User` and `TripHistory`, `get_db()` |
-| **Schemas** | `app/schemas.py` | Pydantic input/output shapes and validation |
 | **Utilities** | `app/utils.py` | Haversine distance, corridor filter |
 | **Predictor** | `app/predictor.py` | Loads `.pkl` models; wait time, needs-charge, charge time and cost |
 | **ML training** | `ml/*.py` | Offline scripts that produce the models; not run by the server |
-| **Templates** | `templates/*.html` | Server-rendered views |
-| **Static assets** | `static/css`, `static/js` | Styling and small client script |
 
 ### 4.1 Layering
 
 ```
-Presentation   →  templates/, static/
+Presentation   →  Streamlit components (st.*, pages)
 Controller     →  app/main.py
 Domain logic   →  app/utils.py, app/predictor.py
 Security       →  app/auth.py
@@ -105,16 +100,16 @@ Offline ML     →  ml/ → .pkl files → loaded by predictor.py
 
 ## 5. Frontend
 
-- **Approach:** server-side rendered pages with Jinja2 template inheritance (`base.html` → other pages). `login.html` and `register.html` are standalone.
-- **Interactivity:** `main.js` handles preset-destination coordinates, browser geolocation, and a basic battery range check.
-- **Styling:** a single `style.css` with CSS variables and a mobile breakpoint.
-- **Pages:** login, register, dashboard, results, history.
+- **Approach:** Streamlit single-page app with sidebar navigation and conditional rendering based on session state.
+- **Interactivity:** Streamlit widgets (st.text_input, st.slider, st.selectbox, st.button) handle user input; browser geolocation via JavaScript injection if needed.
+- **Styling:** Streamlit's built-in theming with optional custom CSS via st.markdown.
+- **Views:** login, register, dashboard, results, history (rendered conditionally in one app).
 
 ## 6. Backend
 
-- **Framework:** FastAPI with `Form(...)` parameters for HTML form posts.
-- **Dependency injection:** `Depends(get_db)` gives each request its own DB session.
-- **Route protection:** each protected route calls `get_current_user_from_cookie(request)` and redirects to `/login` when it returns `None`.
+- **Framework:** Streamlit with session state for user authentication.
+- **State management:** `st.session_state` stores user credentials and current view.
+- **View protection:** each protected view checks `st.session_state.get('authenticated')` and shows login if False.
 - **Startup:** loads `cleaned_data.csv` into a DataFrame and calls `create_tables()`; `predictor.py` loads both models at import.
 
 ## 7. Database
@@ -137,39 +132,32 @@ Offline ML     →  ml/ → .pkl files → loaded by predictor.py
 
 > The link between the tables is by email (no foreign key constraint) to keep the MVP simple. A future version should use `user_id` as a real foreign key.
 
-## 8. API / Route Design
+## 8. View Design
 
-| Method | Path | Auth | Purpose | Response |
-|---|---|---|---|---|
-| GET | `/` | – | Redirect | 307 → `/dashboard` |
-| GET | `/register` | – | Registration form | HTML |
-| POST | `/register` | – | Create account | 302 → `/login` or HTML with error |
-| GET | `/login` | – | Login form | HTML |
-| POST | `/login` | – | Authenticate, set cookie | 302 → `/dashboard` or HTML with error |
-| GET | `/logout` | – | Clear cookie | 302 → `/login` |
-| GET | `/dashboard` | ✅ | Trip form | HTML |
-| POST | `/predict` | ✅ | Run prediction, save history | HTML (results) |
-| GET | `/history` | ✅ | User's past trips | HTML |
-| GET | `/docs` | – | Swagger UI | HTML |
-| GET | `/static/*` | – | CSS and JS | Static files |
+| View | Auth | Purpose |
+|---|---|---|
+| Login | – | Login form |
+| Register | – | Registration form |
+| Dashboard | ✅ | Trip form |
+| Results | ✅ | Prediction results |
+| History | ✅ | User's past trips |
 
 ## 9. Authentication Flow
 
 ```
-Register:  form → validate → bcrypt hash → INSERT users → redirect /login
+Register:  form → validate → bcrypt hash → INSERT users → set session_state['authenticated'] = True
 Login:     form → find user by email → verify bcrypt hash
-                → create JWT {sub: email, username, exp} → Set-Cookie httpOnly
-                → redirect /dashboard
-Request:   cookie → jose.decode(SECRET_KEY, ALGORITHM)
-                → valid? email : None → redirect /login
-Logout:    delete cookie → redirect /login
+                → set session_state['authenticated'] = True, session_state['user_email'], session_state['username']
+Request:   check session_state['authenticated']
+                → True? show view : show login
+Logout:    clear session_state → show login
 ```
 
 ## 10. Data Flow — Main Prediction Request
 
 ```
-1. User submits dashboard form  ──────────────►  POST /predict
-2. Verify cookie → user email
+1. User submits dashboard form (button click)
+2. Verify session_state['authenticated'] → user email
 3. Validate battery % and distance
 4. predict_needs_charge(battery, distance, speed, temp, ac)   → 0 / 1
 5. filter_stations_on_route(car, dest, stations_df)           → candidate stations
@@ -178,7 +166,7 @@ Logout:    delete cookie → redirect /login
       estimate_charge_time_and_cost(battery, kW)              → time, ₹
       build Google Maps URL
 7. INSERT TripHistory (user_email, start, dest, battery, top station)
-8. Render results.html with verdict + recommendations
+8. Render results view with verdict + recommendations
 ```
 
 ## 11. ML Components
@@ -207,32 +195,34 @@ Logout:    delete cookie → redirect /login
 | Threat | Control |
 |---|---|
 | Password theft from DB | bcrypt hashing with per-password salt |
-| Session theft via JavaScript | `httpOnly` cookie |
-| Token forgery | JWT signed with secret from `.env` |
+| Session theft via JavaScript | Streamlit manages session state server-side |
 | SQL injection | SQLAlchemy ORM only |
-| XSS | Jinja2 auto-escaping |
-| Unauthorized access | Cookie check on every protected route |
-| Long-lived sessions | Token expiry (60 min, configurable) |
+| XSS | Streamlit's built-in sanitization |
+| Unauthorized access | Session state check on every protected view |
 | Leaked secrets | `.env` in `.gitignore` |
 | Information leakage | Generic login error; no stack traces in responses |
 
-**Known gaps for production:** CSRF tokens, `secure` and `samesite` cookie flags over HTTPS, rate limiting on login, account lockout, password reset, HTTPS termination.
+**Known gaps for production:** CSRF tokens, rate limiting on login, account lockout, password reset, HTTPS termination.
 
 ## 14. Deployment
 
 ### 14.1 Development / Lab (primary target)
 ```
-python run.py   →   http://localhost:8000
+streamlit run app/main.py   →   http://localhost:8501
 ```
-Single machine, virtual environment, SQLite file, `reload=True`.
+Or:
+```
+python run.py   →   http://localhost:8501
+```
+Single machine, virtual environment, SQLite file.
 
 ### 14.2 Optional Simple Hosting
 | Item | Recommendation |
 |---|---|
-| Host | Any VM or PaaS that runs Python (Render, Railway, a small VPS) |
-| Command | `uvicorn app.main:app --host 0.0.0.0 --port $PORT` (no `--reload`) |
-| HTTPS | Provided by the host or a reverse proxy (Nginx / Caddy) |
-| Secrets | Set as environment variables on the host instead of `.env` |
+| Host | Streamlit Cloud, or any VM/PaaS that runs Python |
+| Command | `streamlit run app/main.py --server.port $PORT` |
+| HTTPS | Provided by Streamlit Cloud or configured via reverse proxy |
+| Secrets | Set as environment variables or Streamlit secrets |
 | Persistence | Mount a persistent volume for `database/ev_app.db` |
 | Models and data | Commit `.pkl` and CSV, or regenerate in the build step |
 
@@ -240,30 +230,28 @@ Single machine, virtual environment, SQLite file, `reload=True`.
 
 | Need | Approach (MVP) |
 |---|---|
-| Request logs | Uvicorn access log in the console |
-| Application errors | Python `logging` module to console; avoid logging passwords or tokens |
-| Health check | Optional `GET /health` returning `{"status": "ok"}` |
+| Request logs | Streamlit console output |
+| Application errors | Python `logging` module to console; avoid logging passwords or session data |
 | Model sanity | Print metrics at training time; startup fails loudly if a model file is missing |
-| Later upgrade | Log to file, add Sentry or Prometheus if deployed publicly |
+| Later upgrade | Log to file, add Sentry or monitoring if deployed publicly |
 
 ## 16. Scalability
 
 | Concern | Current limit | Upgrade path |
 |---|---|---|
-| Concurrent users | Suited to tens of users (single process, SQLite) | Multiple Uvicorn workers + PostgreSQL |
+| Concurrent users | Suited to tens of users (single process, SQLite) | Streamlit Cloud with multiple instances + PostgreSQL |
 | Station count | Row-by-row Python loop is fine for hundreds to a few thousand | Vectorise with NumPy, add a spatial index, or use PostGIS |
 | Model inference | Fast in-process | Separate model service only if models grow large |
 | Routing accuracy | Straight-line corridor | OSRM or Google Directions for road distance |
 | Live data | None | Add live availability feed and cache |
-| Static files | Served by FastAPI | Serve via CDN or Nginx |
 
 ## 17. Key Design Decisions
 
 | Decision | Alternative considered | Why this choice |
 |---|---|---|
-| Server-rendered Jinja2 | React / Vue SPA | Fewer moving parts; no build tooling |
+| Streamlit SPA | React / Vue SPA or FastAPI/Jinja2 | Fewer moving parts; no build tooling; faster ML prototyping |
 | SQLite | PostgreSQL | No setup for a lab; same ORM allows later switch |
-| JWT in cookie | Server sessions | Stateless; httpOnly protects from JS access |
+| Streamlit session state | JWT in cookie | Simpler for MVP; managed by framework |
 | Haversine corridor | Road routing API | Free, offline, explainable |
 | Offline model training | Train at startup | Faster startup; reproducible artifacts |
 | Google Maps link | Embedded map | No API key or billing |

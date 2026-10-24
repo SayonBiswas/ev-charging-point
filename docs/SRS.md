@@ -28,14 +28,14 @@ A server-rendered web application for Bhubaneswar that predicts whether an EV ne
 | kW / kWh | Charger power / energy |
 
 ### 1.4 Technology Constraints
-Python 3.9+, FastAPI, Uvicorn, Jinja2, SQLAlchemy with SQLite, scikit-learn, XGBoost, pandas, joblib, passlib (bcrypt), python-jose.
+Python 3.9+, Streamlit, SQLAlchemy with SQLite, scikit-learn, XGBoost, pandas, joblib, passlib (bcrypt).
 
 ---
 
 ## 2. Overall Description
 
 ### 2.1 System Context
-Browser (user) ⇄ FastAPI app ⇄ SQLite DB, station CSV, and two trained model files (`.pkl`). Google Maps is only linked to, not integrated through an API.
+Browser (user) ⇄ Streamlit app ⇄ SQLite DB, station CSV, and two trained model files (`.pkl`). Google Maps is only linked to, not integrated through an API.
 
 ### 2.2 User Roles and Permissions
 
@@ -59,28 +59,27 @@ There is no admin role in the MVP.
 
 | ID | Requirement |
 |---|---|
-| FR-1.1 | The system shall provide a registration page at `GET /register`. |
-| FR-1.2 | `POST /register` shall accept `username`, `email`, `password`. |
-| FR-1.3 | The system shall reject a password shorter than 8 characters and re-display the form with an error. |
-| FR-1.4 | The system shall reject an email that already exists and re-display the form with an error. |
-| FR-1.5 | On success the system shall store the user with a bcrypt-hashed password and redirect to `/login` (HTTP 302). |
+| FR-1.1 | The system shall provide a registration view accessible via sidebar navigation. |
+| FR-1.2 | The registration form shall accept `username`, `email`, `password`. |
+| FR-1.3 | The system shall reject a password shorter than 8 characters and display an error message. |
+| FR-1.4 | The system shall reject an email that already exists and display an error message. |
+| FR-1.5 | On success the system shall store the user with a bcrypt-hashed password and set the session state to authenticated. |
 
 ### 3.2 Login / Logout
 
 | ID | Requirement |
 |---|---|
-| FR-2.1 | `GET /login` shall display the login form. |
-| FR-2.2 | `POST /login` shall verify email and password against the stored hash. |
-| FR-2.3 | On failure the system shall re-display the form with "Invalid email or password." without revealing which field was wrong. |
-| FR-2.4 | On success the system shall create a JWT containing the email (`sub`) and username, set it as an `httpOnly` cookie named `access_token` (max age 3600 s), and redirect to `/dashboard`. |
-| FR-2.5 | `GET /logout` shall delete the cookie and redirect to `/login`. |
-| FR-2.6 | `GET /` shall redirect to `/dashboard`. |
+| FR-2.1 | The system shall provide a login view accessible via sidebar navigation. |
+| FR-2.2 | The login form shall verify email and password against the stored hash. |
+| FR-2.3 | On failure the system shall display "Invalid email or password." without revealing which field was wrong. |
+| FR-2.4 | On success the system shall set the session state to authenticated with the user's email and username. |
+| FR-2.5 | Logout shall clear the session state and return to the login view. |
 
 ### 3.3 Dashboard (Trip Input)
 
 | ID | Requirement |
 |---|---|
-| FR-3.1 | `GET /dashboard` shall require authentication; otherwise redirect to `/login`. |
+| FR-3.1 | The dashboard shall require authentication; otherwise display the login view. |
 | FR-3.2 | The form shall collect: start name, destination name, preset destination, battery %, distance (km), speed (km/h), temperature (°C), AC on/off. |
 | FR-3.3 | Selecting a preset destination shall populate hidden destination latitude and longitude fields. |
 | FR-3.4 | The page shall attempt to populate the car's coordinates using browser geolocation; if unavailable or denied, defaults to City Center (20.2961, 85.8245). |
@@ -90,7 +89,7 @@ There is no admin role in the MVP.
 
 | ID | Requirement |
 |---|---|
-| FR-4.1 | `POST /predict` shall require authentication. |
+| FR-4.1 | The prediction shall require authentication. |
 | FR-4.2 | The system shall call the battery model with `battery_pct`, `distance_remaining_km`, `speed_kmh`, `temp_celsius`, `ac_on`. |
 | FR-4.3 | The model shall return `1` (needs charge) or `0` (safe to continue). |
 | FR-4.4 | The results page shall show a warning banner for `1` and a success banner for `0`. |
@@ -134,18 +133,15 @@ There is no admin role in the MVP.
 
 ---
 
-## 4. User Roles and Route Access Matrix
+## 4. User Roles and View Access Matrix
 
-| Route | Method | Guest | User |
-|---|---|---|---|
-| `/` | GET | Redirect | Redirect to dashboard |
-| `/register` | GET, POST | ✅ | ✅ |
-| `/login` | GET, POST | ✅ | ✅ |
-| `/logout` | GET | ✅ | ✅ |
-| `/dashboard` | GET | ❌ → `/login` | ✅ |
-| `/predict` | POST | ❌ → `/login` | ✅ |
-| `/history` | GET | ❌ → `/login` | ✅ |
-| `/docs` | GET | ✅ (dev only) | ✅ |
+| View | Guest | User |
+|---|---|---|
+| Login | ✅ | ✅ |
+| Register | ✅ | ✅ |
+| Dashboard | ❌ → Login | ✅ |
+| Prediction Results | ❌ → Login | ✅ |
+| History | ❌ → Login | ✅ |
 
 ---
 
@@ -227,11 +223,9 @@ All validation shall be performed **server-side**; client-side checks are only a
 | ID | Requirement |
 |---|---|
 | AUTH-1 | Passwords shall be hashed with bcrypt via passlib; plain text is never stored or logged. |
-| AUTH-2 | Sessions shall use a JWT signed with `SECRET_KEY` and `ALGORITHM` from `.env`. |
-| AUTH-3 | The JWT shall be stored in an `httpOnly` cookie so JavaScript cannot read it. |
-| AUTH-4 | The token shall expire after `ACCESS_TOKEN_EXPIRE_MINUTES` (default 60). |
-| AUTH-5 | Every protected route shall decode and verify the cookie before rendering; invalid or expired tokens are treated as logged out. |
-| AUTH-6 | Authorization is ownership-based: history queries filter by the token's email. |
+| AUTH-2 | Sessions shall use Streamlit session state for user authentication. |
+| AUTH-3 | Session state shall store the user's email and username when authenticated. |
+| AUTH-4 | Authorization is ownership-based: history queries filter by the session state's email. |
 
 ---
 
@@ -239,18 +233,17 @@ All validation shall be performed **server-side**; client-side checks are only a
 
 | Scenario | Expected behaviour |
 |---|---|
-| Missing or invalid cookie | Redirect to `/login` |
-| Expired token | Redirect to `/login` |
-| Validation failure | Re-render the same page with an error message; no prediction and no DB write |
+| Missing or invalid session state | Display login view |
+| Validation failure | Display error message; no prediction and no DB write |
 | No stations on route | Show "no stations found" message; still save the trip with `station_rec = "None"` |
 | Fewer than 3 stations on route | Show only those available |
-| Missing `.pkl` model files | Server fails to start with a clear message naming the training script to run |
-| Missing `cleaned_data.csv` | Server fails to start with a clear message to run `ml/preprocess.py` |
+| Missing `.pkl` model files | App fails to load with a clear message naming the training script to run |
+| Missing `cleaned_data.csv` | App fails to load with a clear message to run `ml/preprocess.py` |
 | Geolocation denied | Use default City Center coordinates |
 | Destination equals start (distance ≈ 0 km) | Still valid; stations within the corridor are returned |
 | Battery 100% | Charge time and cost = 0 |
 | Station missing connectors/kW | Use defaults (4 connectors, 22 kW) |
-| Database unavailable | Return HTTP 500 with a generic error page; no stack trace shown |
+| Database unavailable | Display generic error message; no stack trace shown |
 | Duplicate form submission | Creates a separate history row (accepted for MVP) |
 
 ---
@@ -263,8 +256,8 @@ All validation shall be performed **server-side**; client-side checks are only a
 |---|---|
 | SEC-1 | Secrets must be read from `.env` and never committed to source control. |
 | SEC-2 | All DB access shall use the SQLAlchemy ORM (no string-built SQL) to prevent SQL injection. |
-| SEC-3 | Jinja2 auto-escaping shall remain enabled to prevent XSS. |
-| SEC-4 | Cookies shall be `httpOnly`; `secure` and `samesite` flags shall be enabled when deployed over HTTPS. |
+| SEC-3 | Streamlit's built-in XSS protection shall be relied upon. |
+| SEC-4 | Session state shall be used for authentication; cookies are managed by Streamlit. |
 | SEC-5 | CSRF protection is **not** implemented in the MVP and is listed as a known limitation. |
 | SEC-6 | Error responses shall not expose stack traces or internal paths. |
 
@@ -272,9 +265,9 @@ All validation shall be performed **server-side**; client-side checks are only a
 
 | ID | Requirement |
 |---|---|
-| PERF-1 | `/predict` shall respond within 2 seconds for a station set of up to 1,000 rows. |
+| PERF-1 | Prediction shall complete within 2 seconds for a station set of up to 1,000 rows. |
 | PERF-2 | Models and station data shall be loaded once at startup, not per request. |
-| PERF-3 | Pages shall load in under 1 second on a local network. |
+| PERF-3 | Views shall render in under 1 second on a local network. |
 
 ### 10.3 Usability and Compatibility
 

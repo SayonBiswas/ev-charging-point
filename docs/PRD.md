@@ -6,7 +6,7 @@
 | Document version | 1.0 |
 | Status | Draft for lab submission |
 | Scope | Bhubaneswar city, Odisha, India |
-| Stack | Python (FastAPI), Jinja2, SQLite, scikit-learn, XGBoost, Uvicorn |
+| Stack | Python (Streamlit), SQLite, scikit-learn, XGBoost |
 
 ---
 
@@ -71,7 +71,7 @@ Register → Login → Dashboard (enter trip details) → Submit → Results (ch
 
 | # | Feature | Description | MVP |
 |---|---|---|---|
-| F1 | Authentication | Register, login, logout; bcrypt password hashing; JWT in httpOnly cookie | ✅ |
+| F1 | Authentication | Register, login, logout; bcrypt password hashing; Streamlit session state | ✅ |
 | F2 | Trip input dashboard | Form for start/destination names, battery %, distance, speed, temperature, AC | ✅ |
 | F3 | Battery sufficiency prediction | Random Forest classifier returns "needs charge" yes/no | ✅ |
 | F4 | Route-corridor station filter | Haversine-based detour test selects stations near the straight-line path | ✅ |
@@ -79,13 +79,12 @@ Register → Login → Dashboard (enter trip details) → Submit → Results (ch
 | F6 | Charge time and cost estimate | Rule-based: 40 kWh battery assumption, ₹8.5 per kWh | ✅ |
 | F7 | Directions link | Google Maps URL to the selected station | ✅ |
 | F8 | Trip history | Per-user list of past trips | ✅ |
-| F9 | Auto-generated API docs | FastAPI `/docs` (Swagger) | ✅ |
 
 ## 7. MVP Scope
 
-**Included:** F1–F9 above, for Bhubaneswar only, using a cleaned station CSV and models trained on simulated data.
+**Included:** F1–F8 above, for Bhubaneswar only, using a cleaned station CSV and models trained on simulated data.
 
-**Deliberately minimal:** server-rendered pages (no SPA), SQLite (no external DB), straight-line route corridor (no road routing API).
+**Deliberately minimal:** Streamlit single-page app, SQLite (no external DB), straight-line route corridor (no road routing API).
 
 ## 8. Success Metrics
 

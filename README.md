@@ -1,6 +1,6 @@
 # ⚡ Intelligent EV Charging & Route Optimization System
 
-A web application that helps electric vehicle drivers in **Bhubaneswar, India** decide whether they need to charge before reaching a destination, and where to charge along the way.
+A Streamlit web application that helps electric vehicle drivers in **Bhubaneswar, India** decide whether they need to charge before reaching a destination, and where to charge along the way.
 
 Given the current battery level, distance, speed, temperature and AC usage, the system predicts whether a charging stop is needed, finds charging stations along the route, and estimates the waiting time, charging time and cost at each one.
 
@@ -10,14 +10,13 @@ Given the current battery level, distance, speed, temperature and AC usage, the 
 
 ## ✨ Features
 
-- **User accounts:** register, log in and log out with bcrypt-hashed passwords and a JWT session cookie
+- **User accounts:** register, log in and log out with bcrypt-hashed passwords
 - **Battery prediction:** a Random Forest model predicts whether the car needs to charge before arriving
 - **Route-aware station search:** shows only stations near the path from your location to the destination
 - **Wait-time prediction:** an XGBoost model estimates the queue at each station
 - **Charge time and cost estimate:** based on charger power and remaining battery
 - **Directions:** one-click Google Maps link to the chosen station
 - **Trip history:** every search is saved per user
-- **API docs:** auto-generated Swagger UI at `/docs`
 
 ---
 
@@ -25,11 +24,11 @@ Given the current battery level, distance, speed, temperature and AC usage, the 
 
 | Layer | Technology |
 |---|---|
-| Backend | Python, FastAPI, Uvicorn |
-| Frontend | Jinja2 templates, HTML, CSS, vanilla JavaScript |
+| Backend | Python, Streamlit |
+| Frontend | Streamlit components, HTML/CSS custom styling |
 | Database | SQLite via SQLAlchemy |
 | ML | scikit-learn (RandomForest), XGBoost |
-| Auth | passlib (bcrypt), python-jose (JWT) |
+| Auth | passlib (bcrypt), Streamlit session state |
 | Data | pandas, numpy, joblib |
 
 Recommended Python version: **3.12** (3.9 or above is required).
@@ -43,10 +42,9 @@ ev-charging-system/
 │
 ├── app/
 │   ├── __init__.py               # App initialization
-│   ├── main.py                   # FastAPI app entry, all routes
+│   ├── main.py                   # Streamlit app entry
 │   ├── models.py                 # SQLAlchemy DB models (User, TripHistory)
-│   ├── schemas.py                # Pydantic input/output schemas
-│   ├── auth.py                   # Login, register, session/token logic
+│   ├── auth.py                   # Login, register, session state logic
 │   ├── utils.py                  # Haversine distance, route corridor filter
 │   ├── predictor.py              # ML model loader and prediction functions
 │   └── config.py                 # Settings loaded from .env
@@ -63,25 +61,13 @@ ev-charging-system/
 │   ├── raw_charging_sessions.csv # Raw training data
 │   └── cleaned_data.csv          # Cleaned version used for training
 │
-├── templates/
-│   ├── base.html                 # Base layout with navbar
-│   ├── login.html                # Login page
-│   ├── register.html             # Register page
-│   ├── dashboard.html            # Main input form page
-│   ├── results.html              # Charging station results
-│   └── history.html              # Past trip history
-│
-├── static/
-│   ├── css/style.css
-│   └── js/main.js
-│
 ├── database/
 │   └── ev_app.db                 # SQLite DB (auto-created on first run)
 │
 ├── .env                          # Secret keys — never commit this
 ├── .gitignore
 ├── requirements.txt              # All Python packages
-├── run.py                        # Entry point to start the server
+├── run.py                        # Entry point to start the Streamlit app
 └── README.md
 ```
 
@@ -130,8 +116,6 @@ Create a file named `.env` in the project root:
 
 ```
 SECRET_KEY=replace_this_with_a_long_random_string
-ALGORITHM=HS256
-ACCESS_TOKEN_EXPIRE_MINUTES=60
 DATABASE_URL=sqlite:///./database/ev_app.db
 ```
 
@@ -176,6 +160,12 @@ This creates `ml/battery_model.pkl` and `ml/demand_model.pkl`.
 ### 7. Run the application
 
 ```bash
+streamlit run app/main.py
+```
+
+Or using the run script:
+
+```bash
 python run.py
 ```
 
@@ -183,8 +173,7 @@ Open in your browser:
 
 | URL | Purpose |
 |---|---|
-| http://localhost:8000 | Application |
-| http://localhost:8000/docs | Swagger API documentation |
+| http://localhost:8501 | Application |
 
 Run all commands from the **project root folder**, otherwise the `.env`, CSV and model paths will not be found.
 
@@ -192,27 +181,13 @@ Run all commands from the **project root folder**, otherwise the `.env`, CSV and
 
 ## 🧭 How to Use
 
-1. Open `/register` and create an account.
-2. Log in.
-3. On the dashboard, enter your starting location, destination, battery %, distance, speed, temperature and AC status.
+1. On the sidebar, select **Register** and create an account.
+2. Log in with your credentials.
+3. On the main dashboard, enter your starting location, destination, battery %, distance, speed, temperature and AC status.
 4. Click **Find Charging Stations**.
 5. Read the verdict (charge needed or not) and the recommended stations with distance, wait time, charge time and cost.
 6. Click **Get Directions** to open Google Maps.
-7. Visit **History** to see earlier trips.
-
----
-
-## 🌐 Routes
-
-| Method | Path | Login required | Purpose |
-|---|---|---|---|
-| GET | `/` | – | Redirects to dashboard |
-| GET / POST | `/register` | No | Create an account |
-| GET / POST | `/login` | No | Log in |
-| GET | `/logout` | No | Log out |
-| GET | `/dashboard` | Yes | Trip input form |
-| POST | `/predict` | Yes | Run prediction and show stations |
-| GET | `/history` | Yes | Past trips |
+7. Visit the **History** tab to see earlier trips.
 
 ---
 
@@ -239,12 +214,11 @@ Trip form → battery model (needs charge?)
 | What | How it is handled |
 |---|---|
 | Passwords | Hashed with bcrypt via passlib, never stored as plain text |
-| Sessions | JWT in an `httpOnly` cookie, not readable by JavaScript |
+| Sessions | Streamlit session state for user authentication |
 | Secret key | Loaded from `.env`, never hardcoded |
 | SQL injection | All queries go through the SQLAlchemy ORM |
-| Route protection | Every protected page checks the cookie token |
+| Route protection | Session state checked before allowing access to protected pages |
 | Input validation | Server-side checks on battery % and distance |
-| Token expiry | 60 minutes, configurable in `.env` |
 
 ---
 
@@ -272,13 +246,12 @@ Trip form → battery model (needs charge?)
 [ ] python ml/preprocess.py → cleaned_data.csv generated
 [ ] python ml/train_battery_model.py → battery_model.pkl generated
 [ ] python ml/train_demand_model.py → demand_model.pkl generated
-[ ] python run.py → server starts on port 8000 without errors
+[ ] streamlit run app/main.py → server starts on port 8501 without errors
 [ ] Register a test account and log in
 [ ] Submit the dashboard form → results show stations
 [ ] "Get Directions" opens Google Maps
-[ ] /history shows the trip just made
-[ ] /logout redirects to login
-[ ] /docs shows the Swagger UI
+[ ] History tab shows the trip just made
+[ ] Logout functionality works
 ```
 
 ---
@@ -287,7 +260,7 @@ Trip form → battery model (needs charge?)
 
 | Problem | Fix |
 |---|---|
-| `ModuleNotFoundError: No module named 'app'` | Run commands from the project root; start with `python run.py` |
+| `ModuleNotFoundError: No module named 'app'` | Run commands from the project root; start with `streamlit run app/main.py` |
 | `FileNotFoundError: ml/battery_model.pkl` | Run both training scripts first |
 | `FileNotFoundError: data/cleaned_data.csv` | Run `python ml/preprocess.py` |
 | No stations on results | Check the CSV has Bhubaneswar rows with valid latitude and longitude, and `is_operational` set to True |
@@ -295,7 +268,7 @@ Trip form → battery model (needs charge?)
 | `.env` values not read | File must be named exactly `.env` and sit in the project root |
 | Model file fails to load | Retrain the models in the same Python and package versions you run the app with |
 | `unable to open database file` | Make sure the `database/` folder exists |
-| Template error about `TemplateResponse` | Newer Starlette expects `TemplateResponse(request, "name.html", context)` |
+| Streamlit not found | Make sure streamlit is installed: `pip install streamlit` |
 
 ---
 
@@ -326,4 +299,4 @@ Project documents: PRD, SRS, System Architecture, UI/UX Design and Development P
 
 ---
 
-*Backend: FastAPI + Uvicorn · Database: SQLite · ML: scikit-learn + XGBoost*
+*Backend: Streamlit · Database: SQLite · ML: scikit-learn + XGBoost*

@@ -6,7 +6,7 @@
 | Document version | 1.0 |
 | Based on | PRD, SRS, Architecture, UI/UX (v1.0) |
 | Target | Working MVP ready for lab demonstration |
-| Suggested duration | ~10 working days (adjust to your deadline) |
+| Suggested duration | ~8 working days (adjust to your deadline) |
 
 ---
 
@@ -15,17 +15,16 @@
 | Phase | Name | Output | Est. time |
 |---|---|---|---|
 | 0 | Setup | Project folder, venv, packages, `.env`, Git | 0.5 day |
-| 1 | Backend foundation | `config`, `models`, `auth`, `schemas`, DB created | 1 day |
+| 1 | Backend foundation | `config`, `models`, `auth`, DB created | 1 day |
 | 2 | Data and ML | Cleaned stations, 2 trained `.pkl` models | 2 days |
 | 3 | Core logic | `utils.py`, `predictor.py` working in isolation | 1 day |
-| 4 | API routes | `main.py` with all routes | 1.5 days |
-| 5 | Frontend | Templates, CSS, JS | 2 days |
-| 6 | Integration and testing | End-to-end flow passes all tests | 1.5 days |
-| 7 | Bug fixing and polish | Stable build, README | 0.5 day |
-| 8 | Deployment and demo prep | Runs cleanly on demo machine; optional hosting | 0.5 day |
+| 4 | Streamlit app | `main.py` with all views and session state | 1.5 days |
+| 5 | Integration and testing | End-to-end flow passes all tests | 1.5 days |
+| 6 | Bug fixing and polish | Stable build, README | 0.5 day |
+| 7 | Deployment and demo prep | Runs cleanly on demo machine; optional hosting | 0.5 day |
 
 ```
-Setup → Backend → Data/ML → Core logic → Routes → Frontend → Testing → Polish → Demo
+Setup → Backend → Data/ML → Core logic → Streamlit app → Testing → Polish → Demo
 ```
 
 ---
@@ -34,10 +33,10 @@ Setup → Backend → Data/ML → Core logic → Routes → Frontend → Testing
 
 | Priority | Items |
 |---|---|
-| **P0 — Must have (MVP)** | Auth, DB, station cleaning, both models, corridor filter, `/predict`, results page, history, README |
-| **P1 — Should have** | Input validation limits (speed, temp), submit-button loading state, helpful startup error messages, `.gitignore`, `/health` route |
-| **P2 — Nice to have** | `schemas.py` fully wired into routes, active nav highlighting, preserved form values after error, logging |
-| **P3 — Future (not in MVP)** | Road routing API, live availability, CSRF tokens, PostgreSQL, Docker |
+| **P0 — Must have (MVP)** | Auth, DB, station cleaning, both models, corridor filter, prediction view, results view, history view, README |
+| **P1 — Should have** | Input validation limits (speed, temp), submit-button loading state, helpful startup error messages, `.gitignore` |
+| **P2 — Nice to have** | Custom CSS styling, preserved form values after error, logging |
+| **P3 — Future (not in MVP)** | Road routing API, live availability, PostgreSQL, Docker |
 
 ---
 
@@ -57,7 +56,7 @@ train_demand_model.py  ─► demand_model.pkl  ─┤ │
                             utils.py + predictor.py
                                       │
                                       ▼
-                                   main.py ─► templates + static
+                                   main.py (Streamlit)
                                       │
                                       ▼
                                  integration tests ─► demo
@@ -78,7 +77,7 @@ Rule: **never start a file before the files it depends on exist and run.**
 - [ ] Initialise Git; first commit
 - [ ] `pip freeze > requirements.txt`
 
-**Done when:** `python -c "import fastapi, sklearn, xgboost"` runs without error.
+**Done when:** `python -c "import streamlit, sklearn, xgboost"` runs without error.
 
 ### Phase 1 — Backend Foundation (1 day)
 - [ ] `app/config.py`
@@ -111,7 +110,7 @@ Rule: **never start a file before the files it depends on exist and run.**
 
 **Done when:** all three predictor functions return sensible values from a Python shell.
 
-### Phase 4 — API Routes (1.5 days)
+### Phase 4 — Streamlit App (1.5 days)
 - [ ] App setup: static mount, templates, load `stations_df`, `create_tables()`
 - [ ] Register routes (GET/POST) with validation
 - [ ] Login, logout routes with cookie handling
