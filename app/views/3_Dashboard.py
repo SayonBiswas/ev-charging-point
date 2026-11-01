@@ -1,4 +1,4 @@
-# app/pages/3_Dashboard.py
+# app/views/3_Dashboard.py
 # Dashboard page for trip prediction and charging station recommendations
 
 import streamlit as st
@@ -221,7 +221,7 @@ if submitted:
             m = folium.Map(
                 location=[st.session_state.start_lat, st.session_state.start_lon],
                 zoom_start=12,
-                tiles="CartoDB dark_matter"
+                tiles="OpenStreetMap"
             )
 
             # Add start marker
@@ -259,7 +259,7 @@ if submitted:
             ).add_to(m)
 
             # Display map
-            st_folium(m, width="100%", height=400)
+            st_folium(m, height=400, use_container_width=True, returned_objects=[])
 
             # Station cards
             for i, station in enumerate(stations_with_details, 1):
@@ -335,14 +335,24 @@ if submitted:
 # Display trip tips
 st.markdown("---")
 st.markdown('<h2 class="t-title">Trip Tips</h2>', unsafe_allow_html=True)
-st.markdown("""
-<div class="card">
-    <ul style="color: var(--text-muted); line-height: 1.8;">
-        <li>🚗 Use lower speeds to conserve battery</li>
-        <li>❄️ Turn off AC when possible to extend range</li>
-        <li>⏰ Charge during off-peak hours for shorter wait times</li>
-        <li>⚡ Plan charging stops at stations with higher power ratings</li>
-        <li>📍 Use the auto-detect feature for accurate coordinates</li>
-    </ul>
-</div>
-""", unsafe_allow_html=True)
+maps_url = f"https://www.google.com/maps/dir/?api=1&destination={station['latitude']},{station['longitude']}"
+badge_html = '<span class="badge badge-rec">Recommended</span>' if is_recommended else ''
+
+card_html = "".join([
+    f'<div class="station-card {recommended_class}">',
+    f'<div class="station-header"><div class="station-name">{station["name"]}</div>{badge_html}</div>',
+    f'<div class="station-address">{station["address"]}</div>',
+    '<div class="station-specs">',
+    f'<div class="station-spec"><p class="t-micro">Distance</p><p class="metric">{station["distance_from_car_km"]} km</p></div>',
+    f'<div class="station-spec"><p class="t-micro">Wait Time</p><p class="metric">{station["wait_minutes"]} min</p></div>',
+    f'<div class="station-spec"><p class="t-micro">Charge Time</p><p class="metric">{station["charge_time_min"]} min</p></div>',
+    '</div>',
+    f'<div class="station-cost">₹{station["cost"]}</div>',
+    '<div class="row row-between">',
+    f'<span class="badge badge-{station["charger_type"].lower()}">{station["charger_type"]}</span>',
+    f'<span class="badge badge-ac">{station["charger_rating_kw"]} kW</span>',
+    '</div>',
+    f'<a href="{maps_url}" target="_blank" class="btn btn-directions">Get Directions</a>',
+    '</div>',
+])
+st.markdown(card_html, unsafe_allow_html=True)

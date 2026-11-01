@@ -1,4 +1,4 @@
-# app/pages/4_History.py
+# app/views/4_History.py
 # Trip history page for Streamlit app
 
 import streamlit as st

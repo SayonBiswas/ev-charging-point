@@ -1,4 +1,4 @@
-# app/pages/2_Register.py
+# app/views/2_Register.py
 # Registration page for Streamlit app
 
 import streamlit as st

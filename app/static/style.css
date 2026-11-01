@@ -553,3 +553,59 @@ h1, h2, h3, h4, h5, h6 {
     border-color: var(--primary) !important;
     box-shadow: 0 0 0 3px rgba(78, 222, 163, 0.15) !important;
 }
+
+
+/* ---------- Sidebar ---------- */
+[data-testid="stSidebar"] {
+    background: var(--surface) !important;
+    border-right: 1px solid rgba(255,255,255,0.08);
+}
+.sb-brand { display:flex; align-items:center; gap:12px; margin-bottom:20px; }
+.sb-mark {
+    width:40px; height:40px; border-radius:12px; font-size:20px;
+    display:flex; align-items:center; justify-content:center;
+    background: linear-gradient(135deg, var(--primary-container), var(--primary));
+    box-shadow: 0 0 20px -3px rgba(16,185,129,.35);
+}
+.sb-name { font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:18px; color:var(--text); line-height:1.1; }
+.sb-tag  { font-size:11px; color:var(--text-muted); }
+
+.sb-user {
+    display:flex; align-items:center; gap:12px; padding:12px;
+    background: var(--surface-low); border-radius:12px; margin-bottom:20px;
+}
+.sb-avatar {
+    width:36px; height:36px; border-radius:50%; font-weight:700;
+    display:flex; align-items:center; justify-content:center;
+    background: var(--surface-highest); color: var(--primary);
+}
+.sb-hello { font-size:11px; color:var(--text-muted); }
+.sb-username { font-weight:600; color:var(--text); }
+
+/* Nav radio as menu items: hide the circles */
+[data-testid="stSidebar"] div[role="radiogroup"] { gap:6px; }
+[data-testid="stSidebar"] div[role="radiogroup"] label {
+    padding:10px 14px; border-radius:12px; width:100%;
+    background: transparent; transition: all .15s; cursor:pointer;
+}
+[data-testid="stSidebar"] div[role="radiogroup"] label > div:first-child { display:none; }
+[data-testid="stSidebar"] div[role="radiogroup"] label:hover { background: var(--surface-high); }
+[data-testid="stSidebar"] div[role="radiogroup"] label:has(input:checked) {
+    background: rgba(78,222,163,.12);
+    box-shadow: 0 0 20px -3px rgba(16,185,129,.35);
+}
+[data-testid="stSidebar"] div[role="radiogroup"] label:has(input:checked) p { color: var(--primary); font-weight:600; }
+
+.sb-spacer { height: 40vh; }
+
+/* Logout as a ghost button */
+[data-testid="stSidebar"] .stButton > button {
+    background: transparent !important;
+    color: var(--primary) !important;
+    border: 1px solid rgba(78,222,163,.3) !important;
+    box-shadow: none !important;
+}
+[data-testid="stSidebar"] .stButton > button:hover {
+    background: rgba(78,222,163,.1) !important;
+    transform: none !important;
+}

@@ -1,4 +1,4 @@
-# app/pages/1_Login.py
+# app/views/1_Login.py
 # Login page for Streamlit app
 
 import streamlit as st

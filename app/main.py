@@ -39,44 +39,58 @@ if 'db_initialized' not in st.session_state:
 # Sidebar navigation
 with st.sidebar:
     st.markdown("""
-    <div class="brand-container" style="margin-bottom: 24px;">
-        <div class="brand-mark" style="width: 40px; height: 40px; font-size: 20px; margin: 0;">⚡</div>
-        <div class="brand-name" style="font-size: 18px;">VoltRoute</div>
+    <div class="sb-brand">
+        <div class="sb-mark">⚡</div>
+        <div>
+            <div class="sb-name">VoltRoute</div>
+            <div class="sb-tag">EV Route Planner</div>
+        </div>
     </div>
     """, unsafe_allow_html=True)
-    st.markdown("---")
 
     if is_logged_in():
-        st.markdown(f'<div style="color: var(--primary); font-weight: 600;">Welcome, {st.session_state.username}</div>', unsafe_allow_html=True)
-        st.markdown("---")
+        initial = (st.session_state.username or "U")[0].upper()
+        st.markdown(f"""
+        <div class="sb-user">
+            <div class="sb-avatar">{initial}</div>
+            <div>
+                <div class="sb-hello">Welcome back</div>
+                <div class="sb-username">{st.session_state.username}</div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
         page = st.radio(
             "Navigate",
             ["Dashboard", "History"],
-            label_visibility="collapsed"
+            format_func=lambda p: {"Dashboard": "🗺️  Plan Trip", "History": "🕘  History"}[p],
+            label_visibility="collapsed",
         )
-        st.markdown("---")
-        if st.button("Logout", use_container_width=True):
+
+        st.markdown('<div class="sb-spacer"></div>', unsafe_allow_html=True)
+        if st.button("Logout", use_container_width=True, key="logout_btn"):
             logout_user()
             st.rerun()
     else:
         page = st.radio(
             "Navigate",
             ["Login", "Register"],
-            label_visibility="collapsed"
+            format_func=lambda p: {"Login": "🔑  Sign In", "Register": "✨  Create Account"}[p],
+            label_visibility="collapsed",
         )
 
 # Main content routing
 if page == "Login":
-    exec(open(os.path.join(os.path.dirname(__file__), 'pages', '1_Login.py')).read())
+    exec(open(os.path.join(os.path.dirname(__file__), 'views', '1_Login.py')).read())
 elif page == "Register":
-    exec(open(os.path.join(os.path.dirname(__file__), 'pages', '2_Register.py')).read())
+    exec(open(os.path.join(os.path.dirname(__file__), 'views', '2_Register.py')).read())
 elif page == "Dashboard":
     if not is_logged_in():
         st.error("Please login to access the dashboard")
         st.stop()
-    exec(open(os.path.join(os.path.dirname(__file__), 'pages', '3_Dashboard.py')).read())
+    exec(open(os.path.join(os.path.dirname(__file__), 'views', '3_Dashboard.py')).read())
 elif page == "History":
     if not is_logged_in():
         st.error("Please login to access the history")
         st.stop()
-    exec(open(os.path.join(os.path.dirname(__file__), 'pages', '4_History.py')).read())
+    exec(open(os.path.join(os.path.dirname(__file__), 'views', '4_History.py')).read())
