@@ -38,7 +38,7 @@ Recommended Python version: **3.12** (3.9 or above is required).
 ## 📁 Project Structure
 
 ```
-ev-charging-system/
+ev-charging-point/
 │
 ├── app/
 │   ├── __init__.py               # App initialization
@@ -47,24 +47,29 @@ ev-charging-system/
 │   ├── auth.py                   # Login, register, session state logic
 │   ├── utils.py                  # Haversine distance, route corridor filter
 │   ├── predictor.py              # ML model loader and prediction functions
-│   └── config.py                 # Settings loaded from .env
+│   ├── config.py                 # Settings loaded from .env
+│   └── pages/
+│       ├── 1_Login.py            # Login page
+│       ├── 2_Register.py         # Registration page
+│       ├── 3_Dashboard.py        # Main dashboard with trip prediction
+│       └── 4_History.py          # Trip history page
 │
-├── ml/
-│   ├── train_battery_model.py    # Train battery drain prediction model
-│   ├── train_demand_model.py     # Train station waiting time model
-│   ├── battery_model.pkl         # Saved battery model (generated after training)
-│   ├── demand_model.pkl          # Saved demand model (generated after training)
-│   └── preprocess.py             # Data cleaning script
-│
-├── data/
-│   ├── bhubaneswar_stations.csv  # EV station dataset filtered to Bhubaneswar
-│   ├── raw_charging_sessions.csv # Raw training data
-│   └── cleaned_data.csv          # Cleaned version used for training
+├── backend/
+│   ├── ml/
+│   │   ├── train_battery_model.py    # Train battery drain prediction model
+│   │   ├── train_demand_model.py     # Train station waiting time model
+│   │   ├── battery_model.pkl         # Saved battery model (generated after training)
+│   │   ├── demand_model.pkl          # Saved demand model (generated after training)
+│   │   └── preprocess.py             # Data cleaning script
+│   └── data/
+│       ├── bhubaneswar_stations.csv  # EV station dataset filtered to Bhubaneswar
+│       ├── raw_charging_sessions.csv # Raw training data
+│       └── cleaned_data.csv          # Cleaned version used for training
 │
 ├── database/
 │   └── ev_app.db                 # SQLite DB (auto-created on first run)
 │
-├── .env                          # Secret keys — never commit this
+├── .env                          # Database URL — never commit this
 ├── .gitignore
 ├── requirements.txt              # All Python packages
 ├── run.py                        # Entry point to start the Streamlit app
@@ -104,7 +109,7 @@ pip install -r requirements.txt
 If you are starting without a `requirements.txt`:
 
 ```bash
-pip install fastapi uvicorn jinja2 python-multipart sqlalchemy "passlib[bcrypt]" "python-jose[cryptography]" scikit-learn xgboost pandas numpy joblib python-dotenv aiofiles email-validator
+pip install streamlit sqlalchemy "passlib[bcrypt]" scikit-learn xgboost pandas numpy joblib python-dotenv pydantic-settings email-validator
 pip freeze > requirements.txt
 ```
 
@@ -115,25 +120,20 @@ pip freeze > requirements.txt
 Create a file named `.env` in the project root:
 
 ```
-SECRET_KEY=replace_this_with_a_long_random_string
-DATABASE_URL=sqlite:///./database/ev_app.db
+DATABASE_URL=sqlite:///database/ev_app.db
 ```
 
-Generate a strong secret key:
+### 4. Create the database directory
 
 ```bash
-python -c "import secrets; print(secrets.token_hex(32))"
+mkdir -p database
 ```
 
-### 4. Create the database tables
-
-```bash
-python -c "from app.models import create_tables; create_tables(); print('Database and tables created successfully')"
-```
+The database tables will be created automatically on the first run.
 
 ### 5. Prepare the station data
 
-Place your station file at `data/bhubaneswar_stations.csv` with these columns:
+Place your station file at `backend/data/bhubaneswar_stations.csv` with these columns:
 
 ```
 station_id, station_name, latitude, longitude, charger_type,
@@ -143,19 +143,19 @@ charger_rating_kw, total_connectors, address, is_operational, city
 Then clean it:
 
 ```bash
-python ml/preprocess.py
+python backend/ml/preprocess.py
 ```
 
-This creates `data/cleaned_data.csv`.
+This creates `backend/data/cleaned_data.csv`.
 
 ### 6. Train the ML models
 
 ```bash
-python ml/train_battery_model.py
-python ml/train_demand_model.py
+python backend/ml/train_battery_model.py
+python backend/ml/train_demand_model.py
 ```
 
-This creates `ml/battery_model.pkl` and `ml/demand_model.pkl`.
+This creates `backend/ml/battery_model.pkl` and `backend/ml/demand_model.pkl`.
 
 ### 7. Run the application
 
@@ -215,7 +215,6 @@ Trip form → battery model (needs charge?)
 |---|---|
 | Passwords | Hashed with bcrypt via passlib, never stored as plain text |
 | Sessions | Streamlit session state for user authentication |
-| Secret key | Loaded from `.env`, never hardcoded |
 | SQL injection | All queries go through the SQLAlchemy ORM |
 | Route protection | Session state checked before allowing access to protected pages |
 | Input validation | Server-side checks on battery % and distance |
@@ -241,11 +240,11 @@ Trip form → battery model (needs charge?)
 ```
 [ ] venv is activated
 [ ] pip install done, requirements.txt exists
-[ ] .env file created with SECRET_KEY
-[ ] data/bhubaneswar_stations.csv is in place
-[ ] python ml/preprocess.py → cleaned_data.csv generated
-[ ] python ml/train_battery_model.py → battery_model.pkl generated
-[ ] python ml/train_demand_model.py → demand_model.pkl generated
+[ ] .env file created with DATABASE_URL
+[ ] backend/data/bhubaneswar_stations.csv is in place
+[ ] python backend/ml/preprocess.py → cleaned_data.csv generated
+[ ] python backend/ml/train_battery_model.py → battery_model.pkl generated
+[ ] python backend/ml/train_demand_model.py → demand_model.pkl generated
 [ ] streamlit run app/main.py → server starts on port 8501 without errors
 [ ] Register a test account and log in
 [ ] Submit the dashboard form → results show stations
@@ -261,8 +260,8 @@ Trip form → battery model (needs charge?)
 | Problem | Fix |
 |---|---|
 | `ModuleNotFoundError: No module named 'app'` | Run commands from the project root; start with `streamlit run app/main.py` |
-| `FileNotFoundError: ml/battery_model.pkl` | Run both training scripts first |
-| `FileNotFoundError: data/cleaned_data.csv` | Run `python ml/preprocess.py` |
+| `FileNotFoundError: backend/ml/battery_model.pkl` | Run both training scripts first |
+| `FileNotFoundError: backend/data/cleaned_data.csv` | Run `python backend/ml/preprocess.py` |
 | No stations on results | Check the CSV has Bhubaneswar rows with valid latitude and longitude, and `is_operational` set to True |
 | bcrypt / passlib error | `pip install bcrypt==4.0.1` |
 | `.env` values not read | File must be named exactly `.env` and sit in the project root |

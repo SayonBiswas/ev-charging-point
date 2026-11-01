@@ -1,0 +1,555 @@
+/* app/static/style.css */
+/* Adapted from original VoltRoute UI for Streamlit with enhancements */
+
+/* CSS Variables */
+:root {
+    --bg: #0f131c;
+    --surface-lowest: #0a0e16;
+    --surface-low: #181c24;
+    --surface: #1c2028;
+    --surface-high: #262a33;
+    --surface-highest: #31353e;
+    --text: #dfe2ee;
+    --text-muted: #bbcabf;
+    --outline: #86948a;
+    --primary: #4edea3;
+    --primary-container: #10b981;
+    --secondary: #93ccff;
+    --tertiary: #ffb95f;
+    --error: #ffb4ab;
+    --error-strong: #ef4444;
+}
+
+/* Streamlit overrides */
+.stApp {
+    background-color: var(--bg) !important;
+    background-image: radial-gradient(circle at 20% 30%, rgba(78, 222, 163, 0.08) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 70%, rgba(147, 204, 255, 0.05) 0%, transparent 50%);
+}
+
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap');
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text);
+}
+
+/* Sidebar */
+.css-1d391kg {
+    background-color: var(--surface) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.css-1d391kg .css-17eq0hr {
+    background-color: var(--surface) !important;
+}
+
+.css-1d391kg .css-6te8wd {
+    color: var(--text) !important;
+}
+
+.css-1d391kg .css-1offfwp {
+    color: var(--text-muted) !important;
+}
+
+.css-1d391kg .css-1v0mbdj {
+    color: var(--primary) !important;
+}
+
+/* Main content */
+.css-18ni7ap {
+    background-color: transparent !important;
+}
+
+/* Cards */
+.stCard {
+    background: rgba(28, 32, 40, 0.9) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 16px !important;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.55);
+}
+
+/* Buttons */
+.stButton > button {
+    background: linear-gradient(135deg, var(--primary-container), var(--primary)) !important;
+    color: #002113 !important;
+    border: none !important;
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+    font-family: inherit !important;
+    box-shadow: 0 0 20px -3px rgba(16, 185, 129, 0.35);
+    transition: all 0.15s;
+}
+
+.stButton > button:hover {
+    filter: brightness(1.1) !important;
+}
+
+.stButton > button:active {
+    transform: translateY(1px);
+}
+
+/* Inputs */
+.stTextInput > div > div > input,
+.stNumberInput > div > div > input {
+    background-color: var(--surface-low) !important;
+    border: 1px solid var(--surface-highest) !important;
+    border-radius: 12px !important;
+    color: var(--text) !important;
+    font-family: inherit !important;
+}
+
+.stTextInput > div > div > input:focus,
+.stNumberInput > div > div > input:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 2px rgba(78, 222, 163, 0.2) !important;
+}
+
+.stTextInput > label,
+.stNumberInput > label {
+    color: var(--text) !important;
+    font-weight: 500 !important;
+}
+
+/* Selectbox */
+.stSelectbox > div > div > select {
+    background-color: var(--surface-low) !important;
+    border: 1px solid var(--surface-highest) !important;
+    border-radius: 12px !important;
+    color: var(--text) !important;
+}
+
+/* Sliders */
+.stSlider > div > div > div {
+    background-color: var(--surface-highest) !important;
+}
+
+.stSlider > div > div > div > div {
+    background-color: var(--primary) !important;
+}
+
+/* Checkbox */
+.stCheckbox > label {
+    color: var(--text) !important;
+}
+
+/* Radio buttons */
+.stRadio > div {
+    background-color: var(--surface-lowest) !important;
+    border-radius: 999px !important;
+    padding: 4px !important;
+}
+
+.stRadio > div > label {
+    color: var(--text-muted) !important;
+    border-radius: 999px !important;
+    padding: 8px 16px !important;
+}
+
+.stRadio > div > label:hover {
+    color: var(--text) !important;
+    background-color: var(--surface-high) !important;
+}
+
+.stRadio > div > label[data-selected="true"] {
+    background-color: var(--surface-high) !important;
+    color: var(--text) !important;
+}
+
+/* Success messages */
+.stSuccess {
+    background: rgba(78, 222, 163, 0.1) !important;
+    color: var(--primary) !important;
+    border: 1px solid rgba(78, 222, 163, 0.2) !important;
+    border-radius: 12px !important;
+}
+
+/* Error messages */
+.stException {
+    background: rgba(239, 68, 68, 0.1) !important;
+    color: var(--error-strong) !important;
+    border: 1px solid rgba(239, 68, 68, 0.2) !important;
+    border-radius: 12px !important;
+}
+
+/* Info messages */
+.stInfo {
+    background: rgba(147, 204, 255, 0.1) !important;
+    color: var(--secondary) !important;
+    border: 1px solid rgba(147, 204, 255, 0.2) !important;
+    border-radius: 12px !important;
+}
+
+/* Warning messages */
+.stWarning {
+    background: rgba(255, 185, 95, 0.1) !important;
+    color: var(--tertiary) !important;
+    border: 1px solid rgba(255, 185, 95, 0.2) !important;
+    border-radius: 12px !important;
+}
+
+/* Dataframe */
+.stDataFrame {
+    background-color: var(--surface-low) !important;
+    border: 1px solid var(--surface-highest) !important;
+    border-radius: 12px !important;
+}
+
+.stDataFrame th {
+    background-color: var(--surface-low) !important;
+    color: var(--text-muted) !important;
+    font-weight: 600 !important;
+}
+
+.stDataFrame td {
+    color: var(--text) !important;
+}
+
+.stDataFrame tr:hover {
+    background-color: var(--surface-high) !important;
+}
+
+/* Expander */
+.stExpander {
+    background-color: var(--surface) !important;
+    border: 1px solid var(--surface-highest) !important;
+    border-radius: 16px !important;
+}
+
+.stExpanderHeader {
+    color: var(--text) !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+/* Metrics */
+.stMetric {
+    background-color: var(--surface) !important;
+    border: 1px solid var(--surface-highest) !important;
+    border-radius: 16px !important;
+}
+
+.stMetric label {
+    color: var(--text-muted) !important;
+    font-size: 12px !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+}
+
+.stMetric .stMetricValue {
+    color: var(--text) !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 700 !important;
+}
+
+/* Form */
+.stForm {
+    background-color: transparent !important;
+}
+
+/* Divider */
+.stDivider {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Custom brand styling */
+.brand-container {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.brand-mark {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-container), var(--primary));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin: 0 auto 16px;
+    box-shadow: 0 0 20px -3px rgba(16, 185, 129, 0.35);
+}
+
+.brand-name {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.tagline {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-top: 8px;
+}
+
+/* Segmented switch */
+.segmented {
+    display: flex;
+    background: var(--surface-lowest);
+    border-radius: 999px;
+    padding: 4px;
+    margin-bottom: 24px;
+}
+
+.segmented a {
+    flex: 1;
+    text-align: center;
+    padding: 8px 16px;
+    border-radius: 999px;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.15s;
+}
+
+.segmented a:hover {
+    color: var(--text);
+}
+
+.segmented a.active {
+    background: var(--surface-high);
+    color: var(--text);
+}
+
+/* Station card styling */
+.station-card {
+    background: var(--surface);
+    border: 1px solid var(--surface-highest);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.15s;
+}
+
+.station-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.4);
+}
+
+.station-card.recommended {
+    border-color: var(--primary);
+    box-shadow: 0 0 20px -3px rgba(16, 185, 129, 0.35);
+}
+
+/* Badge styling */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.badge-dc {
+    background: rgba(255, 185, 95, 0.15);
+    color: var(--tertiary);
+}
+
+.badge-ac {
+    background: rgba(147, 204, 255, 0.15);
+    color: var(--secondary);
+}
+
+.badge-rec {
+    background: rgba(78, 222, 163, 0.15);
+    color: var(--primary);
+}
+
+/* Gauge bar */
+.gauge {
+    width: 100%;
+    height: 8px;
+    background: var(--surface-highest);
+    border-radius: 999px;
+    overflow: hidden;
+    margin: 8px 0;
+}
+
+.gauge-bar {
+    height: 100%;
+    border-radius: 999px;
+    transition: width 0.3s, background-color 0.3s;
+}
+
+.gauge[data-level="ok"] .gauge-bar {
+    background: var(--primary);
+}
+
+.gauge[data-level="mid"] .gauge-bar {
+    background: var(--tertiary);
+}
+
+.gauge[data-level="low"] .gauge-bar {
+    background: var(--error-strong);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Mobile Responsiveness Improvements */
+@media (max-width: 768px) {
+    .station-specs {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+    }
+
+    .station-card {
+        padding: 16px !important;
+    }
+
+    .station-name {
+        font-size: 14px !important;
+    }
+
+    .station-address {
+        font-size: 12px !important;
+    }
+
+    .metric {
+        font-size: 16px !important;
+    }
+
+    .brand-container {
+        margin-bottom: 24px !important;
+    }
+
+    .brand-mark {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 24px !important;
+    }
+
+    .brand-name {
+        font-size: 24px !important;
+    }
+
+    .tagline {
+        font-size: 12px !important;
+    }
+
+    /* Streamlit mobile adjustments */
+    .stColumn {
+        min-width: 100% !important;
+    }
+
+    .stForm {
+        padding: 0 !important;
+    }
+
+    /* Map responsive */
+    .folium {
+        width: 100% !important;
+        height: 300px !important;
+    }
+}
+
+/* Enhanced animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.station-card {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Better scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--surface-lowest);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--surface-highest);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--surface-high);
+}
+
+/* Enhanced button hover effects */
+.stButton > button {
+    transition: all 0.2s ease !important;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 20px -3px rgba(16, 185, 129, 0.5) !important;
+}
+
+.stButton > button:active {
+    transform: translateY(0) !important;
+}
+
+/* Better expander styling */
+.stExpander {
+    transition: all 0.2s ease !important;
+}
+
+.stExpander:hover {
+    border-color: var(--primary) !important;
+}
+
+/* Enhanced metric cards */
+.stMetric {
+    transition: all 0.2s ease !important;
+}
+
+.stMetric:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.4);
+}
+
+/* Improved table styling on mobile */
+@media (max-width: 640px) {
+    .stDataFrame {
+        font-size: 12px !important;
+    }
+
+    .stDataFrame th,
+    .stDataFrame td {
+        padding: 8px !important;
+    }
+}
+
+/* Enhanced form containers */
+.stForm {
+    border: 1px solid var(--surface-highest) !important;
+    border-radius: 16px !important;
+    padding: 24px !important;
+    background: var(--surface-low) !important;
+}
+
+/* Better focus states */
+.stTextInput > div > div > input:focus,
+.stNumberInput > div > div > input:focus {
+    outline: none !important;
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px rgba(78, 222, 163, 0.15) !important;
+}

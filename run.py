@@ -1,20 +1,12 @@
 # run.py
-# Entry point to run the FastAPI application
+# Entry point to run the Streamlit application
 # Usage: python run.py
 
+import subprocess
 import sys
 import os
 
-# Add backend directory to Python path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'backend'))
-
-import uvicorn
-
 if __name__ == "__main__":
-    # Run the FastAPI application with Uvicorn
-    uvicorn.run(
-        "app.main:app",
-        host="0.0.0.0",
-        port=8000,
-        reload=True  # Enable auto-reload during development
-    )
+    # Run the Streamlit application
+    app_path = os.path.join(os.path.dirname(__file__), "app", "main.py")
+    subprocess.run([sys.executable, "-m", "streamlit", "run", app_path])

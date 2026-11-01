@@ -9,36 +9,36 @@ import os
 
 # Paths
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RAW_STATIONS_PATH = os.path.join(BASE_DIR, "data", "bhubaneswar_stations.csv")
+RAW_STATIONS_PATH = os.path.join(BASE_DIR, "data", "odisha_stations.csv")
 CLEANED_DATA_PATH = os.path.join(BASE_DIR, "data", "cleaned_data.csv")
 
 def preprocess_stations():
     """
     Load and preprocess station data
-    Removes rows with missing coordinates, non-Bhubaneswar locations, and non-operational stations
+    Removes rows with missing coordinates, non-operational stations, and filters for car vehicles
     """
     # Load raw station data
     df = pd.read_csv(RAW_STATIONS_PATH)
-    
+
     # Remove rows with missing latitude or longitude
     df = df.dropna(subset=['latitude', 'longitude'])
-    
+
     # Keep only operational stations
     if 'is_operational' in df.columns:
         df = df[df['is_operational'] == True]
-    
-    # Keep only Bhubaneswar stations (simple coordinate check)
-    # Bhubaneswar approximate bounds: 20.2 to 20.4 N, 85.7 to 85.9 E
-    df = df[
-        (df['latitude'] >= 20.2) & (df['latitude'] <= 20.4) &
-        (df['longitude'] >= 85.7) & (df['longitude'] <= 85.9)
-    ]
-    
+
+    # Keep only car stations
+    if 'vehicle_type' in df.columns:
+        df = df[df['vehicle_type'] == 'car']
+        print(f"Filtered to {len(df)} car stations")
+    else:
+        print("Warning: vehicle_type column not found, keeping all stations")
+
     # Save cleaned data
     df.to_csv(CLEANED_DATA_PATH, index=False)
     print(f"Preprocessed {len(df)} stations")
     print(f"Saved to: {CLEANED_DATA_PATH}")
-    
+
     return df
 
 def generate_battery_training_data(output_path: str, num_samples: int = 1000):

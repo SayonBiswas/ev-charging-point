@@ -1,0 +1,628 @@
+station_id,station_name,latitude,longitude,charger_type,charger_rating_kw,total_connectors,address,is_operational,city,vehicle_type,operator,connector_standard,district
+1,UJOY - Jaripal (Angul),20.579145,85.435665,AC,7.4,1,"Jaripal, Odisha Angul",True,Angul,car,UJOY,Type-II AC,Angul
+2,IOCL - Nizigarh (Angul),20.617485,85.19248,AC,3.3,1,"At- Nizigarh Ps- Hindol Dist- Dhenkanal, Angul, Odisha",True,Angul,two_wheeler,IOCL,LEV AC Charge point,Angul
+3,BPCL - Maidharpur (Angul),20.692445,85.184858,AC,3.0,1,"At/Po - Maidharpur, Ps - Banarpal, Angul, Odisha",True,Maidharpur,two_wheeler,BPCL,Bharat AC,Angul
+4,HPCL - Babanda Hindol (Angul),20.723803,85.414207,AC,7.4,1,"Babanda Hindol, Angul, Angul, Odisha",True,Dhalapur,car,HPCL,Type-II AC,Angul
+5,HPCL - Girdhabasa (Angul),20.732765,85.162811,AC,7.4,1,"Girdhabasa, Odisha 759128 Angul",True,Angul,car,HPCL,Type-II AC,Angul
+6,IOCL - Bantala (Angul),20.739697,85.069672,AC,3.3,1,At/Po- Bantala Dist- Angul Odisha 759129,True,Angul,two_wheeler,IOCL,LEV AC Charge point,Angul
+7,IOCL - Garhsantri (Angul),20.808212,85.211305,AC,3.3,1,"At/Po- Garhsantri Ps- Banarpal Dist- Angul, Angul, Odisha",True,Angul,two_wheeler,IOCL,LEV AC Charge point,Angul
+8,HPCL - Panchamahala Near Anugul Rto Office (Angul),20.82,85.06,DC,30.0,1,"Panchamahala Near Anugul Rto Office, Angul, Odisha",True,Anugul,car,HPCL,CCS-II,Angul
+9,IOCL - Angul Town (Angul),20.831695,85.09007,AC,3.3,1,Angul Town Ps Angul Dist- Angul State- Odisha,True,Angul,two_wheeler,IOCL,LEV AC Charge point,Angul
+10,Tata Power - Trupti Automotives (Angul),20.831756,85.24166,DC,25.0,1,"Trupti Automotives, Angul, Nh 55, Telco Chowk, Nuahata, Banarpal, Odisha 759128",True,Angul,car,Tata Power,CCS-II,Angul
+11,Tata Power - Trupti Automotives (Angul),20.831756,85.24166,DC,15.0,1,"Trupti Automotives, Angul, Nh 55, Telco Chowk, Nuahata, Banarpal, Odisha 759128",True,Angul,two_wheeler,Tata Power,Bharat DC-001,Angul
+12,Tata Power - Samal Equip (Angul),20.832862,85.238258,DC,30.0,1,"Samal Equip, Nuahata, Odisha 759128",True,Angul,car,Tata Power,CCS-II,Angul
+13,Tata Power - Samal Equip (Angul),20.832862,85.238258,DC,15.0,1,"Samal Equip, Nuahata, Odisha 759128",True,Angul,two_wheeler,Tata Power,Bharat DC-001,Angul
+14,IOCL - Kandasar Angul (Angul),20.842676,85.135841,DC,30.0,1,"Indianoil Dealer Kandasar Angul. Dist-Angul, Angul, Odisha",True,Angul,car,IOCL,CCS-II,Angul
+15,BPCL - Plot No (Angul),20.843754,85.111216,AC,3.0,1,"Plot No-4911/7115/10621, At Mouza-Turang, Ps/Tahsil-Angul, Angul, Odisha",True,Angul,two_wheeler,BPCL,Bharat AC,Angul
+16,Tata Power - Hotel Prasanti (Angul),20.845148,85.116182,DC,30.0,2,"Hotel Prasanti, Nh 55, Turanga Dist, Angul, Odisha 759123",True,Angul,car,Tata Power,CCS-II + Type-II AC,Angul
+17,IOCL - Turanga Banarpal (Angul),20.856939,85.124771,AC,3.3,1,". Turanga Banarpal Dist. Angul, Angul, Odisha",True,Angul,two_wheeler,IOCL,LEV AC Charge point,Angul
+18,IOCL - Chandi Bazar Kumunda (Angul),20.864291,85.085022,AC,3.3,1,"Chandi Bazar Kumunda Dist. Angul, Angul, Odisha",True,Angul,two_wheeler,IOCL,LEV AC Charge point,Angul
+19,IOCL - Village Sanahula (Angul),20.870092,84.688927,AC,3.3,1,"Village Sanahula Ps Thakurgarh Tahasil Athmalik Dist Angul, Angul, Odisha",True,Angul,two_wheeler,IOCL,LEV AC Charge point,Angul
+20,BPCL - Village Tentoi (Angul),20.894777,85.171786,AC,3.0,1,"Village Tentoi, Ps/Tahasil Banarpal, Mouza Tentoi, Angul, Odisha",True,Angul,two_wheeler,BPCL,Bharat AC,Angul
+21,HPCL - Mouza Laxmidharpur Jerenga (Angul),20.900998,84.845818,AC,7.4,1,"At Mouza Laxmidharpur Jerenga, Ps - Jarapada On Nh55 759127, Angul, Odisha",True,Laxmidharpur,car,HPCL,Type-II AC,Angul
+22,IOCL - Badajharana (Angul),20.916489,85.071561,AC,3.3,1,At- Badajharana Po- Natada Ps- Angul Dist-Angul Odisha- 759123,True,Angul,two_wheeler,IOCL,LEV AC Charge point,Angul
+23,BPCL - Near Ballar Chhak (Angul),20.935186,85.225638,DC,60.0,2,"Near Ballar Chhak, Angarua, On Nh 53, Angul, Odisha",True,Talcher,car,BPCL,CCS,Angul
+24,IOCL - Boinda Angul Orissa (Angul),20.939247,84.700312,AC,3.3,1,Boinda Angul Orissa,True,Angul,two_wheeler,IOCL,LEV AC Charge point,Angul
+25,HPCL - Talcher (Angul),20.942756,85.225865,AC,7.4,1,"Talcher, Odisha 759107 Angul",True,Angul,car,HPCL,Type-II AC,Angul
+26,IOCL - Dera South Bolanda Road Talcher (Angul),20.94545,85.185336,AC,7.4,1,"At/Po Dera South Bolanda Road Talcher, Angul, Odisha",True,Angul,car,IOCL,Type-II AC,Angul
+27,BPCL - Near Handidhua Chhak (Angul),20.945908,85.184799,AC,3.0,1,"Near Handidhua Chhak, Dera, Ps: Colliery, Angul, Odisha",True,Talcher,two_wheeler,BPCL,Bharat AC,Angul
+28,IOCL - Dhaurapali Rajkishorenagar Angul (Angul),20.945916,84.463997,AC,3.3,1,". Dhaurapali Rajkishorenagar Angul, Angul, Odisha",True,Angul,two_wheeler,IOCL,LEV AC Charge point,Angul
+29,IOCL - Kumunda Talcher (Angul),20.975732,85.030713,AC,3.3,1,At/Po- Kumunda Talcher Dist- Angul State- Odisha,True,Angul,two_wheeler,IOCL,LEV AC Charge point,Angul
+30,IOCL - Angul (Angul),20.984414,84.572742,AC,3.3,1,Nh55 Thelconali Dist. Angul Odisha,True,Angul,two_wheeler,IOCL,LEV AC Charge point,Angul
+31,BPCL - Village Gurujanga (Angul),20.994726,84.556518,AC,3.0,1,"Village Gurujanga, Mouza Gurujanga, Ps/Tahasil-Kishorenagar, Angul, Odisha",True,Gurujanga,two_wheeler,BPCL,Bharat AC,Angul
+32,HPCL - Maradahariharpur (Angul),20.997647,85.029076,AC,7.4,1,"Hpcl Dealer At - Maradahariharpur, Po - Kumunda Ps - Colliery, Talcher 759103, Angul, Odisha",True,Maradahariharpur,car,HPCL,Type-II AC,Angul
+33,BPCL - Talcher (Angul),20.999442,85.187446,DC,60.0,2,"At Po - Radharamanpur, Angul, Odisha",True,Talcher,car,BPCL,CCS,Angul
+34,IOCL - Angul (Angul),21.016569,84.925224,AC,3.3,1,"Sh-63 Kosala Ps Chhendipada Dist. Angul, Angul, Odisha",True,Angul,two_wheeler,IOCL,LEV AC Charge point,Angul
+35,BPCL - Tentuloi Gopinathpur (Angul),21.046894,84.89414,DC,60.0,2,"At Tentuloi Gopinathpur, Po Kukurpeta Sh 63, Angul, Odisha",True,Chendipada,car,BPCL,CCS,Angul
+36,BPCL - Tentuloi Gopinathpur (Angul),21.046894,84.89414,AC,3.0,1,"At Tentuloi Gopinathpur, Po Kukurpeta Sh 63, Angul, Odisha",True,Chendipada,two_wheeler,BPCL,Bharat AC,Angul
+37,IOCL - Badasada (Angul),21.28585,85.192295,AC,3.3,1,"At/Po Badasada Ps Khamar Pallahara Dist. Angul, Angul, Odisha",True,Angul,two_wheeler,IOCL,LEV AC Charge point,Angul
+38,UJOY - Pal Lahara Rd (Angul),21.30599,85.181529,AC,7.4,1,"Pal Lahara Rd, Chakradharpur, Odisha 759118 Angul",True,Angul,car,UJOY,Type-II AC,Angul
+39,BPCL - Mouza Hatighincha (Angul),21.454689,85.154808,AC,3.0,1,"Mouza Hatighincha, Pallahara, On Nh 49, Angul, Odisha",True,Pallahara,two_wheeler,BPCL,Bharat AC,Angul
+40,BPCL - Kutmara (Balangir),20.202843,82.936206,AC,7.0,1,"Kutmara, Balangir, Odisha",True,Kutmara,car,BPCL,Type II,Balangir
+41,HPCL - Bhawanipatna (Balangir),20.265239,83.123625,AC,3.3,1,"Bhawanipatna, Balangir, Odisha",True,Bhawanipatna,two_wheeler,HPCL,Bharat AC-001,Balangir
+42,IOCL - Bandhupala (Balangir),20.286584,83.162817,AC,3.3,1,At-Bandhupala Po/Ps- Titlagarh Dist-Bolangir Odisha-767033,True,Bolangir,two_wheeler,IOCL,LEV AC Charge point,Balangir
+43,IOCL - Muribahal (Balangir),20.401389,83.018889,AC,7.4,1,Indian Oil Retail Outlet At/Po-Muribahal Ps-Kantabanji Dist-Bolangir Odisha Pin-767037,True,Bolangir,car,IOCL,Type-II AC,Balangir
+44,IOCL - Dungripali (Balangir),20.458813,83.509435,AC,3.3,1,At- Dungripali Po/Ps - Tusura Dist-Bolangir Odisha-767030,True,Bolangir,two_wheeler,IOCL,LEV AC Charge point,Balangir
+45,IOCL - Kukudahad (Balangir),20.468968,82.938854,AC,3.3,1,Indian Oil Retail Outlet At-Kukudahad Po-Kantabanji Dist-Balangir Odisha Pin-767039,True,Bolangir,two_wheeler,IOCL,LEV AC Charge point,Balangir
+46,BPCL - & Po Tusra (Balangir),20.485539,83.486652,AC,7.0,1,"At & Po Tusra, Balangir, Odisha",True,Tusra,car,BPCL,Type II,Balangir
+47,IOCL - Sarasbahal (Balangir),20.529268,83.409756,AC,3.3,1,At-Sarasbahal Po/Ps-Deogaon Tah-Deogaon Dist-Bolangir Odisha Pin-767029,True,Bolangir,two_wheeler,IOCL,LEV AC Charge point,Balangir
+48,IOCL - Ghagara (Balangir),20.644909,82.924038,AC,3.3,1,Indian Oil Retail Outlet At/Po-Ghagara Ps/Tahasil- Belpada Dist-Bolangir Odisha Pin-767026,True,Bolangir,two_wheeler,IOCL,LEV AC Charge point,Balangir
+49,IOCL - Koushal Chowk Palace Line Bolangir (Balangir),20.6923,83.4722,AC,3.3,1,"Koushal Chowk Palace Line Bolangir, Balangir, Odisha",True,Bolangir,two_wheeler,IOCL,LEV AC Charge point,Balangir
+50,IOCL - Salepali (Balangir),20.692806,83.492743,AC,3.3,1,At-Salepali Po- Bolangir Tah-Bolangir Dist-Bolangir Odisha Pin-767001,True,Bolangir,two_wheeler,IOCL,LEV AC Charge point,Balangir
+51,BPCL - Tikrapara (Balangir),20.700922,83.488984,AC,7.0,1,"At/Po Tikrapara, Tikraara, Balangir, Odisha",True,Bolangir,car,BPCL,Type II,Balangir
+52,BPCL - Bolangir (Balangir),20.701933,83.485625,DC,60.0,2,"Po Bolangir, Bolangir, Balangir, Odisha",True,Bolangir,car,BPCL,CCS,Balangir
+53,IOCL - Bolangir (Balangir),20.7122,83.45365,AC,3.3,1,At/Po-Bolangir Tah-Bolangir Dist-Bolangir Odisha Pin-767002,True,Bolangir,two_wheeler,IOCL,LEV AC Charge point,Balangir
+54,BPCL - Dhumamara (Balangir),20.714537,83.446916,AC,7.0,1,"At Dhumamara, Sh-42, P.S. Sadar Tha, Near Little Flower School, Balangir, Odisha",True,Bolangir,car,BPCL,Type II,Balangir
+55,BPCL - Bolangir (Balangir),20.714954,83.494038,DC,60.0,2,"Po Bolangir, Bolangir, Balangir, Odisha",True,Bolangir,car,BPCL,CCS,Balangir
+56,BPCL - Chudapali (Balangir),20.718178,83.282769,AC,7.0,1,"Chudapali, Balangir, Odisha",True,Bolangir,car,BPCL,Type II,Balangir
+57,IOCL - Khaprakhol (Balangir),20.746602,82.855229,AC,3.3,1,At/Po-Khaprakhol Ps-Khaprakhol Dist-Bolangir Odisha Pin-767028,True,Bolangir,two_wheeler,IOCL,LEV AC Charge point,Balangir
+58,IOCL - P.O-Loisingha (Balangir),20.8615,83.5108,AC,3.3,1,"At./P.O-Loisingha P.S- Loisingha Dist -Balangir, Balangir, Odisha",True,Bolangir,two_wheeler,IOCL,LEV AC Charge point,Balangir
+59,IOCL - Sargad (Balangir),20.862967,83.371389,AC,3.3,1,At/Po-Sargad Ps-Bolangir Dist-Bolangir Odisha Odisha Pin-767020,True,Bolangir,two_wheeler,IOCL,LEV AC Charge point,Balangir
+60,HPCL - Balasore Sa (Baleshwar),20.871474,86.765148,AC,7.4,1,"Balasore Sa, Baleshwar, Odisha",True,Balasore,car,HPCL,Type-II AC,Baleshwar
+61,BPCL - Jamjhadi (Baleshwar),21.194867,86.626616,DC,60.0,2,"Jamjhadi, On Nh5, Baleshwar, Odisha",True,Jamjhadi,car,BPCL,CCS,Baleshwar
+62,IOCL - Kharasahapur (Baleshwar),21.248799,86.805815,AC,3.3,1,"Kharasahapur Ps Soro Tahsil Bahanaga Dist. Balasore, Baleshwar, Odisha",True,Baleshwar,two_wheeler,IOCL,LEV AC Charge point,Baleshwar
+63,IOCL - Randakhajuri (Baleshwar),21.271881,86.537132,AC,3.3,1,". Randakhajuri Tahasil Khaira Dist. Balasore, Baleshwar, Odisha",True,Baleshwar,two_wheeler,IOCL,LEV AC Charge point,Baleshwar
+64,IOCL - Kamanapur Telunipokhari (Baleshwar),21.275672,86.705672,AC,3.3,1,"At- Kamanapur Telunipokhari Po- Soro Ps- Soro Dist- Balasore, Baleshwar, Odisha",True,Baleshwar,two_wheeler,IOCL,LEV AC Charge point,Baleshwar
+65,BPCL - Uttareshwar (Baleshwar),21.292849,86.685421,DC,60.0,2,"Uttareshwar, Soro, Baleshwar, Odisha",True,Soro,car,BPCL,CCS,Baleshwar
+66,BPCL - Keshpur (Baleshwar),21.325308,86.73476,DC,60.0,2,"Keshpur, Soro, Baleshwar, Odisha",True,Balasore,car,BPCL,CCS,Baleshwar
+67,HPCL - Baleshwar (Baleshwar),21.34734,86.769769,DC,30.0,1,"8Qw9+Pvv, Bahanaga, Kamaripur, Odisha 756042",True,Baleshwar,car,HPCL,CCS-II,Baleshwar
+68,BPCL - Khantapada (Baleshwar),21.358081,86.784451,DC,30.0,1,"Khantapada, Mouza-Sipura, Baleshwar, Odisha",True,Balasore,car,BPCL,CCS,Baleshwar
+69,BPCL - Manakahani (Baleshwar),21.402573,86.806068,DC,30.0,1,"Manakahani, Po Khantapara, Baleshwar, Odisha",True,Balasore,car,BPCL,CCS,Baleshwar
+70,IOCL - Sergarh (Baleshwar),21.424885,86.830097,AC,3.3,1,"At : Sergarh Dist : Balasore O R I S S A., Baleshwar, Odisha",True,Baleshwar,two_wheeler,IOCL,LEV AC Charge point,Baleshwar
+71,HPCL - Sitaram Ss Balasore Sa (Baleshwar),21.437115,86.8445,AC,7.4,1,"Sitaram Ss Balasore Sa, Baleshwar, Odisha",True,Balasore,car,HPCL,Type-II AC,Baleshwar
+72,IOCL - Mouza: Podasul (Baleshwar),21.473174,86.742158,AC,3.3,1,"Ro Mouza: Podasul Tahasil: Nilagiri District- Balasore, Baleshwar, Odisha",True,Baleshwar,two_wheeler,IOCL,LEV AC Charge point,Baleshwar
+73,UJOY - Kadrabad (Baleshwar),21.481395,86.93969,AC,3.3,1,"Kadrabad, Baleshwar, Odisha",True,Balasore,two_wheeler,UJOY,LEV AC Charge point,Baleshwar
+74,IOCL - O.T.Road Balasore Orissa (Baleshwar),21.494208,86.9201,AC,3.3,1,O.T.Road Balasore Orissa,True,Baleshwar,two_wheeler,IOCL,LEV AC Charge point,Baleshwar
+75,IOCL - Kadambagadi (Baleshwar),21.497117,86.659921,AC,3.3,1,"At-Kadambagadi Po- Garadihi Ps- Berhampur, Baleshwar, Odisha",True,Baleshwar,two_wheeler,IOCL,LEV AC Charge point,Baleshwar
+76,Tata Power - Gramps Auto (Baleshwar),21.497869,86.88961,DC,30.0,1,"Gramps Auto, Bampada, Nh 16 (Old Nh 5), Balasore. State: Odisha, Pin: 756056",True,Balasore,car,Tata Power,CCS-II,Baleshwar
+77,Tata Power - Gramps Auto (Baleshwar),21.497869,86.88961,DC,15.0,1,"Gramps Auto, Bampada, Nh 16 (Old Nh 5), Balasore. State: Odisha, Pin: 756056",True,Balasore,two_wheeler,Tata Power,Bharat DC-001,Baleshwar
+78,BPCL - Remuna Golai (Baleshwar),21.513185,86.893489,DC,60.0,2,"Remuna Golai, Januganj, Baleshwar, Odisha",True,Balasore,car,BPCL,CCS,Baleshwar
+79,BPCL - Odangi (Baleshwar),21.552823,86.961579,DC,60.0,2,"Odangi, Baleshwar, Odisha",True,Balasore,car,BPCL,CCS,Baleshwar
+80,BPCL - Odangi (Baleshwar),21.553906,86.961622,DC,60.0,2,"Nh60, Odangi, Baleshwar, Odisha",True,Odangi,car,BPCL,CCS,Baleshwar
+81,HPCL - Radha Krishna Jew Fs (Baleshwar),21.578236,86.762686,AC,7.4,1,"Radha Krishna Jew Fs, Balasore Sa, Baleshwar, Odisha",True,Balasore,car,HPCL,Type-II AC,Baleshwar
+82,HPCL - Haraparbati Filling Station Balasore Sa (Baleshwar),21.623931,87.182336,AC,7.4,1,"Haraparbati Filling Station Balasore Sa, Baleshwar, Odisha",True,Balasore,car,HPCL,Type-II AC,Baleshwar
+83,IOCL - Bahadalpur (Baleshwar),21.639578,87.181495,AC,3.3,1,"Ksk Bahadalpur Ps Singla Tahasil Basta Dist. Balasore, Baleshwar, Odisha",True,Baleshwar,two_wheeler,IOCL,LEV AC Charge point,Baleshwar
+84,IOCL - Gahirasimulia (Baleshwar),21.657496,87.060757,AC,3.3,1,"At: Gahirasimulia Po: Dandika Via: Bastadist: Balasore, Baleshwar, Odisha",True,Baleshwar,two_wheeler,IOCL,LEV AC Charge point,Baleshwar
+85,IOCL - Remu (Baleshwar),21.663745,87.218896,AC,3.3,1,"Remu Ps Baliapal Dist. Balasore, Baleshwar, Odisha",True,Baleshwar,two_wheeler,IOCL,LEV AC Charge point,Baleshwar
+86,IOCL - Mahadebsarai (Baleshwar),21.703092,87.056781,AC,3.3,1,"At- Mahadebsarai Po-Basta Ps- Basta Dist- Balasore, Baleshwar, Odisha",True,Baleshwar,two_wheeler,IOCL,LEV AC Charge point,Baleshwar
+87,BPCL - Mouza-Mathani (Baleshwar),21.728248,87.131195,DC,60.0,2,"Mouza-Mathani, Ps-Basta, Baleshwar, Odisha",True,Mathani,car,BPCL,CCS,Baleshwar
+88,IOCL - Dahunda Bhogarai (Baleshwar),21.758715,87.384472,AC,3.3,1,". Dahunda Bhogarai Dist. Balasore, Baleshwar, Odisha",True,Baleshwar,two_wheeler,IOCL,LEV AC Charge point,Baleshwar
+89,IOCL - Ulinda-Rajpur (Baleshwar),21.777914,87.210359,AC,3.3,1,"Ulinda-Rajpur Nh-16 Jaleswar Dist. Balasore, Baleshwar, Odisha",True,Baleshwar,two_wheeler,IOCL,LEV AC Charge point,Baleshwar
+90,IOCL - Sekbad (Baleshwar),21.794896,87.214608,AC,3.3,1,". Sekbad Po/Ps- Jaleswar Dist- Balasore, Baleshwar, Odisha",True,Baleshwar,two_wheeler,IOCL,LEV AC Charge point,Baleshwar
+91,BPCL - Station Bazar (Baleshwar),21.797557,87.217959,DC,60.0,2,"Station Bazar, Jaleshwar, Baleshwar, Odisha",True,Jaleswar,car,BPCL,CCS,Baleshwar
+92,IOCL - Koknara (Bargarh),20.922606,82.804951,AC,3.3,1,At-Koknara Po- Paikmal Dist-Bargarh Odisha Pin-768039,True,Bargarh,two_wheeler,IOCL,LEV AC Charge point,Bargarh
+93,IOCL - Salepali (Bargarh),20.930719,82.819352,AC,3.3,1,At/Po-Salepali Ps/Tahasil-Paikmal Dist-Bargarh Odisha-768039,True,Bargarh,two_wheeler,IOCL,LEV AC Charge point,Bargarh
+94,IOCL - Jhankarpali Padampur (Bargarh),20.984493,83.062191,AC,7.4,1,At-Jhankarpali Padampur Po-Rajborasambar Dist-Bargarh Odisha Pin-768036,True,Bargarh,car,IOCL,Type-II AC,Bargarh
+95,IOCL - Padampur (Bargarh),20.996266,83.07255,AC,3.3,1,At/Po/Ps- Padampur Dist- Bargarh Odisha Pin-768036,True,Bargarh,two_wheeler,IOCL,LEV AC Charge point,Bargarh
+96,IOCL - Padampur (Bargarh),21.00087,83.076817,AC,3.3,1,At/Po- Padampur Dist-Bargarh Odisha Pin-768036,True,Bargarh,two_wheeler,IOCL,LEV AC Charge point,Bargarh
+97,IOCL - Badkunjari (Bargarh),21.1325,82.9286,AC,3.3,1,"At - Badkunjari Po - Jagdalpur Dist - Bargarh, Bargarh, Odisha",True,Bargarh,two_wheeler,IOCL,LEV AC Charge point,Bargarh
+98,IOCL - Barpadar (Bargarh),21.161397,83.743379,AC,3.3,1,At/Po-Barpadar Ps/Tah-Bheden Dist-Bargarh Odisha Pin-768104,True,Bargarh,two_wheeler,IOCL,LEV AC Charge point,Bargarh
+99,IOCL - Pahandi (Bargarh),21.161586,83.423739,AC,3.3,1,At-Pahandi Po-Bijepur Dist-Bargarh Odisha-768032,True,Bargarh,two_wheeler,IOCL,LEV AC Charge point,Bargarh
+100,BPCL - Brahmachari (Bargarh),21.25503,83.50702,AC,7.0,1,"Brahmachari, Bargarh, Odisha",True,Bargarh,car,BPCL,Type II,Bargarh
+101,HPCL - Sohela (Bargarh),21.25989,83.352756,AC,7.4,1,"Sohela, Bargarh, Odisha",True,Sohela,car,HPCL,Type-II AC,Bargarh
+102,IOCL - Remunda (Bargarh),21.275271,83.760093,AC,3.3,1,Indian Oil Retail Outlet At-Remunda Tahasil/Ps-Bheden Po-Remunda Dist-Bargarh Odisha-76,True,Bargarh,two_wheeler,IOCL,LEV AC Charge point,Bargarh
+103,BPCL - Karalmal (Bargarh),21.312318,83.313077,DC,30.0,1,"Karalmal Village, NH-6, Bargarh, Odisha",True,Karalmal,car,BPCL,CCS,Bargarh
+104,BPCL - Nagaon (Bargarh),21.314058,83.457303,DC,60.0,3,"Nagaon, Sohela Nh 53, Bargarh, Odisha",True,Bargarh,car,BPCL,CCS + Type II,Bargarh
+105,BPCL - Arjunda (Bargarh),21.314764,83.309047,DC,30.0,1,"At Arjunda, Bargarh, Odisha",True,Arjunda,car,BPCL,CCS,Bargarh
+106,BPCL - Govindpur (Bargarh),21.322526,83.536489,DC,60.0,2,"At Govindpur, Bargarh, Odisha",True,Govindpur,car,BPCL,CCS,Bargarh
+107,BPCL - Sohela (Bargarh),21.323259,83.493619,AC,7.0,1,"Sohela, Bargarh, Odisha",True,Bargarh,car,BPCL,Type II,Bargarh
+108,IOCL - Bhatli Chowk (Bargarh),21.3434,83.6085,AC,3.3,1,At-Bhatli Chowk Po/Dist-Bargarh Orissa,True,Bargarh,two_wheeler,IOCL,LEV AC Charge point,Bargarh
+109,BPCL - Barahaguda (Bargarh),21.351549,83.686734,DC,60.0,2,"At Barahaguda, National Highway No.6, Bargarh, Odisha",True,Bargarh,car,BPCL,CCS,Bargarh
+110,BPCL - At&Po.Rengalipali Camp (Bargarh),21.365323,83.743623,DC,30.0,1,"At&Po.Rengalipali Camp, Nh6, Bargarh, Odisha",True,Attabira,car,BPCL,CCS,Bargarh
+111,IOCL - Ps/Tahasil (Bargarh),21.383732,83.799382,AC,3.3,1,Indian Oil Retail Outlet At/Po/Ps/Tahasil - Attabira Dist-Bargarh Odisha Pin-768027,True,Bargarh,two_wheeler,IOCL,LEV AC Charge point,Bargarh
+112,BPCL - Attabira (Bargarh),21.391815,83.811897,DC,60.0,2,"Attabira, Bargarh, Odisha",True,Attabira,car,BPCL,CCS,Bargarh
+113,BPCL - Godvaga (Bargarh),21.410005,83.840532,DC,60.0,2,"At/Po Godvaga, Bargarh, Odisha",True,Godvaga,car,BPCL,CCS,Bargarh
+114,IOCL - Baddhara (Bargarh),21.556071,83.374815,AC,3.3,1,At-Baddhara Ps-Ambabhona Po-Bhukta Dist- Bargarh Odisha Pin-768045,True,Bargarh,two_wheeler,IOCL,LEV AC Charge point,Bargarh
+115,IOCL - Chicholi (Bargarh),21.584957,83.414891,AC,3.3,1,Indian Oil Retail Outlet At-Chicholi Po-Bhukta Dist-Bargarh Odisha Pin-768045,True,Bargarh,two_wheeler,IOCL,LEV AC Charge point,Bargarh
+116,IOCL - Ruchida (Bargarh),21.60649,83.39232,AC,3.3,1,At/Po- Ruchida Tah/P.S- Ambabhona Dist-Bargarh Orissa,True,Bargarh,two_wheeler,IOCL,LEV AC Charge point,Bargarh
+117,IOCL - Motto Oil India Road (Bhadrak),20.850087,86.778407,AC,3.3,1,"Ksk At/Po-Motto Oil India Road Tah-Chandabali Dist-Bhadrak 756132, Bhadrak, Odisha",True,Bhadrak,two_wheeler,IOCL,LEV AC Charge point,Bhadrak
+118,BPCL - Mouza-Jayanagar (Bhadrak),20.909894,86.449356,AC,3.0,1,"Mouza-Jayanagar, Ps-Dhamnagar, Near Khan Ka Masjid, Bhadrak, Odisha",True,Dhamnagar,two_wheeler,BPCL,Bharat AC,Bhadrak
+119,IOCL - Baincha Chandabali (Bhadrak),20.916596,86.899597,AC,3.3,1,At- Baincha Chandabali Ps- Bashada Dist- Bhadrak Odisha- 756164,True,Bhadrak,two_wheeler,IOCL,LEV AC Charge point,Bhadrak
+120,IOCL - Bidyadharpur (Bhadrak),20.928842,86.775787,AC,3.3,1,At- Bidyadharpur Po- Chudakutipalasa Dist- Bhadrak Odisha,True,Bhadrak,two_wheeler,IOCL,LEV AC Charge point,Bhadrak
+121,IOCL - Mirjapur P.O.Tihidi (Bhadrak),20.992538,86.630394,AC,7.4,1,"At-Mirjapur P.O.Tihidi Dist:Bhadrak, Bhadrak, Odisha",True,Bhadrak,car,IOCL,Type-II AC,Bhadrak
+122,IOCL - Kapagadia Basudevpur (Bhadrak),21.0325,86.393,AC,3.3,1,Kapagadia Basudevpur Dist- Bhadrak Disha Stae- Odisha,True,Bhadrak,two_wheeler,IOCL,LEV AC Charge point,Bhadrak
+123,BPCL - Barpada (Bhadrak),21.082111,86.435073,AC,3.0,1,"At P.O.Barpada, P.S.Bhadrak (R), Bhadrak, Odisha",True,At Po Barapada,two_wheeler,BPCL,Bharat AC,Bhadrak
+124,BPCL - Mouza Asura (Bhadrak),21.116575,86.543992,DC,60.0,2,"Mouza Asura, Po Ranital, Bhadrak, Odisha",True,Bhadrak,car,BPCL,CCS,Bhadrak
+125,IOCL - Basudevpur (Bhadrak),21.126287,86.736775,AC,3.3,1,Basudevpur Dist-Bhadrakorissa,True,Bhadrak,two_wheeler,IOCL,LEV AC Charge point,Bhadrak
+126,IOCL - Agarparakuansmoria (Bhadrak),21.186036,86.385584,AC,3.3,1,"At: Agarparakuansmoria   Po: B.T.Purdist: Bhadrak, Bhadrak, Odisha",True,Bhadrak,two_wheeler,IOCL,LEV AC Charge point,Bhadrak
+127,IOCL - Deuldunguriq (Boudh),20.542391,83.674959,AC,3.3,1,At- Deuldunguriq Po/Ps-Kantamal Dist- Boudhodisha-762017,True,Boudh,two_wheeler,IOCL,LEV AC Charge point,Boudh
+128,IOCL - Purunakatak (Boudh),20.621969,84.421253,AC,3.3,1,"Purunakatak Dist: Boudh Pin: 762 013, Boudh, Odisha",True,Boudh,two_wheeler,IOCL,LEV AC Charge point,Boudh
+129,IOCL - Deuladunguri (Boudh),20.65086,83.74755,AC,3.3,1,"At- Deuladunguri Po-Kantamala Dist- Boudh, Boudh, Odisha",True,Boudh,two_wheeler,IOCL,LEV AC Charge point,Boudh
+130,IOCL - Tangiapali (Boudh),20.684202,84.043796,AC,3.3,1,At- Tangiapali Po- Barapadar Ps- Katamal Dist- Boudh State- Odisha,True,Boudh,two_wheeler,IOCL,LEV AC Charge point,Boudh
+131,BPCL - Biramchandrapur (Boudh),20.7147,84.3629,AC,7.0,1,"Biramchandrapur, Nh 57, Boudh, Odisha",True,Biramchandrapur,car,BPCL,Type II,Boudh
+132,BPCL - Tangarpali (Boudh),20.804044,84.077736,DC,60.0,2,"Tangarpali, Boudh, Boudh, Odisha",True,Boudh,car,BPCL,CCS,Boudh
+133,IOCL - Jamghati (Boudh),20.80439,84.052269,AC,3.3,1,"At-Jamghati On Nh-57 Ps-Baunsuni Dist-Boudh, Boudh, Odisha",True,Boudh,two_wheeler,IOCL,LEV AC Charge point,Boudh
+134,BPCL - Basudebpali (Boudh),20.830149,83.93188,DC,60.0,2,"Basudebpali, Nh 57 Boudh, Boudh, Odisha",True,Manamunda,car,BPCL,CCS,Boudh
+135,IOCL - Khairmal Monomunda Bypass (Boudh),20.83108,83.93735,AC,7.4,1,"Khairmal Monomunda Bypass Nh-57 Dist. Boudh, Boudh, Odisha",True,Boudh,car,IOCL,Type-II AC,Boudh
+136,IOCL - Gambharipadar (Boudh),20.856494,84.276935,AC,3.3,1,At: Gambharipadar Nh-57Po- Balasinga Dist- Boudhodisha.,True,Boudh,two_wheeler,IOCL,LEV AC Charge point,Boudh
+137,BPCL - Niali (Cuttack),20.131046,86.065338,AC,3.0,1,"Niali, Cuttack, Odisha",True,Niali,two_wheeler,BPCL,Bharat AC,Cuttack
+138,BPCL - Sisua (Cuttack),20.246731,85.988105,AC,3.0,1,"At Sisua, P.O Bairoi, Cuttack, Odisha",True,Adaspur-Bairoi,two_wheeler,BPCL,Bharat AC,Cuttack
+139,HPCL - Omm Sai Filling Station Cuttack Sa (Cuttack),20.300243,85.522857,AC,7.4,1,"Omm Sai Filling Station Cuttack Sa, Cuttack, Odisha",True,Cuttack,car,HPCL,Type-II AC,Cuttack
+140,Reliance BP - Bampakuda (Nuahata),20.376877,85.889537,DC,60.0,1,"Plot No.953, Near Grand Bazar, Bampakuda, Nuahata, Cuttack-753011, Odisha., Bhubaneswar",True,Bhubaneswar,car,Reliance BP,CCS-II,Cuttack
+141,UJOY - Shree Raghunath Fueling Center (Cuttack),20.38802,85.550657,AC,7.4,1,"Shree Raghunath Fueling Center, Cuttack, Cuttack, Odisha",True,Cuttack,car,UJOY,Type-II AC,Cuttack
+142,IOCL - Manijanga (Cuttack),20.390686,86.262213,AC,3.3,1,". Manijanga Ps Kishannagar Dist. Cuttack, Cuttack, Odisha",True,Cuttack,two_wheeler,IOCL,LEV AC Charge point,Cuttack
+143,Tata Power - Gugnani Autocars (Cuttack),20.40517,85.879782,DC,25.0,2,"Gugnani Autocars, Pratap Nagari, Plot No- 785, Cuttack. State: Odisha, Pin: 753011",True,Cuttack,car,Tata Power,Combo (CCS-II+CHAdeMO),Cuttack
+144,IOCL - Samantrapur Kisannagar (Cuttack),20.420544,86.084904,AC,3.3,1,"Samantrapur Kisannagar Dist. Cuttack, Cuttack, Odisha",True,Cuttack,two_wheeler,IOCL,LEV AC Charge point,Cuttack
+145,IOCL - Bhagipur (Cuttack),20.421592,85.727771,AC,3.3,1,"Bhagipur Ps Banki Tahasil Dampada, Cuttack, Odisha",True,Cuttack,two_wheeler,IOCL,LEV AC Charge point,Cuttack
+146,UJOY - Cuttack Banki Road (Cuttack),20.43511,85.76973,AC,7.4,1,"Cuttack Banki Road, Chakradharpur, Cuttack, Odisha",True,Cuttack,car,UJOY,Type-II AC,Cuttack
+147,BPCL - Village-Karilo (Cuttack),20.438332,85.150758,DC,60.0,2,"Village-Karilo, Ps-Kanpur, Cuttack, Odisha",True,Narsinghpur,car,BPCL,CCS,Cuttack
+148,HPCL - Sri Achyuta Filling Station Cuttack Sa (Cuttack),20.438712,86.172231,AC,7.4,1,"Sri Achyuta Filling Station Cuttack Sa, Cuttack, Odisha",True,Cuttack,car,HPCL,Type-II AC,Cuttack
+149,BPCL - Trishulia Chowk (Cuttack),20.441079,85.828426,AC,3.0,1,"Trishulia Chowk, Cuttack, Odisha",True,Cuttack,two_wheeler,BPCL,Bharat AC,Cuttack
+150,BPCL - Link Road (Cuttack),20.448719,85.895195,DC,7.0,2,"Link Road, Cuttack, Odisha",True,Cuttack,two_wheeler,BPCL,LEV DC,Cuttack
+151,Ola - Link Roadcuttack Odisha (Cuttack),20.44872,85.8952,DC,7.0,1,Link Roadcuttack Odisha,True,Cuttack,two_wheeler,OLA,LEV DC Charge Point (IS-17017-2-6),Cuttack
+152,Ather Grid - Urmila Complex (Cuttack),20.449152,85.898762,DC,3.3,2,"Urmila Complex, At Po: Madhupatna, Near Madhupatna Police Station, Cuttack, Orissa (763010)",True,Cuttack,two_wheeler,Ather,LEV DC Charge Point (IS-17017-2-7),Cuttack
+153,IOCL - Khannagar Ring Roadcuttack Pin (Cuttack),20.450606,85.886074,AC,3.3,1,Khannagar Ring Roadcuttack Pin-753012Ph.2312019 R 2619547 Orissa. Godrej Lock No.11004,True,Cuttack,two_wheeler,IOCL,LEV AC Charge point,Cuttack
+154,IOCL - Kendupalipo: Nukhapada (Cuttack),20.458679,85.096367,AC,3.3,1,"At: Kendupalipo: Nukhapada Dist: Cuttack  Lock No : 11003 X 2 (One Set), Cuttack, Odisha",True,Cuttack,two_wheeler,IOCL,LEV AC Charge point,Cuttack
+155,UJOY - Panchamukhi (Cuttack),20.460474,85.078896,AC,3.3,1,"Panchamukhi, Cuttack, Odisha",True,Cuttack,two_wheeler,UJOY,LEV AC Charge point,Cuttack
+156,Ather Grid - Cuttack (Cuttack),20.462176,85.883744,DC,3.3,1,"461, Mahtab Rd, Dolmundai, Cuttack, Odisha 753001",True,Cuttack,two_wheeler,Ather,LEV DC Charge Point (IS-17017-2-7),Cuttack
+157,Ather Grid - Service Rd (Cuttack),20.466062,85.905361,DC,3.3,1,"Service Rd, Gandarpur, Cuttack, Odisha 753003",True,Cuttack,two_wheeler,Ather,LEV DC Charge Point (IS-17017-2-7),Cuttack
+158,HPCL - Jaga Balia Filling Point Cuttack Sa (Cuttack),20.46761,85.523575,AC,7.4,1,"Jaga Balia Filling Point Cuttack Sa, Cuttack, Odisha",True,Cuttack,car,HPCL,Type-II AC,Cuttack
+159,IOCL - Kumbhiput (Cuttack),20.467753,85.524317,AC,3.3,1,"Kumbhiput Tahasil Tigria Cuttack, Cuttack, Odisha",True,Cuttack,two_wheeler,IOCL,LEV AC Charge point,Cuttack
+160,UJOY - Padmini Filling Station (Cuttack),20.478512,86.254121,AC,7.4,1,"Padmini Filling Station, Cuttack, Cuttack, Odisha",True,Cuttack,car,UJOY,Type-II AC,Cuttack
+161,IOCL - Salepur Cuttack Orissa (Cuttack),20.481678,86.087473,AC,3.3,1,Salepur Cuttack Orissa,True,Cuttack,two_wheeler,IOCL,LEV AC Charge point,Cuttack
+162,IOCL - Bhatpada (Cuttack),20.481738,86.046295,AC,3.3,1,"At Bhatpada Po- Salepur Dist- Cuttack, Cuttack, Odisha",True,Cuttack,two_wheeler,IOCL,LEV AC Charge point,Cuttack
+163,Tata Power - Dion Automotives (Cuttack),20.481787,85.817213,DC,25.0,1,"Dion Automotives, Cda Sec 11, Cda Sector 11, Cuttack, Odisha 753014",True,Cuttack,car,Tata Power,CCS-II,Cuttack
+164,Tata Power - Dion Automotives (Cuttack),20.481787,85.817213,DC,15.0,1,"Dion Automotives, Cda Sec 11, Cda Sector 11, Cuttack, Odisha 753014",True,Cuttack,two_wheeler,Tata Power,Bharat DC-001,Cuttack
+165,IOCL - Nuabandha Athagarh (Cuttack),20.484138,85.568654,AC,3.3,1,Nuabandha Athagarh Dist- Cuttack State Odisha,True,Cuttack,two_wheeler,IOCL,LEV AC Charge point,Cuttack
+166,BPCL - Salepur (Cuttack),20.485311,86.11127,AC,3.0,1,"Salepur, Cuttack, Odisha",True,Salepur,two_wheeler,BPCL,Bharat AC,Cuttack
+167,BPCL - Gunjarpur (Cuttack),20.49554,85.95433,AC,3.0,1,"At Gunjarpur, P.O. Bhairpur, P.S. Jagatpur, Cuttack, Odisha",True,Jagatpur,two_wheeler,BPCL,Bharat AC,Cuttack
+168,BPCL - Plot No (Cuttack),20.51118,85.63709,AC,3.0,1,"Plot No 262/1107 (P), 262/1115, Khata No 41/459, 41/465, Cuttack, Odisha",True,Cuttack,two_wheeler,BPCL,Bharat AC,Cuttack
+169,IOCL - Birakishorepur Athagarh (Cuttack),20.514619,85.594381,AC,3.3,1,"Ksk Birakishorepur Athagarh, Cuttack, Odisha",True,Cuttack,two_wheeler,IOCL,LEV AC Charge point,Cuttack
+170,IOCL - Manguli (Cuttack),20.52041,85.933882,AC,3.3,1,Manguli Nh-5 Cuttack-754025 Ph.0671-2693575 R-2342275 Orissa. Lock No.12007,True,Cuttack,two_wheeler,IOCL,LEV AC Charge point,Cuttack
+171,IOCL - Viruda (Cuttack),20.528803,85.534043,AC,3.3,1,"At/Po- Viruda Ps- Tigiria Dist-Cuttack, Cuttack, Odisha",True,Cuttack,two_wheeler,IOCL,LEV AC Charge point,Cuttack
+172,Tata Power - Trupti Automotives (Cuttack),20.529316,85.949237,DC,25.0,1,"Trupti Automotives, Nh 16 - Manguli Chowk, Nh16, Manguli Chowk, Odisha 754025",True,Cuttack,car,Tata Power,CCS-II,Cuttack
+173,Tata Power - Trupti Automotives (Cuttack),20.529316,85.949237,DC,15.0,1,"Trupti Automotives, Nh 16 - Manguli Chowk, Nh16, Manguli Chowk, Odisha 754025",True,Cuttack,two_wheeler,Tata Power,Bharat DC-001,Cuttack
+174,HPCL - Sakuntala Filling Station Cuttack Sa (Cuttack),20.5358,85.91399,AC,7.4,1,"Sakuntala Filling Station Cuttack Sa, Cuttack, Odisha",True,Cuttack,car,HPCL,Type-II AC,Cuttack
+175,HPCL - Kairapari (Cuttack),20.55127,85.985496,DC,30.0,2,"Hpcl Retail Outlet At- Kairapari, On Nh-16 On Cuttack-Chandikhol Road 754025, Cuttack, Odisha",True,Cuttack,car,HPCL,CCS-II + Type-II AC,Cuttack
+176,IOCL - Agrahat Choudwar (Cuttack),20.558479,85.909025,AC,3.3,1,"Agrahat Choudwar Dist. Cuttack, Cuttack, Odisha",True,Cuttack,two_wheeler,IOCL,LEV AC Charge point,Cuttack
+177,IOCL - Kaudokolo (Cuttack),20.649902,86.180467,AC,3.3,1,"At Kaudokolo Ps Mahanga Dist Cuttack, Cuttack, Odisha",True,Cuttack,two_wheeler,IOCL,LEV AC Charge point,Cuttack
+178,HPCL - Baba Filling Stationcuttack Sa (Cuttack),20.667018,85.937256,AC,7.4,1,"Baba Filling Stationcuttack Sa, Cuttack, Odisha",True,Cuttack,car,HPCL,Type-II AC,Cuttack
+179,BPCL - Karadakhaman (Deogarh),21.234576,85.002554,DC,60.0,2,"At-Karadakhaman, Po/Gp- Karlaga, Ps-Kundheigola, Deogarh, Odisha",True,Karadakhaman,car,BPCL,CCS,Deogarh
+180,HPCL - Reamal (Deogarh),21.357203,84.656987,AC,7.4,1,"Reamal, Deogarh, Odisha",True,Reamal,car,HPCL,Type-II AC,Deogarh
+181,BPCL - Kalla (Deogarh),21.526925,85.035591,DC,60.0,2,"Kalla, Kalla Deogarh, Deogarh, Odisha",True,Barkote,car,BPCL,CCS,Deogarh
+182,IOCL - Kailash (Deogarh),21.5436,84.6183,AC,3.3,1,At:Kailash; Po.: Tileibani Dist.: Deogarh; Orissa,True,Deogarh,two_wheeler,IOCL,LEV AC Charge point,Deogarh
+183,IOCL - Ratan Bazar Dhenkanal Town (Dhenkanal),20.673479,85.589121,AC,3.3,1,"At-Ratan Bazar Dhenkanal Town Dist-Dhenkanal, Dhenkanal, Odisha",True,Dhenkanal,two_wheeler,IOCL,LEV AC Charge point,Dhenkanal
+184,BPCL - Mouza Balaramprasad (Dhenkanal),20.772825,85.40058,DC,60.0,2,"Mouza Balaramprasad, Nh 42, Dhenkanal, Odisha",True,Nh 42,car,BPCL,CCS,Dhenkanal
+185,BPCL - Mouza Balaramprasad (Dhenkanal),20.772825,85.40058,AC,3.0,1,"Mouza Balaramprasad, Nh 42, Dhenkanal, Odisha",True,Nh 42,two_wheeler,BPCL,Bharat AC,Dhenkanal
+186,BPCL - Mouza-Ghantalpasi (Dhenkanal),20.801545,85.303122,DC,60.0,2,"At Mouza-Ghantalpasi, Ps-Motanga, Ps No-17, Tahasil-Dhenkanal, Dhenkanal, Odisha",True,Meramundili,car,BPCL,CCS,Dhenkanal
+187,BPCL - Mouza-Ghantalpasi (Dhenkanal),20.801545,85.303122,AC,3.0,1,"At Mouza-Ghantalpasi, Ps-Motanga, Ps No-17, Tahasil-Dhenkanal, Dhenkanal, Odisha",True,Meramundili,two_wheeler,BPCL,Bharat AC,Dhenkanal
+188,IOCL - Kharagprasad (Dhenkanal),20.816567,85.286007,AC,3.3,1,"At/Po-Kharagprasad Via-Meramundali Ps-Motangadist-Dhenkanal, Dhenkanal, Odisha",True,Dhenkanal,two_wheeler,IOCL,LEV AC Charge point,Dhenkanal
+189,BPCL - Khaat No (Dhenkanal),20.816884,85.283379,AC,3.0,1,"Khaat No-546/207, Plot No-3913/5552, Kurunti, Kusupanga, Motonga, Dhenkanal, Dhenkanal, Odisha",True,Dhenkanal,two_wheeler,BPCL,Bharat AC,Dhenkanal
+190,BPCL - Bhuban (Dhenkanal),20.893016,85.833328,AC,3.0,1,"At/Po Bhuban, Nh-200, Dhenkanal, Odisha",True,Bhuban,two_wheeler,BPCL,Bharat AC,Dhenkanal
+191,IOCL - Maa Batatarini Chhaka (Dhenkanal),20.894033,85.815315,AC,3.3,1,"At- Maa Batatarini Chhaka Po- Bhuban Po- Bhuban, Dhenkanal, Odisha",True,Dhenkanal,two_wheeler,IOCL,LEV AC Charge point,Dhenkanal
+192,IOCL - Rekula (Dhenkanal),20.91989,85.544038,AC,3.3,1,At-Rekula Po-Kamakhayanagar Dist- Dhenkanal-759018 Odisha,True,Dhenkanal,two_wheeler,IOCL,LEV AC Charge point,Dhenkanal
+193,HPCL - Gamargola Angul (Dhenkanal),20.921894,85.843198,AC,7.4,1,"Gamargola Angul, Dhenkanal, Odisha",True,Gamargola,car,HPCL,Type-II AC,Dhenkanal
+194,BPCL - Sarang (Dhenkanal),20.922973,85.257114,DC,60.0,2,"At - Sarang, Ps - Parjang, Dhenkanal, Odisha",True,Sarang,car,BPCL,CCS,Dhenkanal
+195,IOCL - Kualo (Dhenkanal),20.961908,85.283089,AC,3.3,1,"At/Po- Kualo Ps- Parjang Dist - Dhenkanal, Dhenkanal, Odisha",True,Dhenkanal,two_wheeler,IOCL,LEV AC Charge point,Dhenkanal
+196,BPCL - Plot No (Dhenkanal),20.964093,85.540621,DC,60.0,2,"Plot No 760/2130, Nuapani, Tahasil - Kamakhyanag, Dhenkanal, Odisha",True,Kamakhyanagar,car,BPCL,CCS,Dhenkanal
+197,HPCL - Angul (Dhenkanal),20.986013,85.663324,AC,7.4,1,"Angul, Dhenkanal, Odisha",True,Angul,car,HPCL,Type-II AC,Dhenkanal
+198,IOCL - Kankadahad (Dhenkanal),21.048891,85.580503,AC,3.3,1,"Ksk At/Po- Kankadahad Dist- Dhenkanal, Dhenkanal, Odisha",True,Dhenkanal,two_wheeler,IOCL,LEV AC Charge point,Dhenkanal
+199,BPCL - Bharat Petroleum Dealers (Gajapati),18.773202,84.106841,AC,3.0,1,"Bharat Petroleum Dealers, Near Municipality Check Gate, Gajapati, Odisha",True,Parlekhamedi,two_wheeler,BPCL,Bharat AC,Gajapati
+200,IOCL - Paralakhemundi Gajapati (Gajapati),18.777067,84.087353,AC,7.4,1,"Ro Paralakhemundi Gajapati, Gajapati, Odisha",True,Gajapati,car,IOCL,Type-II AC,Gajapati
+201,IOCL - Brahman Sitapur (Gajapati),18.778415,84.124031,AC,3.3,1,Brahman Sitapur Po/Ps- Paralakhemundi Dist- Gajapati Odisha-761200,True,Gajapati,two_wheeler,IOCL,LEV AC Charge point,Gajapati
+202,IOCL - Parsurampur (Gajapati),18.80781,83.94497,AC,3.3,1,At- Parsurampur Via- Hadobhangi Ps- Kasinagar Dist- Gajapatiodisha,True,Gajapati,two_wheeler,IOCL,LEV AC Charge point,Gajapati
+203,IOCL - Nuagada (Gajapati),19.063665,84.083197,AC,3.3,1,At /Po Nuagada Dist- Gajapati Odisha-761214,True,Gajapati,two_wheeler,IOCL,LEV AC Charge point,Gajapati
+204,IOCL - Gajapati (Gajapati),19.455271,84.358925,AC,3.3,1,"Nh 326 Luhagudi Dist. Gajapati, Gajapati, Odisha",True,Gajapati,two_wheeler,IOCL,LEV AC Charge point,Gajapati
+205,IOCL - Jayantipur (Ganjam),19.095291,84.617144,AC,3.3,1,"At/Po Jayantipur Ps Jarada Tahsil Patrapur Dist. Ganjam, Ganjam, Odisha",True,Ganjam,two_wheeler,IOCL,LEV AC Charge point,Ganjam
+206,BPCL - Girisola (Ganjam),19.148694,84.742003,DC,60.0,2,"Girisola, Ganjam, Odisha",True,Berhampur,car,BPCL,CCS,Ganjam
+207,IOCL - Pitatali P S Nuagaon (Ganjam),19.173814,84.668671,AC,3.3,1,"At Pitatali P S Nuagaon Tahasil Chikiti Dist. Ganjam, Ganjam, Odisha",True,Ganjam,two_wheeler,IOCL,LEV AC Charge point,Ganjam
+208,BPCL - Near Bhaliagada (Ganjam),19.181025,84.72525,DC,30.0,1,"Near Bhaliagada, At & Po - Girisola, Nh5, Ganjam, Odisha",True,Girisola,car,BPCL,CCS,Ganjam
+209,BPCL - Girisola (Ganjam),19.183324,84.727616,DC,30.0,1,"Po Girisola, Ganjam, Odisha",True,Girisola,car,BPCL,CCS,Ganjam
+210,IOCL - Kanamana (Ganjam),19.251745,84.708178,AC,3.3,1,"At/Po- Kanamana Ps- Chamakhandi Dist- Ganjam, Ganjam, Odisha",True,Ganjam,two_wheeler,IOCL,LEV AC Charge point,Ganjam
+211,IOCL - Gopalpur (Ganjam),19.263846,84.89902,AC,3.3,1,At/Po/Ps- Gopalpur Dist- Ganjam Odisha (761002),True,Ganjam,two_wheeler,IOCL,LEV AC Charge point,Ganjam
+212,IOCL - Ganjam (Ganjam),19.290896,84.80594,AC,3.3,1,"Nh 16 Lanjipalli Berhampur Dist. Ganjam, Ganjam, Odisha",True,Ganjam,two_wheeler,IOCL,LEV AC Charge point,Ganjam
+213,IOCL - Ganjam (Ganjam),19.296622,84.82324,AC,3.3,1,"Nh 16 Ankuli Berhampur Dist. Ganjam, Ganjam, Odisha",True,Ganjam,two_wheeler,IOCL,LEV AC Charge point,Ganjam
+214,IOCL - Mango Market Radhanathpur Berhampore (Ganjam),19.297165,84.78133,AC,3.3,1,"Mango Market Radhanathpur Berhampore, Ganjam, Odisha",True,Ganjam,two_wheeler,IOCL,LEV AC Charge point,Ganjam
+215,Tata Power - Brahmapur (Ganjam),19.298988,84.831762,DC,25.0,2,"7Rxj+Mm4, Ankuli, Brahmapur, Odisha 760010",True,Brahmapur,car,Tata Power,Combo (CCS-II+CHAdeMO),Ganjam
+216,HPCL - Bhubaneswar Sa (Ganjam),19.301236,84.793672,AC,7.4,1,"Bhubaneswar Sa, Ganjam, Odisha",True,Chhatrapur,car,HPCL,Type-II AC,Ganjam
+217,IOCL - Bijipur Berhampur Town (Ganjam),19.302852,84.795384,AC,3.3,1,"At- Bijipur Berhampur Town Dist- Ganjam, Ganjam, Odisha",True,Ganjam,two_wheeler,IOCL,LEV AC Charge point,Ganjam
+218,Tata Power - Dion Automotives (Ganjam),19.305687,84.801336,DC,15.0,1,"Dion Automotives, Ankuli Bye Pass Road, Berhampur, Ganjam Dist Odisha 760010",True,Brahmapur,two_wheeler,Tata Power,Bharat DC-001,Ganjam
+219,IOCL - Gopalpur Main Road Near Airstrip Ramachandrapur (Ganjam),19.305814,84.869241,AC,3.3,1,"Gopalpur Main Road Near Airstrip Ramachandrapur Dist- Ganjam, Ganjam, Odisha",True,Ganjam,two_wheeler,IOCL,LEV AC Charge point,Ganjam
+220,IOCL - Goilundi Berhampur (Ganjam),19.308166,84.818328,AC,3.3,1,"At Goilundi Berhampur Dist. Ganjam, Ganjam, Odisha",True,Ganjam,two_wheeler,IOCL,LEV AC Charge point,Ganjam
+221,BPCL - Jagannathpur (Ganjam),19.323519,84.86924,DC,60.0,2,"Jagannathpur, Nh-5, Ganjam, Odisha",True,Berhampur,car,BPCL,CCS,Ganjam
+222,BPCL - Ambagada (Ganjam),19.335948,84.758526,AC,3.0,1,"Ambagada, In Front Of Ambagada Village, Ganjam, Odisha",True,Berhampur,two_wheeler,BPCL,Bharat AC,Ganjam
+223,BPCL - Chatrapur (Ganjam),19.3471,84.957948,DC,30.0,1,"Chatrapur, On Nh-5, Ganjam, Odisha",True,Chatrapur,car,BPCL,CCS,Ganjam
+224,IOCL - Ganjam (Ganjam),19.364285,85.007692,AC,3.3,1,"Nh-16 Humuri Chatrapur Dist. Ganjam, Ganjam, Odisha",True,Ganjam,two_wheeler,IOCL,LEV AC Charge point,Ganjam
+225,IOCL - Pitambarpur Sasan (Ganjam),19.371261,84.634903,AC,3.3,1,"Pitambarpur Sasan Ps Digapahandi Dist. Ganjam, Ganjam, Odisha",True,Ganjam,two_wheeler,IOCL,LEV AC Charge point,Ganjam
+226,IOCL - Punjikayan Square Digapahandi Ganjam (Ganjam),19.380146,84.563965,AC,3.3,1,"Punjikayan Square Digapahandi Ganjam, Ganjam, Odisha",True,Ganjam,two_wheeler,IOCL,LEV AC Charge point,Ganjam
+227,IOCL - Ganjam (Ganjam),19.39451,85.065968,AC,3.3,1,". Nh-16 Palibandha Dist. Ganjam, Ganjam, Odisha",True,Ganjam,two_wheeler,IOCL,LEV AC Charge point,Ganjam
+228,IOCL - Bhabandha (Ganjam),19.41466,84.869071,AC,3.3,1,At-Bhabandha Dist-Ganjam Odisha-761003,True,Ganjam,two_wheeler,IOCL,LEV AC Charge point,Ganjam
+229,IOCL - Humma (Ganjam),19.430393,85.070403,AC,3.3,1,"At/Po Humma Ps Rambha Dist. Ganjam, Ganjam, Odisha",True,Ganjam,two_wheeler,IOCL,LEV AC Charge point,Ganjam
+230,IOCL - Sikharpur (Ganjam),19.438948,84.849981,AC,3.3,1,"Sikharpur On Sh 36 Tahasil Hinjlicut District Ganjam, Ganjam, Odisha",True,Ganjam,two_wheeler,IOCL,LEV AC Charge point,Ganjam
+231,IOCL - Village Bhutasarasingi (Ganjam),19.540085,84.853372,AC,3.3,1,"Village Bhutasarasingi Tahasil Purushottampur Ps Purushottampur, Ganjam, Odisha",True,Ganjam,two_wheeler,IOCL,LEV AC Charge point,Ganjam
+232,IOCL - Kabisuryanagarsh (Ganjam),19.58819,84.744156,AC,3.3,1,"At-Kabisuryanagarsh-30 Po-Kabisuryanagar Dist-Ganjam, Ganjam, Odisha",True,Ganjam,two_wheeler,IOCL,LEV AC Charge point,Ganjam
+233,UJOY - Ganjam (Ganjam),19.599542,84.643592,AC,7.4,1,"Ganjam, Ganjam, Odisha",True,Ganjam,car,UJOY,Type-II AC,Ganjam
+234,BPCL - Aska (Ganjam),19.616512,84.665074,AC,3.0,1,", Ganjam, Odisha",True,Aska,two_wheeler,BPCL,Bharat AC,Ganjam
+235,IOCL - Jagati Sahipo- Beguniapada (Ganjam),19.626304,84.984901,AC,3.3,1,"Ksk At-Jagati Sahipo- Beguniapada Ps-Kodala, Ganjam, Odisha",True,Ganjam,two_wheeler,IOCL,LEV AC Charge point,Ganjam
+236,IOCL - Gadadamodar Palli (Ganjam),19.657565,84.577672,AC,3.3,1,"At /Po Gadadamodar Palli Ps Dharakote Khamarapaitari Dist. Ganjam, Ganjam, Odisha",True,Ganjam,two_wheeler,IOCL,LEV AC Charge point,Ganjam
+237,BPCL - & Po Bhanajanagar (Ganjam),19.933559,84.580399,AC,3.0,1,"At & Po Bhanajanagar, Ganjam, Odisha",True,Bhanjanagar,two_wheeler,BPCL,Bharat AC,Ganjam
+238,IOCL - Jagannathprasad (Ganjam),19.960379,84.765973,AC,3.3,1,At/Po/Ps- Jagannathprasad Dist- Ganjam Odisha,True,Ganjam,two_wheeler,IOCL,LEV AC Charge point,Ganjam
+239,IOCL - Biluapada (Ganjam),20.099687,84.558942,AC,3.3,1,"At Biluapada Ps Tarasinga Tahasil Ghumusar Dist. Ganjam, Ganjam, Odisha",True,Ganjam,two_wheeler,IOCL,LEV AC Charge point,Ganjam
+240,UJOY - Mahima Filling Station (Jagatsinghpur),20.084992,86.282314,AC,7.4,1,"Mahima Filling Station, Jagatsinghpur, Jagatsinghpur, Odisha",True,Jagatsinghpur,car,UJOY,Type-II AC,Jagatsinghpur
+241,UJOY - Shree Jagannath Filling Station (Jagatsinghpur),20.124448,86.281992,AC,7.4,1,"Shree Jagannath Filling Station, Jagatsinghpur, Jagatsinghpur, Odisha",True,Jagatsinghpur,car,UJOY,Type-II AC,Jagatsinghpur
+242,BPCL - Near Market Building (Jagatsinghpur),20.265987,86.659073,DC,60.0,2,"Near Market Building, Paradeep, Jagatsinghpur, Odisha",True,Paradeep,car,BPCL,CCS,Jagatsinghpur
+243,BPCL - Near Market Building (Jagatsinghpur),20.265987,86.659073,AC,3.0,1,"Near Market Building, Paradeep, Jagatsinghpur, Odisha",True,Paradeep,two_wheeler,BPCL,Bharat AC,Jagatsinghpur
+244,BPCL - Jagatsinghpur (Jagatsinghpur),20.268255,86.160335,AC,3.0,1,"At/Po Jagatsinghpur, Jagatsinghpur, Jagatsinghpur, Odisha",True,Jagatsinghpur,two_wheeler,BPCL,Bharat AC,Jagatsinghpur
+245,BPCL - Rahama (Jagatsinghpur),20.303216,86.386721,DC,60.0,2,"Rahama, Jagatsinghpur, Odisha",True,Rahama,car,BPCL,CCS,Jagatsinghpur
+246,BPCL - Rahama (Jagatsinghpur),20.303216,86.386721,AC,3.0,1,"Rahama, Jagatsinghpur, Odisha",True,Rahama,two_wheeler,BPCL,Bharat AC,Jagatsinghpur
+247,BPCL - Tentulipada (Jagatsinghpur),20.30679,86.31829,DC,60.0,2,"At Tentulipada, Jagatsinghpur, Odisha",True,Tirtol,car,BPCL,CCS,Jagatsinghpur
+248,Tata Power - Trupti Automotives (Jagatsinghpur),20.307243,86.320751,DC,25.0,1,"Trupti Automotives, Nh 12, Nh12 - Adj. Sarala Road, Tentulipada, Odisha 754136",True,Tentulipada,car,Tata Power,CCS-II,Jagatsinghpur
+249,BPCL - Post Kujang (Jagatsinghpur),20.320856,86.550124,DC,60.0,2,"At Post Kujang, Kujang, Jagatsinghpur, Odisha",True,Kujang,car,BPCL,CCS,Jagatsinghpur
+250,IOCL - Patkura (Jagatsinghpur),20.32463,86.377942,AC,3.3,1,"Patkura Tahasil Tirtol Ps Tirtol Dist. Jagatsinghpur, Jagatsinghpur, Odisha",True,Jagatsinghpur,two_wheeler,IOCL,LEV AC Charge point,Jagatsinghpur
+251,BPCL - Jeypore (Jagatsinghpur),20.333956,86.269579,DC,60.0,2,"At Jeypore, Jagatsinghpur, Odisha",True,Jaipur,car,BPCL,CCS,Jagatsinghpur
+252,HPCL - Cuttack Sa (Jagatsinghpur),20.359716,86.15535,AC,7.4,1,"Cuttack Sa, Jagatsinghpur, Odisha",True,Jagatsinghpur,car,HPCL,Type-II AC,Jagatsinghpur
+253,BPCL - Mouza-Nalipur (Jajapur),20.611829,86.243871,DC,60.0,2,"Mouza-Nalipur, Nh 5A, Jajapur, Odisha",True,Balichandrapur,car,BPCL,CCS,Jajapur
+254,BPCL - Gopalpur (Jajapur),20.61183,86.24387,DC,60.0,2,"Gopalpur, Nh-53, Jajapur, Odisha",True,Chandikhol,car,BPCL,CCS,Jajapur
+255,IOCL - Mukundpur Jajpur Orissa (Jajapur),20.637474,86.196526,AC,3.3,1,Mukundpur Jajpur Orissa,True,Jajpur,two_wheeler,IOCL,LEV AC Charge point,Jajapur
+256,IOCL - Chandia P. S. Balichandrapur (Jajapur),20.64994,86.27841,AC,3.3,1,". Chandia P. S. Balichandrapur Dist. Jajpur, Jajapur, Odisha",True,Jajpur,two_wheeler,IOCL,LEV AC Charge point,Jajapur
+257,BPCL - Mauza Khaira (Jajapur),20.656229,86.112809,DC,30.0,1,"Mauza Khaira, At Badchana, Jajapur, Odisha",True,Manguli Badchana,car,BPCL,CCS,Jajapur
+258,IOCL - Chakdeulkur (Jajapur),20.661154,86.119512,DC,30.0,1,"Chakdeulkur Po/Ps- Badachana Dist-Jajpur, Jajapur, Odisha",True,Jajpur,car,IOCL,CCS-II,Jajapur
+259,BPCL - Rathia (Jajapur),20.708271,86.134958,DC,30.0,1,"At - Rathia, Po - Haridaspur, Nh5, Jajapur, Odisha",True,Chandikhol,car,BPCL,CCS,Jajapur
+260,BPCL - Agarmal (Jajapur),20.719671,86.10878,DC,60.0,2,"Agarmal, At Alijanga, Nh 200, Jajapur, Odisha",True,Bhadanga,car,BPCL,CCS,Jajapur
+261,IOCL - Sujanpur (Jajapur),20.7306,86.3213,AC,3.3,1,At/Po- Sujanpur Dist- Jajpur State - Odisha,True,Jajpur,two_wheeler,IOCL,LEV AC Charge point,Jajapur
+262,BPCL - Rathia (Jajapur),20.740244,86.145748,DC,60.0,2,"At Rathia, Po Haridaspur, Jajapur, Odisha",True,Chandikhole,car,BPCL,CCS,Jajapur
+263,IOCL - Rathia P.O. Haridaspur (Jajapur),20.74725,86.149907,AC,3.3,1,"Rathia P.O. Haridaspur Dist: Jajpur, Jajapur, Odisha",True,Jajpur,two_wheeler,IOCL,LEV AC Charge point,Jajapur
+264,IOCL - Prathamkhand (Jajapur),20.80586,86.17547,AC,3.3,1,Indian Oil Retail Outlet At/Po-Prathamkhand Dist-Jajpurodisha-755008,True,Jajpur,two_wheeler,IOCL,LEV AC Charge point,Jajapur
+265,BPCL - Mangalpur (Jajapur),20.813428,86.510555,AC,3.0,1,"At Mangalpur, Jajapur, Odisha",True,Mangalpur,two_wheeler,BPCL,Bharat AC,Jajapur
+266,IOCL - Katikata (Jajapur),20.845877,86.422089,AC,3.3,1,". Katikata P.S. Mangalpur Dist. Jajpur, Jajapur, Odisha",True,Jajpur,two_wheeler,IOCL,LEV AC Charge point,Jajapur
+267,BPCL - Kusunpur (Jajapur),20.85707,86.02026,DC,60.0,2,"Kusunpur, Balarampurtalagarh, Jajapur, Odisha",True,Kusunpur,car,BPCL,CCS,Jajapur
+268,BPCL - Alatir (Jajapur),20.915851,86.223992,DC,60.0,2,"Alatir, Nh 215, Jajapur, Odisha",True,Panikoili,car,BPCL,CCS,Jajapur
+269,IOCL - Md Jamalpur (Jajapur),20.920141,86.212479,AC,3.3,1,At-Md Jamalpur Po: Panikoili   Dist: Jajpur Orissa.  Jajpur,True,Jajpur,two_wheeler,IOCL,LEV AC Charge point,Jajapur
+270,BPCL - Sathipur (Jajapur),20.92369,86.249074,DC,60.0,2,"Nh5 At: Baliposi, Post: Raniguda, Jajapur, Odisha",True,Sathipur,car,BPCL,CCS,Jajapur
+271,Tata Power - Panikoili (Jajapur),20.923832,86.249428,DC,30.0,1,"Lalit Jena's Site, Beside Prasanta Filling Station (BPCL), Mouza Baliposi, Panikoili, Jajpur, Odisha 755025",True,Jajpur,car,Tata Power,CCS-II,Jajapur
+272,IOCL - Telibahali (Jajapur),20.9529,86.0772,AC,3.3,1,"At-Telibahali Ps- Jakhapura Dist- Jajpur, Jajapur, Odisha",True,Jajpur,two_wheeler,IOCL,LEV AC Charge point,Jajapur
+273,BPCL - Bhatia (Jajapur),20.953379,86.133858,DC,60.0,2,"Bhatia, Jajapur, Odisha",True,Jajpur,car,BPCL,CCS,Jajapur
+274,BPCL - Bhatia (Jajapur),20.953379,86.133858,AC,3.0,1,"Bhatia, Jajapur, Odisha",True,Jajpur,two_wheeler,BPCL,Bharat AC,Jajapur
+275,IOCL - Kalinga Nagar At/Po- Dangadi (Jajapur),20.966017,86.06205,AC,3.3,1,"Kalinga Nagar At/Po- Dangadi Dist - Jajpur, Jajapur, Odisha",True,Jajpur,two_wheeler,IOCL,LEV AC Charge point,Jajapur
+276,BPCL - Mouza Trijanga (Jajapur),20.96893,86.088137,DC,60.0,2,"Mouza Trijanga, Military Chack, Jajapur, Odisha",True,Jajpur Road,car,BPCL,CCS,Jajapur
+277,BPCL - Mouza Upargarh (Jajapur),21.003543,86.124592,DC,60.0,2,"Mouza Upargarh, Jajapur, Odisha",True,Jajpur,car,BPCL,CCS,Jajapur
+278,IOCL - Baliapal Danagadi (Jajapur),21.04347,86.97789,AC,3.3,1,At- Baliapal Danagadi Ps-Kalinganagar (1) Dist- Jajpur Odisha,True,Jajpur,two_wheeler,IOCL,LEV AC Charge point,Jajapur
+279,IOCL - Charpali (Jharsuguda),21.657601,83.937788,AC,7.4,1,At-Charpali Po-Barpali Dist-Jharsuguda Odisha Pin-768211,True,Jharsuguda,car,IOCL,Type-II AC,Jharsuguda
+280,IOCL - Jharsuguda (Jharsuguda),21.7413,83.7796,AC,7.4,1,Indian Oil Retail Outlet At/Po/Ps - Lakhanpur Dist-Jharsuguda Odisha - 768219,True,Jharsuguda,car,IOCL,Type-II AC,Jharsuguda
+281,IOCL - Sodhamal (Jharsuguda),21.7422,84.1741,AC,3.3,1,At/Po- Sodhamal Ps-Kolabira Tah-Kolabira Dist-Jharsuguda Odisha-768214,True,Jharsuguda,two_wheeler,IOCL,LEV AC Charge point,Jharsuguda
+282,BPCL - Govindpur (Jharsuguda),21.769666,83.680889,DC,60.0,2,"Govindpur, Jharsuguda, Odisha",True,Lakhanpur,car,BPCL,CCS,Jharsuguda
+283,IOCL - Katarbaga (Jharsuguda),21.7763,83.6315,AC,3.3,1,Indian Oil Retail Outlet At/Po-Katarbaga Ps-Rengali Tah-Re Dist-Jharsuguda Odisha Pin-768219,True,Jharsuguda,two_wheeler,IOCL,LEV AC Charge point,Jharsuguda
+284,IOCL - Renkuli (Jharsuguda),21.7827,83.6073,AC,3.3,1,At-Renkuli Ps-Rengali Po-Lakhanpur Tah-Lakhanpur Dist-Jharsuguda Odisha-768226,True,Jharsuguda,two_wheeler,IOCL,LEV AC Charge point,Jharsuguda
+285,IOCL - Samasingha (Jharsuguda),21.7922,84.178,AC,3.3,1,"At/Po- Samasingha Tahasil-Kolabira Dist- Jharsuguda, Jharsuguda, Odisha",True,Jharsuguda,two_wheeler,IOCL,LEV AC Charge point,Jharsuguda
+286,IOCL - Kherwal (Jharsuguda),21.794826,84.008816,AC,3.3,1,At-Kherwal Po/Ps-Badmal Dist-Jharsuguda Odisha Pin-768202,True,Jharsuguda,two_wheeler,IOCL,LEV AC Charge point,Jharsuguda
+287,BPCL - Vedanta Road (Jharsuguda),21.818527,84.024805,AC,7.0,1,"Vedanta Road, Brundamal, Jharsuguda, Odisha",True,Jharsuguda,car,BPCL,Type II,Jharsuguda
+288,HPCL - R S Filling Station (Jharsuguda),21.832238,84.013142,AC,3.3,1,"R S Filling Station, Jharsuguda, Jharsuguda, Odisha",True,Jharsuguda,two_wheeler,HPCL,Bharat AC-001,Jharsuguda
+289,IOCL - Junanimunda (Jharsuguda),21.8593,83.9081,AC,3.3,1,At-Junanimunda Po-Brajrajnagar Dist-Jharsuguda Odisha Pin-768216,True,Jharsuguda,two_wheeler,IOCL,LEV AC Charge point,Jharsuguda
+290,BPCL - Gandhi Chowk (Jharsuguda),21.860867,83.920677,DC,60.0,2,"Gandhi Chowk, Nh 200, Jharsuguda, Odisha",True,Brajrajnagar,car,BPCL,CCS,Jharsuguda
+291,IOCL - Kalimandir Road Badheimunda Jhars (Jharsuguda),21.8654,84.0348,AC,3.3,1,Indian Oil Retail Outlet Kalimandir Road Badheimunda Jhars Dist-Jharsuguda Odisha-768202,True,Jharsuguda,two_wheeler,IOCL,LEV AC Charge point,Jharsuguda
+292,IOCL - Hansamura Katapali (Jharsuguda),21.8696,83.9783,AC,7.4,1,At-Hansamura Katapali Ps/Tah/Dist-Jharsuguda Odisha Pin-768202,True,Jharsuguda,car,IOCL,Type-II AC,Jharsuguda
+293,IOCL - Panchapada Jharsuguda (Jharsuguda),21.876,83.996,AC,3.3,1,At-Panchapada Jharsuguda Po-Jharsuguda Dist-Jharsuguda Odisha Pin-768202,True,Jharsuguda,two_wheeler,IOCL,LEV AC Charge point,Jharsuguda
+294,BPCL - Jharsuguda (Jharsuguda),21.879082,84.025681,DC,60.0,3,"Po Jharsuguda, Behramal Chowk, Jharsuguda, Odisha",True,Jharsuguda,car,BPCL,CCS + Type II,Jharsuguda
+295,IOCL - Jharsuguda Town Unit No (Jharsuguda),21.88366,84.05472,AC,3.3,1,At-Jharsuguda Town Unit No.2 Bali Po-Jharsuguda Dist-Jharsuguda Odisha Pin-768203,True,Jharsuguda,two_wheeler,IOCL,LEV AC Charge point,Jharsuguda
+296,HPCL - Alaka Fuel Point (Jharsuguda),21.910555,84.013935,AC,7.4,1,"Alaka Fuel Point, Jharsuguda, Jharsuguda, Odisha",True,Jharsuguda,car,HPCL,Type-II AC,Jharsuguda
+297,IOCL - Telidihi (Jharsuguda),21.93943,84.186028,AC,3.3,1,At-Telidihi Po-Bagdehi Tah-Kirmira Dist-Jharsuguda Odisha Pin-768220,True,Jharsuguda,two_wheeler,IOCL,LEV AC Charge point,Jharsuguda
+298,IOCL - Baner (Kalahandi),19.542747,82.816276,AC,3.3,1,At/Po-Baner Ps-Jaipatna Dist-Kalahandi Odisha Pin-766018,True,Kalahandi,two_wheeler,IOCL,LEV AC Charge point,Kalahandi
+299,IOCL - Rampur (Kalahandi),19.55314,82.933907,AC,3.3,1,At-Rampur Po/Ps-Thuamal Rampur Dist-Kalahandi Odisha Pin-766037,True,Kalahandi,two_wheeler,IOCL,LEV AC Charge point,Kalahandi
+300,BPCL - Koksara (Kalahandi),19.589879,82.75629,DC,60.0,3,"Koksara, Kalahandi, Odisha",True,Koksara,car,BPCL,CCS + Type II,Kalahandi
+301,IOCL - Ladugaon (Kalahandi),19.61414,82.70099,AC,3.3,1,At-Ladugaon Po-Ladugaon Tah-Koksara Dist-Kalahandi Odisha Pin-766019,True,Kalahandi,two_wheeler,IOCL,LEV AC Charge point,Kalahandi
+302,BPCL - Pokhriband (Kalahandi),19.880821,83.41187,AC,7.0,1,"Pokhriband, On Sh-6, Kalahandi, Odisha",True,Pokharibandh,car,BPCL,Type II,Kalahandi
+303,IOCL - Kebedi (Kalahandi),19.883139,82.791993,AC,3.3,1,At-Kebedi Po-Dharamgarh Ps-Dharamgarh Dist-Kalahandi Odisha Pin-766015,True,Kalahandi,two_wheeler,IOCL,LEV AC Charge point,Kalahandi
+304,IOCL - Duarasuni (Kalahandi),19.887415,83.159897,AC,3.3,1,At-Duarasuni Po- Bhawanipatna Dist- Kalahandi Odisha Pin-766001,True,Kalahandi,two_wheeler,IOCL,LEV AC Charge point,Kalahandi
+305,Tata Power - Lankeswari Motors (Kalahandi),19.924197,83.173929,DC,25.0,1,"Lankeswari Motors, Bhawanipatna, Plot No 159/1700 Bhawanipatna, Kalahandi Odisha 762110",True,Kalahandi,car,Tata Power,CCS-II,Kalahandi
+306,IOCL - Medinpur (Kalahandi),19.927762,83.202647,AC,3.3,1,At-Medinpur Po/Ps-Bhawanipatna Dist-Kalahandi Odisha Pin-766001,True,Kalahandi,two_wheeler,IOCL,LEV AC Charge point,Kalahandi
+307,IOCL - Kamthana (Kalahandi),19.94909,83.14342,AC,3.3,1,At/Po-Kamthana Ps-Bhawanipatna Tah-Bhawanipatna Dist- Kalahandi Odisha-766001,True,Kalahandi,two_wheeler,IOCL,LEV AC Charge point,Kalahandi
+308,IOCL - Sanchiching (Kalahandi),19.972718,83.30824,AC,3.3,1,At-Sanchiching Po-Santpur Dist-Kalahandi Odisha Pin-766110,True,Kalahandi,two_wheeler,IOCL,LEV AC Charge point,Kalahandi
+309,IOCL - Sankhairmal (Kalahandi),19.9838,83.13066,AC,3.3,1,"At-Sankhairmal Po- Kamthana Tahasil-Bhawanipatna Dist-Kalahandi, Kalahandi, Odisha",True,Kalahandi,two_wheeler,IOCL,LEV AC Charge point,Kalahandi
+310,IOCL - Pastigudi (Kalahandi),20.018199,83.176561,AC,3.3,1,At-Pastigudi Tah-Kesinga Dist- Kalahandi Odisha Pin-766011,True,Kalahandi,two_wheeler,IOCL,LEV AC Charge point,Kalahandi
+311,IOCL - Dangarmal (Kalahandi),20.065556,83.387223,AC,3.3,1,At-Dangarmal Po-Narla Tahasil-Narla Dist-Kalahandi Odisha Pin-766100,True,Kalahandi,two_wheeler,IOCL,LEV AC Charge point,Kalahandi
+312,IOCL - Mading Chhak (Kalahandi),20.067975,83.10819,AC,3.3,1,Indian Oil Retail Outlet Mading Chhak Sh-16 Karpapada Dist-Kalahandi Odisha Pin-766011,True,Kalahandi,two_wheeler,IOCL,LEV AC Charge point,Kalahandi
+313,IOCL - Themera (Kalahandi),20.113769,83.17925,AC,3.3,1,At-Themera Po-Utkela Block-Kesinga Dist-Kalahandi Odisha Pin-766011,True,Kalahandi,two_wheeler,IOCL,LEV AC Charge point,Kalahandi
+314,BPCL - Madanpur Rampur (Kalahandi),20.188668,83.509808,AC,7.0,1,"At/Po - Madanpur Rampur, M.Rampur, Kalahandi, Odisha",True,Madanpur Rampur,car,BPCL,Type II,Kalahandi
+315,BPCL - Amath Chowk (Kalahandi),20.286389,83.307778,DC,60.0,2,"Amath Chowk, Kalahandi, Odisha",True,Amath Chowk,car,BPCL,CCS,Kalahandi
+316,IOCL - Nunmath (Kalahandi),20.288679,83.30177,AC,3.3,1,Indian Oil Retail Outlet At/Po-Nunmath Ps-Kesinga Dist-Kalahandi Odisha Pin-766012,True,Kalahandi,two_wheeler,IOCL,LEV AC Charge point,Kalahandi
+317,BPCL - Daringbadi (Kandhamal),19.902125,84.128565,AC,3.0,1,"Daringbadi, Kandhamal, Odisha",True,Daringibadi,two_wheeler,BPCL,Bharat AC,Kandhamal
+318,IOCL - Jaleshpeta (Kandhamal),19.99743,83.71219,AC,3.3,1,"Jaleshpeta Ps Kotgada Tahasil Tumudibandha Dist Kandhamal, Kandhamal, Odisha",True,Kandhamal,two_wheeler,IOCL,LEV AC Charge point,Kandhamal
+319,IOCL - Baliguda (Kandhamal),20.182181,83.933809,AC,3.3,1,At/Po/Ps-Baliguda Dist- Kandhamal Odisha-762103,True,Kandhamal,two_wheeler,IOCL,LEV AC Charge point,Kandhamal
+320,BPCL - Tikabali (Kandhamal),20.241868,84.342342,AC,3.0,1,"Tikabali, Kandhamal, Odisha",True,Tikabali,two_wheeler,BPCL,Bharat AC,Kandhamal
+321,BPCL - Biju Patnaik Square (Kandhamal),20.477922,84.237123,AC,3.0,1,"Biju Patnaik Square, Main Road, Kandhamal, Odisha",True,Phulbani,two_wheeler,BPCL,Bharat AC,Kandhamal
+322,IOCL - Ziringpada At- Circular Road Near Hanuman Mandir (Kandhamal),20.477925,84.237207,AC,3.3,1,"Ziringpada At- Circular Road Near Hanuman Mandir Po- Phulbani Dist- Kandhamal, Kandhamal, Odisha",True,Kandhamal,two_wheeler,IOCL,LEV AC Charge point,Kandhamal
+323,BPCL - Plot No (Kendrapara),20.375623,86.516525,DC,60.0,2,"Plot No 231/3122(P) 231(P), Khata No 1034/533 1034/532, Kendrapara, Odisha",True,Kendrapara,car,BPCL,CCS,Kendrapara
+324,IOCL - Bantala (Kendrapara),20.37893,86.32115,AC,3.3,1,"At Bantala Po Tentola Via Tyendaku Tahasil Garadpur Ps Patkura Dist. Kendrapara, Kendrapara, Odisha",True,Kendrapara,two_wheeler,IOCL,LEV AC Charge point,Kendrapara
+325,IOCL - Mahakalpada Marshaghai (Kendrapara),20.418887,86.578386,AC,3.3,1,"Mahakalpada Marshaghai Dist. Kendrapara, Kendrapara, Odisha",True,Kendrapara,two_wheeler,IOCL,LEV AC Charge point,Kendrapara
+326,BPCL - Vill: Darabachha (Kendrapara),20.44205,86.474709,DC,60.0,2,"Vill: Darabachha, Near Marshaghai Crossing, Kendrapara, Odisha",True,Marshaghai,car,BPCL,CCS,Kendrapara
+327,BPCL - Vill: Darabachha (Kendrapara),20.44205,86.474709,AC,3.0,1,"Vill: Darabachha, Near Marshaghai Crossing, Kendrapara, Odisha",True,Marshaghai,two_wheeler,BPCL,Bharat AC,Kendrapara
+328,IOCL - Bhagwanpur (Kendrapara),20.510313,86.405398,AC,3.3,1,"At Bhagwanpur P.S. Kendrapara Town Kendrapara, Kendrapara, Odisha",True,Kendrapara,two_wheeler,IOCL,LEV AC Charge point,Kendrapara
+329,BPCL - Kendrapara (Kendrapara),20.516133,86.395774,DC,60.0,2,"At/Po Kendrapara, Sh-09A, College Square, Yinimuhani, Kendrapara, Odisha",True,Kendrapara,car,BPCL,CCS,Kendrapara
+330,BPCL - Plot (Kendrapara),20.561915,86.313226,DC,60.0,2,"Plot - 160(P), Khata - 808/51, Mz - Laxminarayanpur, Nuahat, Kendrapara, Odisha",True,Kendrapara,car,BPCL,CCS,Kendrapara
+331,BPCL - Sanabada Gopalpur (Kendrapara),20.573913,86.70857,AC,3.0,1,"At Sanabada Gopalpur, Gopalpur, Kendrapara, Odisha",True,Rajnagar,two_wheeler,BPCL,Bharat AC,Kendrapara
+332,IOCL - Arakhanda Nh (Kendrapara),20.575291,86.289378,AC,3.3,1,"At Arakhanda Nh53 Ps Derabish Dist. Kendrapara, Kendrapara, Odisha",True,Kendrapara,two_wheeler,IOCL,LEV AC Charge point,Kendrapara
+333,IOCL - Village Charpada Tahsil Rajkanika (Kendrapara),20.71846,86.573997,AC,3.3,1,"Village Charpada Tahsil Rajkanika Ps Rajkanika, Kendrapara, Odisha",True,Kendrapara,two_wheeler,IOCL,LEV AC Charge point,Kendrapara
+334,IOCL - Achutapur (Kendrapara),20.720413,86.684547,AC,3.3,1,"Ro At-Achutapur Po-Bharigada, Kendrapara, Odisha",True,Kendrapara,two_wheeler,IOCL,LEV AC Charge point,Kendrapara
+335,IOCL - Kantapada Bazar (Kendrapara),20.748516,86.714748,AC,3.3,1,"Kantapada Bazar Sh 9A Dist. Kendrapara, Kendrapara, Odisha",True,Kendrapara,two_wheeler,IOCL,LEV AC Charge point,Kendrapara
+336,Tata Power - Trupti Automotives (Kendujhar),20.918732,86.216983,DC,25.0,1,"Trupti Automotives, Mohammed Jamalpur, Keonjhar - Ghatgaon - Panikoili Rd, Odisha 755015",True,Keonjhar,car,Tata Power,CCS-II,Kendujhar
+337,Tata Power - Trupti Automotives (Kendujhar),20.918732,86.216983,DC,15.0,1,"Trupti Automotives, Mohammed Jamalpur, Keonjhar - Ghatgaon - Panikoili Rd, Odisha 755015",True,Keonjhar,two_wheeler,Tata Power,Bharat DC-001,Kendujhar
+338,IOCL - Alati (Kendujhar),21.078961,86.073997,AC,3.3,1,At/Po-Alati Ps- Ramachandanpur Dist-Keonjhar Odisha Pin-758043,True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+339,BPCL - Barpada (Kendujhar),21.111139,86.114671,DC,60.0,2,"Barpada, Kendujhar, Odisha",True,Barpada,car,BPCL,CCS,Kendujhar
+340,IOCL - Sainkul (Kendujhar),21.11942,86.138004,AC,3.3,1,At/Po-Sainkul Ps-Ramchandrapur Tah-Ghasipura Dist-Keonjhar Odishapin-758043,True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+341,IOCL - Orali (Kendujhar),21.12288,86.2777,AC,3.3,1,At-Orali Po-Orali Tahasil-Hatadihi Dist-Keonjhar Odisha-758083,True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+342,IOCL - Gobindpur (Kendujhar),21.184435,86.230162,AC,3.3,1,At-Gobindpur Po-Chhenapadi Ps-Nandipada Dist-Keonjhar Odisha Pin-758083,True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+343,IOCL - Jhadkundi (Kendujhar),21.191779,86.066633,AC,3.3,1,At-Jhadkundi Po-Balarampur Ps-Ghasipura Dist-Keonjhar Odisha Pin-758025,True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+344,HPCL - Rourkela Sa (Kendujhar),21.221763,86.118987,AC,3.3,1,"Rourkela Sa, Kendujhar, Odisha",True,Kendujhar,two_wheeler,HPCL,Bharat AC-001,Kendujhar
+345,IOCL - Salabani (Kendujhar),21.224958,86.167716,AC,3.3,1,Indian Oil Retail Outlet At-Salabani Po/Ps-Anandapur Dist-Keonjhar Odisha-758021,True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+346,BPCL - Bhalukhuma (Kendujhar),21.299875,86.071851,DC,60.0,2,"At- Bhalukhuma, Ps- Ghasipura, New Nh20, Kendujhar, Odisha",True,Anandpur,car,BPCL,CCS,Kendujhar
+347,IOCL - Jagmohanpurnh (Kendujhar),21.433089,85.331782,AC,3.3,1,"Jagmohanpurnh-6 Dist.Dhenkanal Keonjhar, Kendujhar, Odisha",True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+348,BPCL - Mouza Tikira (Kendujhar),21.492318,85.836498,DC,60.0,2,"Mouza Tikira, Dhenkikote, Kendujhar, Odisha",True,Dhenkikote,car,BPCL,CCS,Kendujhar
+349,IOCL - Pipilia (Kendujhar),21.565198,85.756783,AC,3.3,1,At-Pipilia Po-Ghatagaon Ps-Ghatagaon Dist-Keonjhar Odisha Pin-758029,True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+350,BPCL - Jamunalia (Kendujhar),21.594507,85.664038,DC,60.0,2,"Jamunalia, Nekdagarh, Kendujhar, Odisha",True,Jamunalia,car,BPCL,CCS,Kendujhar
+351,IOCL - Balabhadrapur (Kendujhar),21.600082,85.604018,AC,3.3,1,At/Po-Balabhadrapur Ps-Sadar Dist- Keonjhar Odisha Pin-758001,True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+352,BPCL - Tentuli (Kendujhar),21.614394,85.543495,DC,60.0,2,"At- Tentuli, Gandhijoda, Po Tala Champei, Kendujhar, Odisha",True,Keonjhar,car,BPCL,CCS,Kendujhar
+353,IOCL - Talakainsari Keonjhar Orissa (Kendujhar),21.628852,85.549574,AC,3.3,1,Talakainsari Keonjhar Orissa,True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+354,IOCL - Keonjhargarh (Kendujhar),21.62936,85.619499,AC,3.3,1,"At-Keonjhargarh Po- Keonjhar Dist- Keonjhar, Kendujhar, Odisha",True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+355,IOCL - Ichinda (Kendujhar),21.638333,85.522361,AC,3.3,1,At/Po-Ichinda Ps- Sadar Tahasil-Banspal Dist-Keonjhar Odisha Pin-758018,True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+356,IOCL - Pabitradihapankajini Plaza New Market Keonjhardist: Keonjhar Orissa (Kendujhar),21.639325,85.607488,AC,3.3,1,At:Pabitradihapankajini Plaza New Market Keonjhardist: Keonjhar Orissa,True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+357,IOCL - Dhrupada (Kendujhar),21.661037,85.58834,AC,3.3,1,At-Dhrupada Po-Keonjhar Dist-Keonjhar Odisha Pin-758001,True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+358,BPCL - Raisuan (Kendujhar),21.66934,85.584853,DC,60.0,2,"At Raisuan, Nh215, Kendujhar, Odisha",True,Keonjhar,car,BPCL,CCS,Kendujhar
+359,IOCL - Gopinathpur (Kendujhar),21.68494,85.58272,AC,3.3,1,"At- Gopinathpur Po- Raisuan Dist- Keonjhar, Kendujhar, Odisha",True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+360,IOCL - Bankamaruni (Kendujhar),21.761985,85.570399,AC,3.3,1,At:Bankamaruni Po:Palaspanaga  Dist: Keonjhar Orissa,True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+361,BPCL - Hundula (Kendujhar),21.764048,85.56912,DC,60.0,2,"Hundula, Raisuan Sadar, Palaspanga, Kendujhar, Odisha",True,Hundula,car,BPCL,CCS,Kendujhar
+362,BPCL - Chemena (Kendujhar),21.777139,85.786473,DC,60.0,2,"Chemena, Keonjhar, Kendujhar, Odisha",True,Keonjhar,car,BPCL,CCS,Kendujhar
+363,BPCL - Chadeibole (Kendujhar),21.813369,85.803013,DC,60.0,2,"At-Chadeibole, Po/Ps-Turmunga, Kendujhar, Odisha",True,Kendujhar,car,BPCL,CCS,Kendujhar
+364,IOCL - Bhanda (Kendujhar),21.935222,85.759117,AC,3.3,1,At/Po-Bhanda Dist- Keonjhar Odisha Pin- 758044,True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+365,BPCL - Kalikaprasad On Nh (Kendujhar),21.97511,85.608611,DC,60.0,2,"Kalikaprasad On Nh-20, Rimuli, Kendujhar, Odisha",True,Champua,car,BPCL,CCS,Kendujhar
+366,IOCL - Banspani (Kendujhar),21.987777,85.4219,AC,3.3,1,At/Po- Banspani Ps-Joda Dist-Keonjhar Odisha,True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+367,IOCL - Kamar Joda (Kendujhar),22.013508,85.421222,AC,3.3,1,"At- Kamar Joda Po- Joda Dist- Keonjhar, Kendujhar, Odisha",True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+368,IOCL - Tanto (Kendujhar),22.050877,85.371597,AC,3.3,1,At-Tanto Po-Barbil Orissa,True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+369,IOCL - Bhadrasahi Jhargaon Barbil (Kendujhar),22.056434,85.382035,AC,3.3,1,"Bhadrasahi Jhargaon Barbil, Kendujhar, Odisha",True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+370,IOCL - Bhusugaon (Kendujhar),22.059858,85.389572,AC,3.3,1,At- Bhusugaon Po- Bhadrasahi Dist-Keonjhar Odisha Pin- 7580354,True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+371,IOCL - Bileipada (Kendujhar),22.064833,85.478218,AC,3.3,1,"Bileipada - Murga Road Po- Bileipada Dist- Keonjhar, Kendujhar, Odisha",True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+372,IOCL - Champua (Kendujhar),22.066408,85.65458,AC,3.3,1,"Champua - Basudevpur Road Near Mulaniguda Basti Champua, Kendujhar, Odisha",True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+373,IOCL - Dorbichhak (Kendujhar),22.092129,85.355003,AC,3.3,1,"At- Dorbichhak Po-Matkambeda Dist- Keonjhar, Kendujhar, Odisha",True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+374,IOCL - Barbil Keonjhar Orissa (Kendujhar),22.1005,85.3833,AC,3.3,1,Barbil Keonjhar Orissa,True,Keonjhar,two_wheeler,IOCL,LEV AC Charge point,Kendujhar
+375,IOCL - Ranasinghprasad (Khordha),19.745826,85.183539,AC,3.3,1,". Ranasinghprasad On Nh16 Balugaon Dist. Khurda, Khordha, Odisha",True,Khordha,two_wheeler,IOCL,LEV AC Charge point,Khordha
+376,BPCL - Balugaon (Khordha),19.749316,85.207598,DC,60.0,2,"At/Po Balugaon, Nh-5, Khordha, Odisha",True,Balugaon,car,BPCL,CCS,Khordha
+377,IOCL - Brahmanakusadihi (Khordha),19.794936,85.242786,AC,3.3,1,"At- Brahmanakusadihi Po- Ankulachatti Ps- Balugaon Dist- Khordha, Khordha, Odisha",True,Khordha,two_wheeler,IOCL,LEV AC Charge point,Khordha
+378,IOCL - Deogaon (Khordha),19.85573,85.195937,AC,3.3,1,"At Deogaon Tahasil Banapur Ps Banapur Dist. Khurda, Khordha, Odisha",True,Khordha,two_wheeler,IOCL,LEV AC Charge point,Khordha
+379,IOCL - Sundarpur Village (Khordha),19.933781,85.448915,AC,3.3,1,". Sundarpur Village On Mangaljodi Roa Dist. Khurda, Khordha, Odisha",True,Khordha,two_wheeler,IOCL,LEV AC Charge point,Khordha
+380,BPCL - Khajuripada (Khordha),19.9917,85.53277,AC,3.0,1,"Khajuripada, Nirakarpur, Khordha, Odisha",True,Nirakarpur,two_wheeler,BPCL,Bharat AC,Khordha
+381,BPCL - Plot (Khordha),19.995597,85.479969,DC,30.0,1,"Plot 54, 52, 51, 52/5677, Khata 618, 715 Mouza Badapokharia, Khordha, Odisha",True,Badapokharia,car,BPCL,CCS,Khordha
+382,BPCL - Jankia (Khordha),20.047727,85.532615,DC,60.0,2,"Jankia, On Nh 16, Khordha, Odisha",True,Jankia,car,BPCL,CCS,Khordha
+383,Tata Power - Sibaram Dash (Khordha),20.088998,85.565851,DC,30.0,1,"Sibaram Dash, Beside Nandi Filling Station, Kiajhari, Malipada, Odisha 752018",True,Khordha,car,Tata Power,CCS-II,Khordha
+384,IOCL - Kiajhari (Khordha),20.089154,85.566087,AC,3.3,1,"At: Kiajhari On Nh-5 Po: Mal Dist: Khurda Lock No: 21019 X 2 (One Set), Khordha, Odisha",True,Khordha,two_wheeler,IOCL,LEV AC Charge point,Khordha
+385,IOCL - Khurdamala Khurda Orissa (Khordha),20.121195,85.579254,AC,3.3,1,Khurdamala Khurda Orissa,True,Khordha,two_wheeler,IOCL,LEV AC Charge point,Khordha
+386,UJOY - Dadhimachagadia (Khordha),20.122171,85.578783,AC,3.3,1,"Dadhimachagadia, Khordha, Odisha",True,Khordha,two_wheeler,UJOY,LEV AC Charge point,Khordha
+387,BPCL - Daleiput Mouza (Khordha),20.15161,85.602813,DC,60.0,2,"Daleiput Mouza, On Nh 16, Khurdha, Khordha, Odisha",True,Dalaiput,car,BPCL,CCS,Khordha
+388,IOCL - Mandalsingh (Khordha),20.160263,85.214804,AC,3.3,1,"Mandalsingh Tahasil Bolagarh Dist. Khurda, Khordha, Odisha",True,Khordha,two_wheeler,IOCL,LEV AC Charge point,Khordha
+389,Ather Grid - Tlc Office Rd (Khordha),20.178874,85.611523,DC,3.3,1,"Tlc Office Rd, Khordha, Odisha 752057",True,Bhubaneswar,two_wheeler,Ather,LEV DC Charge Point (IS-17017-2-7),Khordha
+390,IOCL - Main Road Mukundaprasad Khurda (Khordha),20.187029,85.633095,AC,3.3,1,"Main Road Mukundaprasad Khurda, Khordha, Odisha",True,Khordha,two_wheeler,IOCL,LEV AC Charge point,Khordha
+391,Ather Grid - Gopinathpur (Dhauli Rd),20.197299,85.843429,DC,3.3,1,"Plot-115, Gopinathpur, Dhauli Rd, Bhubaneswar, Odisha 751002",True,Bhubaneswar,two_wheeler,Ather,LEV DC Charge Point (IS-17017-2-7),Khordha
+392,IOCL - Khordha (Khordha),20.198338,85.431089,AC,3.3,1,"Nh 57 Mohanpur Near Chakapada Bazar Dist. Khurda, Khordha, Odisha",True,Khordha,two_wheeler,IOCL,LEV AC Charge point,Khordha
+393,IOCL - Khordha (Khordha),20.202117,85.568054,AC,3.3,1,". Nh-57 Taratua Dist. Khurda, Khordha, Odisha",True,Khordha,two_wheeler,IOCL,LEV AC Charge point,Khordha
+394,IOCL - Khordha (Khordha),20.208742,85.47037,AC,7.4,1,"Nh 57 Balabhadrapur Ps Begunia Dist. Khurda, Khordha, Odisha",True,Khordha,car,IOCL,Type-II AC,Khordha
+395,IOCL - Ogalpada N.H (Khordha),20.210386,85.697212,AC,3.3,1,"At.: Ogalpada N.H.-5 Talakheta Po: Janala752054 Dist.: Khurdaph-0674-2490297, Khordha, Odisha",True,Khordha,two_wheeler,IOCL,LEV AC Charge point,Khordha
+396,BPCL - Pitapalli (NH-16),20.223621,85.726762,DC,30.0,1,"Pitapalli, On Nh 16, Bhubaneswar",True,Bhubaneswar,car,BPCL,CCS,Khordha
+397,Ather Grid - Nuagaon Chhak,20.224053,85.844465,DC,3.3,1,"Plot-5, Nuagaon Chhak, Samantarapur, Near Jagannath Petrol Pump, Gangotri Nagar, Bhubaneswar, Odisha 751002",True,Bhubaneswar,two_wheeler,Ather,LEV DC Charge Point (IS-17017-2-7),Khordha
+398,"Tata Power - Dion Automotives, Samantarapur",20.227001,85.840966,DC,25.0,2,"Dion Automotives, Smantarpur, Plot No 2175, 3766, Lewis Road, Samantarapur, Old Town, Bhubaneswar, Odisha 751002",True,Bhubaneswar,car,Tata Power,Combo (CCS-II+CHAdeMO),Khordha
+399,"Tata Power - Dion Automotives, Samantarapur",20.227001,85.840966,DC,15.0,1,"Dion Automotives, Smantarpur, Plot No 2175, 3766, Lewis Road, Samantarapur, Old Town, Bhubaneswar, Odisha 751002",True,Bhubaneswar,two_wheeler,Tata Power,Bharat DC-001,Khordha
+400,IOCL - Sri Gajendra Kumar Samantaray At-Paniorapo-Palaspur (Khordha),20.233982,85.673439,AC,3.3,1,Sri Gajendra Kumar Samantaray At-Paniorapo-Palaspur Ps-Chandaka Dist-Khurda Orissa-752054,True,Khordha,two_wheeler,IOCL,LEV AC Charge point,Khordha
+401,"Tata Power - Trupti Enterprises, Bhagabanpur",20.238165,85.756643,DC,25.0,2,"Trupti Enterprises, Bhagabanpur Industrial Area, Idco, Plot No 16, 17, 32&33 Bhagabanpur Industrial Area, Bhubaneswar, Odisha 751019",True,Bhubaneswar,car,Tata Power,Combo (CCS-II+CHAdeMO),Khordha
+402,"Tata Power - Trupti Enterprises, Bhagabanpur",20.238165,85.756643,DC,15.0,1,"Trupti Enterprises, Bhagabanpur Industrial Area, Idco, Plot No 16, 17, 32&33 Bhagabanpur Industrial Area, Bhubaneswar, Odisha 751019",True,Bhubaneswar,two_wheeler,Tata Power,Bharat DC-001,Khordha
+403,"Tata Power - DN Regalia Mall, Patrapada",20.240903,85.758056,DC,25.0,3,"Dn Regalia Mall, Patrapada, Idco Plot No1/A, Bhagbanpur Industrial Estate, Dn Square, Bhubhaneswar-751019",True,Bhubaneswar,car,Tata Power,CCS-II + Type-II AC,Khordha
+404,"Tata Power - DN Regalia Mall, Patrapada",20.240903,85.758056,DC,15.0,1,"Dn Regalia Mall, Patrapada, Idco Plot No1/A, Bhagbanpur Industrial Estate, Dn Square, Bhubhaneswar-751019",True,Bhubaneswar,two_wheeler,Tata Power,Bharat DC-001,Khordha
+405,"Tata Power - Hotel Vivanta, Patrapada",20.241402,85.759144,DC,25.0,3,"Hotel Vivanta, Patrapada, Idco Plot No1/A, Bhagbanpur Industrial Estate, Dn Square, Bhubhaneswar -751019",True,Bhubaneswar,car,Tata Power,CCS-II + Type-II AC,Khordha
+406,IOCL - Patrapara (NH-5),20.243628,85.768913,AC,3.3,1,Ioc Dealer At/Po- Patrapara Nh-5 Bhubaneswar,True,Bhubaneswar,two_wheeler,IOCL,LEV AC Charge point,Khordha
+407,Ather Grid - Gautam Nagar,20.247906,85.841217,DC,3.3,1,"Plot-2865, Gautam Nagar, Lewis Road, Near State Bank Of India, Bhubaneswar, Khordha, Odisha-751002",True,Bhubaneswar,two_wheeler,Ather,LEV DC Charge Point (IS-17017-2-7),Khordha
+408,BPCL - Khandagiri (Aiginia),20.25473,85.787241,DC,60.0,2,"Khandagiri, Aiginia P.O., Bhubaneswar",True,Bhubaneswar,car,BPCL,CCS,Khordha
+409,"Ather Grid - Nayan Tower, Khandagiri",20.256187,85.786838,DC,3.3,1,"Plot No-18/1180/3220, Nayan Tower, Khandagiri, Bhubaneswar, Odisha 751030",True,Bhubaneswar,two_wheeler,Ather,LEV DC Charge Point (IS-17017-2-7),Khordha
+410,BPCL - Kalpana Square,20.257426,85.841095,DC,7.0,2,"Kalpana Square, Nh203, Bhubaneswar",True,Bhubaneswar,two_wheeler,BPCL,LEV DC,Khordha
+411,Ola - Kalpana Square,20.25743,85.8411,DC,7.0,1,"Kalpana Square, Nh203, Khurda, Bhubaneswar",True,Bhubaneswar,two_wheeler,OLA,LEV DC Charge Point (IS-17017-2-6),Khordha
+412,"Tata Power - Fortune Park Hotel, Gautam Nagar",20.258983,85.83971,DC,30.0,2,"Fortune Park Hotel, Gautam Nagar, Fortune Park Sishmo, 86/A-1 Gautam Nagar, Bhubaneswar -751014",True,Bhubaneswar,car,Tata Power,CCS-II + Type-II AC,Khordha
+413,"Tata Power - Fortune Park Hotel, Gautam Nagar",20.258983,85.83971,DC,15.0,1,"Fortune Park Hotel, Gautam Nagar, Fortune Park Sishmo, 86/A-1 Gautam Nagar, Bhubaneswar -751014",True,Bhubaneswar,two_wheeler,Tata Power,Bharat DC-001,Khordha
+414,BPCL - Mendhasal (Khordha),20.263381,85.691899,AC,3.0,1,"At - Mendhasal, Ps - Chandaka, Khordha, Odisha",True,Mendhasal,two_wheeler,BPCL,Bharat AC,Khordha
+415,Ather Grid - Jharapada,20.267371,85.869223,DC,3.3,1,"Mangaraj Point, Jharapada, Bhubaneswar, Odisha 751006",True,Bhubaneswar,two_wheeler,Ather,LEV DC Charge Point (IS-17017-2-7),Khordha
+416,"Ather Grid - Raj Bhavan, Surya Nagar",20.269543,85.814565,DC,3.3,1,"Plot No 109, 7R97+Qrr, Gopabandhu-Governer House Rd, Near Raj Bhavan, Unit 7, Surya Nagar, Bhubaneswar, Odisha 751003",True,Bhubaneswar,two_wheeler,Ather,LEV DC Charge Point (IS-17017-2-7),Khordha
+417,"Tata Power - DN Wisdom Tree School, Kalinganagar",20.270451,85.758845,AC,7.4,1,"Dn Wisdom Tree Global School, Kalinganagar, 2630, K-2, Bhubaneswar, Odisha 751003",True,Bhubaneswar,car,Tata Power,Type-II AC,Khordha
+418,"Tata Power - DN Wisdom Tree School, Kalinganagar",20.270451,85.758845,AC,3.3,3,"Dn Wisdom Tree Global School, Kalinganagar, 2630, K-2, Bhubaneswar, Odisha 751003",True,Bhubaneswar,two_wheeler,Tata Power,Bharat AC-001,Khordha
+419,Ather Grid - Ghatikia,20.271105,85.78353,DC,3.3,1,"Plot No-3753, Khandagiri, Ghatikia, Bhubaneswar-751030",True,Bhubaneswar,two_wheeler,Ather,LEV DC Charge Point (IS-17017-2-7),Khordha
+420,BPCL - Sundarpada,20.277576,85.843749,AC,3.0,1,"At - Kantilo, Ps - Airfield, Bhubaneswar",True,Bhubaneswar,two_wheeler,BPCL,Bharat AC,Khordha
+421,BPCL - Balianta (Benupur),20.280949,85.900894,AC,3.0,1,"At/Po - Benupur, Ps - Balianta, Jaydev Road, Bhubaneswar",True,Bhubaneswar,two_wheeler,BPCL,Bharat AC,Khordha
+422,Ather Grid - Nayapalli (CRPF Square),20.283292,85.806051,DC,3.3,1,"A/62, Nh16, Near Crpf Square, Nayapalli, Bhubaneswar, Odisha 751003",True,Bhubaneswar,two_wheeler,Ather,LEV DC Charge Point (IS-17017-2-7),Khordha
+423,"Tata Power - Gugnani Tyres, Nayapalli",20.285484,85.809325,DC,25.0,1,"Gugnani Tyres, Nayapalli, Uco Bank, 1294, Crp - Dav Rd, Nilakantha Nagar, Bhubaneswar, Odisha 751012",True,Bhubaneswar,car,Tata Power,CCS-II,Khordha
+424,"Tata Power - Gugnani Tyres, Nayapalli",20.285484,85.809325,DC,15.0,1,"Gugnani Tyres, Nayapalli, Uco Bank, 1294, Crp - Dav Rd, Nilakantha Nagar, Bhubaneswar, Odisha 751012",True,Bhubaneswar,two_wheeler,Tata Power,Bharat DC-001,Khordha
+425,Ather Grid - Saheed Nagar,20.286826,85.847101,DC,3.3,1,"Unit II, Saheed Nagar, Bhubaneswar, Odisha 751007",True,Bhubaneswar,two_wheeler,Ather,LEV DC Charge Point (IS-17017-2-7),Khordha
+426,"Tata Power - BMC Bhawani Mall, Saheed Nagar",20.28697,85.84661,DC,15.0,4,"Bmc-Bhawani Mall, Saheed Nagar, Bhubaneswar- 751007",True,Bhubaneswar,two_wheeler,Tata Power,Bharat AC-001 + Bharat DC-001,Khordha
+427,Kazam - Rasulgarh,20.287964,85.867574,AC,3.3,1,"Rasulgarh, Bhubaneswar, Odisha, 751025",True,Bhubaneswar,two_wheeler,KAZAM,Bharat AC-001,Khordha
+428,Tata Power - MLCP Saheed Nagar,20.291534,85.843222,DC,15.0,4,"Mlcp- Saheed Nagar, Saheed Nagar, Plot No. 150(P), Bhubaneswar-751007",True,Bhubaneswar,two_wheeler,Tata Power,Bharat AC-001 + Bharat DC-001,Khordha
+429,UJOY - Gadahaladia (Khordha),20.29379,85.571365,AC,3.3,1,"Gadahaladia, Khordha, Odisha",True,Khordha,two_wheeler,UJOY,Bharat AC-001,Khordha
+430,"Tata Power - DN Group Office, Nayapalli",20.296189,85.804045,DC,25.0,1,"Dn Group Corporate Office, Nayapalli, Vip-15, Vip Colony, Irc Village, Bhubaneswar, Odisha 751015",True,Bhubaneswar,car,Tata Power,CCS-II,Khordha
+431,Ather Grid - Jayadev Vihar,20.298657,85.823203,DC,3.3,1,"Jayadev Vihar Rd, Jayadev Vihar, Bhubaneswar, Odisha 751013",True,Bhubaneswar,two_wheeler,Ather,LEV DC Charge Point (IS-17017-2-7),Khordha
+432,"Tata Power - CSM Technologies, Acharya Vihar",20.299638,85.830934,DC,30.0,1,"Csm Technologies, Acharya Vihar, Ocac(Odisha Computer Application Centre) Building, Plot No N-1/7-D, Khorda, Bhubaneswar, Odisha-751013",True,Bhubaneswar,car,Tata Power,CCS-II,Khordha
+433,"Tata Power - Ginger Hotel, Nayapalli",20.303032,85.823012,DC,30.0,2,"Ginger Hotel, Nayapalli, Ginger Hotel Bhubaneshwar Opp. Nalco Headquarter, Jayadev Vihar, Bhubaneshwar 751013, Bhubaneswar",True,Bhubaneswar,car,Tata Power,CCS-II + Type-II AC,Khordha
+434,IOCL - Ghangapatana (Chandaka),20.304131,85.716044,AC,3.3,1,". Ghangapatana Ps Chandaka Dist. Khurda, Bhubaneswar",True,Bhubaneswar,two_wheeler,IOCL,LEV AC Charge point,Khordha
+435,"Tata Power - Gugnani Autocars, Mancheswar",20.306665,85.852819,DC,25.0,1,"Gugnani Autocars, Mancheswar Industrial Estate, Plot No.-S, 3/48, Block C, Sector A, Bhubaneswar, Odisha 751010",True,Bhubaneswar,car,Tata Power,CCS-II,Khordha
+436,"Tata Power - Audi Bhubaneswar, NH-16",20.337774,85.884933,DC,50.0,2,"Audi Bhubaneswar, Utkal Signature, Nh16, Bhubaneswar, Odisha 752101",True,Bhubaneswar,car,Tata Power,CCS-II,Khordha
+437,"Tata Power - CSM Technologies, Infocity",20.339527,85.80065,DC,25.0,1,"Csm Technologies, Khorda, E/56, Infocity, Chandrasekharpur Industrial Area, Bhubaneswar, Odisha-751024",True,Bhubaneswar,car,Tata Power,CCS-II,Khordha
+438,"Ather Grid - Prakriti Tower, Patia",20.351768,85.825838,DC,3.3,2,"Prakriti Tower, Plot No.435/2170, Magnetic Square, Patia, Bhubaneswar, Khurda, Odisha (751024)",True,Bhubaneswar,two_wheeler,Ather,LEV DC Charge Point (IS-17017-2-7),Khordha
+439,"Tata Power - MG Bhubaneswar, Pahala",20.352134,85.890374,DC,25.0,2,"Mg Bhubaneswar, Nh 16, Plot No. 86/88, Near Apex Institute Of Technology & Management, Pahala, Bhubaneswar, Odisha-752101",True,Bhubaneswar,car,Tata Power,Combo (CCS-II+CHAdeMO),Khordha
+440,Ather Grid - Pahala (Bhimpur),20.357175,85.88871,DC,3.3,1,"Pahala, Bhubaneswar, Sh 60, Bhimpur, Odisha 752101",True,Bhubaneswar,two_wheeler,Ather,LEV DC Charge Point (IS-17017-2-7),Khordha
+441,HPCL - Raghunathpur (Nandankanan),20.390548,85.824353,AC,7.4,1,"At Raghunathpur, Near Nandankan, Bhubaneswar",True,Bhubaneswar,car,HPCL,Type-II AC,Khordha
+442,Tata Power - Trupti Automotives (Khordha),20.950256,85.989753,DC,25.0,1,"Trupti Automotives, Nh 53 - Duburi, Duburi, Kalinga Nagar Tata Steel Area, Odisha- 755026",True,Kalinganagar,car,Tata Power,CCS-II,Khordha
+443,Tata Power - Ginger Hotel (Khordha),20.979188,86.0273,DC,30.0,2,"Ginger Hotel, Nuagan, Ginger Hotel Kalinganagar Sh 20, Odisha 755026",True,Kalinganagar,car,Tata Power,CCS-II + Type-II AC,Khordha
+444,BPCL - Potangi (Koraput),18.541714,82.986567,AC,3.0,1,"Potangi, Koraput, Odisha",True,Potangi,two_wheeler,BPCL,Bharat AC,Koraput
+445,IOCL - Nandapur (Koraput),18.569776,82.747771,AC,3.3,1,At/Po- Nandapur Ps/Tah-Nandapur Dist-Koraput Odisha Pin-764037,True,Koraput,two_wheeler,IOCL,LEV AC Charge point,Koraput
+446,IOCL - Maliput (Koraput),18.586499,82.915048,AC,3.3,1,At-Maliput Po-Pottangi Dist-Koraput Odisha Pin-764039,True,Koraput,two_wheeler,IOCL,LEV AC Charge point,Koraput
+447,IOCL - Muliaput (Koraput),18.592695,82.781644,AC,3.3,1,Indian Oil Retail Outlet At-Muliaput Po/Ps/Tah- Nandapur Dist-Koraput Odisha Pin-764037,True,Koraput,two_wheeler,IOCL,LEV AC Charge point,Koraput
+448,IOCL - Pungar (Koraput),18.70295,82.858459,AC,3.3,1,Indian Oil Retail Outlet At/Po-Pungar Ps-Pottangi Dist-Koraput Odisha Pin-764036,True,Koraput,two_wheeler,IOCL,LEV AC Charge point,Koraput
+449,IOCL - Lunguri (Koraput),18.703133,82.881989,AC,3.3,1,At/Po-Lunguri Ps-Semiliguda Dist-Koraput Odisha Pin-764036,True,Koraput,two_wheeler,IOCL,LEV AC Charge point,Koraput
+450,IOCL - Ramgiri (Koraput),18.772039,82.246618,AC,3.3,1,Indian Oil Retail Outlet At/Po-Ramgiri Ps- Boipariguda Dist-Koraput Odisha Pin-764043,True,Koraput,two_wheeler,IOCL,LEV AC Charge point,Koraput
+451,IOCL - Mohanpada (Koraput),18.772715,82.806549,AC,3.3,1,At/Po-Mohanpada Ps/Tahasil-Koraput Odisha Pin-764021,True,Koraput,two_wheeler,IOCL,LEV AC Charge point,Koraput
+452,HPCL - Dumriput (Koraput),18.779174,82.759952,AC,7.4,1,"Dumriput, Koraput, Odisha",True,Dumriput,car,HPCL,Type-II AC,Koraput
+453,BPCL - Koraput (Koraput),18.792141,82.728135,DC,60.0,2,"Koraput, Koraput, Odisha",True,Koraput,car,BPCL,CCS,Koraput
+454,IOCL - Machhara Ghatghumar Chhak (Koraput),18.828571,82.641251,AC,3.3,1,Indian Oil Retail Outlet At/Po- Machhara Ghatghumar Chhak Ps/Dist-Koraput Odisha Pin-764021,True,Koraput,two_wheeler,IOCL,LEV AC Charge point,Koraput
+455,BPCL - Malkangiri Jeypore Road (Koraput),18.847246,82.565182,DC,60.0,2,"Malkangiri Jeypore Road, C/O Kalidas Mohapatra, Koraput, Odisha",True,Jeypore,car,BPCL,CCS,Koraput
+456,IOCL - Gunjarguda (Koraput),18.84944,82.691717,AC,3.3,1,At-Gunjarguda Po-Koraput Dist- Koraput Odisha Pin-764020,True,Koraput,two_wheeler,IOCL,LEV AC Charge point,Koraput
+457,Tata Power - Lankeswari Motors (Koraput),18.858098,82.589987,DC,30.0,1,"Lankeswari Motors, Hatpada, Plot No 576, 577 & 580 Hatpada, Jeypore, Odisha 764001",True,Jeypore,car,Tata Power,CCS-II,Koraput
+458,IOCL - Kundra (Koraput),18.927722,82.390442,AC,3.3,1,At/Po/Ps-Kundra Dist-Korapuut Odisha Pin-764003,True,Koraput,two_wheeler,IOCL,LEV AC Charge point,Koraput
+459,IOCL - Phupugam (Koraput),18.999042,82.58874,AC,3.3,1,At-Phupugam Po- Boriguma Ps- Boriguma Dist- Koraput Odisha Pin-764056,True,Koraput,two_wheeler,IOCL,LEV AC Charge point,Koraput
+460,IOCL - Kusumi (Koraput),19.02566,82.42582,AC,3.3,1,At/Po- Kusumi Ps-Kotpad Tah-Kotpad Dist-Koraput Odisha Pin-764055,True,Koraput,two_wheeler,IOCL,LEV AC Charge point,Koraput
+461,IOCL - Khudiguda (Koraput),19.029956,82.551375,AC,3.3,1,Indian Oil Retail Outlet At--Khudiguda Po- Boriguma Dist- Koraput Odisha-764056,True,Koraput,two_wheeler,IOCL,LEV AC Charge point,Koraput
+462,IOCL - Dasamantpur (Koraput),19.040086,82.91979,AC,3.3,1,At/Po-Dasamantpur Ps/Tah-Dasamantpur Dist- Korapur Odisha,True,Koraput,two_wheeler,IOCL,LEV AC Charge point,Koraput
+463,IOCL - Koraput (Koraput),19.059885,82.533787,AC,3.3,1,"Nh-43 Bondaguda Boriguma Dist- Koraput, Koraput, Odisha",True,Koraput,two_wheeler,IOCL,LEV AC Charge point,Koraput
+464,IOCL - Hordoli (Koraput),19.09935,82.61976,AC,3.3,1,At/Po- Hordoli Ps-Boriguma Tahasil-Boriguma Dist-Koraput Odisha Pin-764056,True,Koraput,two_wheeler,IOCL,LEV AC Charge point,Koraput
+465,IOCL - Kalimela (Malkangiri),18.07357,81.725223,AC,3.3,1,Indian Oil Retail Outlet At/Po/Ps-Kalimela Dist-Malkangiri Odisha Pin-764047,True,Malkangiri,two_wheeler,IOCL,LEV AC Charge point,Malkangiri
+466,IOCL - Gondhipally (Malkangiri),18.37699,81.85386,AC,3.3,1,At-Gondhipally Po-Chalanguda Dist-Malkangiri Odisha Pin-764045,True,Malkangiri,two_wheeler,IOCL,LEV AC Charge point,Malkangiri
+467,BPCL - Plot No (Malkangiri),18.84732,82.565171,DC,60.0,2,"Plot No.262/1305(P), Mouza-Tamasha, Malkangiri, Odisha",True,Malkangiri,car,BPCL,CCS,Malkangiri
+468,IOCL - Kainsali (Mayurbhanj),21.731247,86.756194,AC,3.3,1,"Kainsali Ps Badasahi Dist Mayurbhanj, Mayurbhanj, Odisha",True,Mayurbhanj,two_wheeler,IOCL,LEV AC Charge point,Mayurbhanj
+469,IOCL - Kurulia Karanjia (Mayurbhanj),21.80569,85.995209,AC,3.3,1,"Kurulia Karanjia Nh-220, Mayurbhanj, Odisha",True,Mayurbhanj,two_wheeler,IOCL,LEV AC Charge point,Mayurbhanj
+470,IOCL - Narankhunta (Mayurbhanj),21.817945,86.670829,AC,3.3,1,"At- Narankhunta Ps- Badasahi Dist- Mayurbhanj, Mayurbhanj, Odisha",True,Mayurbhanj,two_wheeler,IOCL,LEV AC Charge point,Mayurbhanj
+471,IOCL - Plot No (Mayurbhanj),21.835618,86.96318,AC,3.3,1,". Plot No 1170/3423 Mouza : Silda Tahasil & Ps - Morada Dist Mayurbh, Mayurbhanj, Odisha",True,Mayurbhanj,two_wheeler,IOCL,LEV AC Charge point,Mayurbhanj
+472,BPCL - Chhancha (Mayurbhanj),21.917686,86.761902,AC,7.0,1,"Chhancha, Baripada, Mayurbhanj, Odisha",True,Mayurbhanj,car,BPCL,Type II,Mayurbhanj
+473,BPCL - Ward No (Mayurbhanj),21.937095,86.727375,AC,7.0,1,"Ward No 4, Lalbazar, Baripada, Mayurbhanj, Odisha",True,Mayurbhanj,car,BPCL,Type II,Mayurbhanj
+474,BPCL - Raghunathpur (Mayurbhanj),21.94179,86.749011,AC,7.0,1,"At-Raghunathpur, Ward No. 22, Po-Baripada, Mayurbhanj, Odisha",True,Baripada,car,BPCL,Type II,Mayurbhanj
+475,IOCL - Baripada-Gopibalabhpur At-Kainphulia (Mayurbhanj),21.964541,86.770492,AC,3.3,1,"Ro Baripada-Gopibalabhpur At-Kainphulia Po-Baripada Dist-Mayu, Mayurbhanj, Odisha",True,Mayurbhanj,two_wheeler,IOCL,LEV AC Charge point,Mayurbhanj
+476,IOCL - Jashipur (Mayurbhanj),21.98166,86.08036,AC,3.3,1,"At-Jashipur Po/Ps-Jashipur Dist-Mayurbhanj, Mayurbhanj, Odisha",True,Mayurbhanj,two_wheeler,IOCL,LEV AC Charge point,Mayurbhanj
+477,IOCL - Jagannathpur (Mayurbhanj),22.100373,86.635758,AC,3.3,1,"Ksk At-Jagannathpur Po-Kalabadia Dist- Mayurbhanj, Mayurbhanj, Odisha",True,Mayurbhanj,two_wheeler,IOCL,LEV AC Charge point,Mayurbhanj
+478,IOCL - Badhuniapo-Bisoi (Mayurbhanj),22.16207,86.415706,AC,3.3,1,At-Badhuniapo-Bisoi Ps-Bisoidist-Mayurbhanj Odisha-757033,True,Mayurbhanj,two_wheeler,IOCL,LEV AC Charge point,Mayurbhanj
+479,BPCL - Nuagaon (Mayurbhanj),22.23701,86.159491,AC,7.0,1,"Nuagaon, Sh49, Mayurbhanj, Odisha",True,Rairangpur,car,BPCL,Type II,Mayurbhanj
+480,BPCL - Ward No (Mayurbhanj),22.253614,86.179539,AC,7.0,1,"Ward No 9, Rairangpur Bazar, Mayurbhanj, Odisha",True,Rairangpur,car,BPCL,Type II,Mayurbhanj
+481,BPCL - Rairangpur Chak (Mayurbhanj),22.261994,86.17268,AC,7.0,1,"Rairangpur Chak, Rairangpur, Mayurbhanj, Odisha",True,Mayurbhanj,car,BPCL,Type II,Mayurbhanj
+482,BPCL - Vigilance Office Road (Nabarangapur),19.233082,82.541976,AC,7.0,1,"Vigilance Office Road, Nabarangpur Town, Nabarangapur, Odisha",True,Nabarangpur,car,BPCL,Type II,Nabarangapur
+483,BPCL - Padhalguda (Nabarangapur),19.255929,82.541707,DC,60.0,2,"Padhalguda, Nabarangapur, Odisha",True,Nabarangpur,car,BPCL,CCS,Nabarangapur
+484,IOCL - Kosagumuda (Nabarangapur),19.276691,82.245502,AC,3.3,1,Indian Oil Retail Outlet At/Po-Kosagumuda Tahasil - Kodinga Dist-Nabarangpur Odisha Pin-76406,True,Nabarangapur,two_wheeler,IOCL,LEV AC Charge point,Nabarangapur
+485,IOCL - Kodingatah-Kodinga (Nabarangapur),19.304772,82.365526,AC,3.3,1,At/Po-Kodingatah-Kodinga Dist-Nabarangpur Odisha Pin-764075,True,Nabarangapur,two_wheeler,IOCL,LEV AC Charge point,Nabarangapur
+486,IOCL - Pradhaniguda (Nabarangapur),19.364683,82.543098,AC,3.3,1,Indian Oil Retail Outlet At-Pradhaniguda Po/Ps/Tah-Papdahan Dist-Nabarangpur Odisha Pin-76407,True,Nabarangapur,two_wheeler,IOCL,LEV AC Charge point,Nabarangapur
+487,IOCL - Dabugaon (Nabarangapur),19.455813,82.408717,AC,3.3,1,At/Po-Dabugaon Tah-Dabugaon Dist-Nabarangpur Odisha Pin-764072,True,Nabarangapur,two_wheeler,IOCL,LEV AC Charge point,Nabarangapur
+488,IOCL - Saraguda (Nabarangapur),19.50719,82.365,AC,3.3,1,At-Saraguda Ps-Dabugaon Dist-Nabarangpur Odisha-764072,True,Nabarangapur,two_wheeler,IOCL,LEV AC Charge point,Nabarangapur
+489,BPCL - Umerkote (Nabarangapur),19.67152,82.200836,AC,7.0,1,"Umerkote, Nabarangapur, Odisha",True,Umerkote,car,BPCL,Type II,Nabarangapur
+490,IOCL - Kumuli (Nabarangapur),19.843709,82.107638,AC,3.3,1,At-Kumuli Po-Raighar Ps-Raighar Dist-Nabarangpur Odisha Pin-764074,True,Nabarangapur,two_wheeler,IOCL,LEV AC Charge point,Nabarangapur
+491,BPCL - Chandahandi (Nabarangapur),19.863181,82.496933,AC,7.0,1,"Chandahandi, Nabarangapur, Odisha",True,Chandahandi,car,BPCL,Type II,Nabarangapur
+492,BPCL - Raighar (Nabarangapur),19.955866,81.979979,AC,7.0,1,"Raighar, Nabarangapur, Odisha",True,Raighar,car,BPCL,Type II,Nabarangapur
+493,HPCL - Baghua Chowk (Nayagarh),19.964177,84.924025,AC,7.4,1,"At : Baghua Chowk Po : Rohibanka Ps : Odagaon 752090, Nayagarh, Odisha",True,Rohibanka,car,HPCL,Type-II AC,Nayagarh
+494,BPCL - Plot No (Nayagarh),20.001905,84.948504,AC,3.0,1,"Plot No. 158/862, 159/861, 156, Pathara, Nayagarh, Odisha",True,Pathara,two_wheeler,BPCL,Bharat AC,Nayagarh
+495,HPCL - Angul Sa (Nayagarh),20.021874,85.071538,AC,7.4,1,"Angul Sa, Nayagarh, Odisha",True,Angul,car,HPCL,Type-II AC,Nayagarh
+496,IOCL - Dimisar (Nayagarh),20.049655,85.157486,AC,3.3,1,"At- Dimisar Po- Dimisar Via - Godipada Dist- Nayagarh, Nayagarh, Odisha",True,Nayagarh,two_wheeler,IOCL,LEV AC Charge point,Nayagarh
+497,IOCL - Lathipada (Nayagarh),20.104689,85.161248,AC,3.3,1,"Lathipada On Pratappur Road Dist. Nayagarh, Nayagarh, Odisha",True,Nayagarh,two_wheeler,IOCL,LEV AC Charge point,Nayagarh
+498,IOCL - Nayagarh (Nayagarh),20.136826,85.084842,AC,3.3,1,"Nh 57 Kalahandi Nayagarh Town Dist. Nayagarh, Nayagarh, Odisha",True,Nayagarh,two_wheeler,IOCL,LEV AC Charge point,Nayagarh
+499,BPCL - Pratapprasad (Nayagarh),20.137342,85.151081,AC,3.0,1,"Pratapprasad, At/Po Nayagarh, Nayagarh, Odisha",True,Nayagarh,two_wheeler,BPCL,Bharat AC,Nayagarh
+500,HPCL - Similisahi Mauza-Khamarisahi (Nayagarh),20.154536,85.063788,DC,30.0,1,"At/Po- Similisahi Mauza-Khamarisahi 752069, Nayagarh, Odisha",True,Nayagarh,car,HPCL,CCS-II,Nayagarh
+501,IOCL - Rajsunakhala (Nayagarh),20.172831,85.324562,AC,3.3,1,"Ioc Dealer At/Po- Rajsunakhala Dist- Khurda, Nayagarh, Odisha",True,Nayagarh,two_wheeler,IOCL,LEV AC Charge point,Nayagarh
+502,IOCL - Singhpada (Nayagarh),20.311902,85.14294,AC,3.3,1,"At- Singhpada Po-Khandapada Dist- Nayagarh, Nayagarh, Odisha",True,Nayagarh,two_wheeler,IOCL,LEV AC Charge point,Nayagarh
+503,BPCL - Plot No (Nayagarh),20.35833,84.974403,DC,60.0,2,"Plot No - 1124/1596, Khata 165/217 Mouza Krushnapalli, Nayagarh, Odisha",True,Krushnapalli,car,BPCL,CCS,Nayagarh
+504,IOCL - Hatiapalli Khandapada (Nayagarh),20.377632,85.117353,AC,3.3,1,"Hatiapalli Khandapada Dist- Nayagarh, Nayagarh, Odisha",True,Nayagarh,two_wheeler,IOCL,LEV AC Charge point,Nayagarh
+505,IOCL - Rajkiari (Nayagarh),20.381649,85.113924,AC,3.3,1,". Rajkiari On Kanasingha Chak To Sidh Dist. Nayagarh, Nayagarh, Odisha",True,Nayagarh,two_wheeler,IOCL,LEV AC Charge point,Nayagarh
+506,BPCL - Mouza Banigochha On Nh (Nayagarh),20.412231,84.590828,DC,60.0,2,"Mouza Banigochha On Nh 57, Dasaplla Tahasil, Nayagarh, Odisha",True,Banigochha,car,BPCL,CCS,Nayagarh
+507,BPCL - Mouza Banigochha On Nh (Nayagarh),20.412231,84.590828,AC,3.0,1,"Mouza Banigochha On Nh 57, Dasaplla Tahasil, Nayagarh, Odisha",True,Banigochha,two_wheeler,BPCL,Bharat AC,Nayagarh
+508,IOCL - Kendumunda (Nuapada),20.06963,82.57348,AC,3.3,1,At-Kendumunda Po-Kendumunda Ps/Tah-Sinapalidist-Nuapada Odisha Pin-766108,True,Nuaparha,two_wheeler,IOCL,LEV AC Charge point,Nuapada
+509,IOCL - Sinapali (Nuapada),20.099577,82.662307,AC,3.3,1,At/Po- Sinapali Dist-Nuapada Orissa,True,Nuaparha,two_wheeler,IOCL,LEV AC Charge point,Nuapada
+510,IOCL - Khariar (Nuapada),20.276948,82.763048,AC,3.3,1,At/Po-Khariar Dist-Nuapada Odisha Pin-766107,True,Nuaparha,two_wheeler,IOCL,LEV AC Charge point,Nuapada
+511,BPCL - Rajkhariar (Nuapada),20.301414,82.751658,DC,60.0,2,"Nh-217, At/Po-Rajkhariar, Nuapada, Odisha",True,Rajkhariar,car,BPCL,CCS,Nuapada
+512,IOCL - Komna (Nuapada),20.50029,82.67061,AC,3.3,1,At/Po- Komna Ps-Komna Dist- Nuapada Odisha Pin- 766106,True,Nuaparha,two_wheeler,IOCL,LEV AC Charge point,Nuapada
+513,IOCL - Pandrapathar Komna (Nuapada),20.567853,82.638768,AC,3.3,1,"Indian Oil Retail Outlet At/Po-Pandrapathar Komna Ps/Tah-Komna Dist- Nuapada Pin-76, Nuapada, Odisha",True,Nuaparha,two_wheeler,IOCL,LEV AC Charge point,Nuapada
+514,IOCL - Semelpali (Nuapada),20.624788,82.716978,AC,3.3,1,Indian Oil Retail Outlet At-Semelpali Ps/Tahasil-Komna Dist-Nuapada Odisha Pin-766106,True,Nuaparha,two_wheeler,IOCL,LEV AC Charge point,Nuapada
+515,IOCL - Palsipani (Nuapada),20.686358,82.603552,AC,3.3,1,Indian Oil Retail Outlet At-Palsipani Po/Ps-Komna Dist-Nuapada Odisha Pin-766105,True,Nuaparha,two_wheeler,IOCL,LEV AC Charge point,Nuapada
+516,IOCL - Mahuabhata (Nuapada),20.780388,82.541847,AC,3.3,1,Indian Oil Retail Outlet At/Po- Mahuabhata Tahasil/Ps-Nuapa Dist-Nuapada Odisha Pin-766105,True,Nuaparha,two_wheeler,IOCL,LEV AC Charge point,Nuapada
+517,IOCL - Ratapali (Nuapada),20.810956,82.479244,AC,3.3,1,At-Ratapali Po/Ps-Nuapada Tah/Dist-Nuapada Odisha Pin-766105,True,Nuaparha,two_wheeler,IOCL,LEV AC Charge point,Nuapada
+518,BPCL - Saipala (Nuapada),20.822607,82.646728,DC,60.0,3,"Saipala, Nuapada, Odisha",True,Nuapada,car,BPCL,CCS + Type II,Nuapada
+519,BPCL - Kalikabari (Puri),19.793084,85.630781,DC,60.0,2,"At Kalikabari, Brahmagiri, Puri, Odisha",True,Brahmagiri,car,BPCL,CCS,Puri
+520,BPCL - Kalikabari (Puri),19.793084,85.630781,AC,3.0,1,"At Kalikabari, Brahmagiri, Puri, Odisha",True,Brahmagiri,two_wheeler,BPCL,Bharat AC,Puri
+521,BPCL - Balukhanda (Puri),19.82612,85.860653,DC,60.0,2,"At - Balukhanda, Tahsil - Puri, Puri, Odisha",True,Puri,car,BPCL,CCS,Puri
+522,Tata Power - Dion Automotives (Puri),19.83745,85.836591,DC,25.0,1,"Dion Automotives, Batamangala, Main Road Birharekrushnapur, Near Batamangala, Puri, Odisha 752002",True,Puri,car,Tata Power,CCS-II,Puri
+523,Tata Power - Dion Automotives (Puri),19.83745,85.836591,DC,15.0,1,"Dion Automotives, Batamangala, Main Road Birharekrushnapur, Near Batamangala, Puri, Odisha 752002",True,Puri,two_wheeler,Tata Power,Bharat DC-001,Puri
+524,IOCL - Pratapramchandrapur Puri Sadar (Puri),19.90396,85.75716,AC,3.3,1,"Pratapramchandrapur Puri Sadar Dist. Puri, Puri, Odisha",True,Puri,two_wheeler,IOCL,LEV AC Charge point,Puri
+525,IOCL - Sanaora Chak Sahaspur (Puri),19.91955,85.57843,AC,3.3,1,"Sanaora Chak Sahaspur Dist. Puri, Puri, Odisha",True,Puri,two_wheeler,IOCL,LEV AC Charge point,Puri
+526,IOCL - Aruha Srichandanpur Kakatpur (Puri),19.929972,86.16294,AC,3.3,1,"Aruha Srichandanpur Kakatpur Dist. Puri, Puri, Odisha",True,Puri,two_wheeler,IOCL,LEV AC Charge point,Puri
+527,BPCL - Kushupur (Puri),19.989703,86.012337,AC,3.0,1,"At - Kushupur, Gop-Nimapara Road, Puri, Odisha",True,Gop,two_wheeler,BPCL,Bharat AC,Puri
+528,BPCL - Plot No (Puri),20.007468,85.808147,DC,30.0,1,"Plot No - 155, Mouza-Nanapur, Ps/Tahsil - Pipili, Puri, Odisha",True,Nanapur,car,BPCL,CCS,Puri
+529,IOCL - Bhatabandha Tahsil Nimapada (Puri),20.04359,86.14659,AC,3.3,1,". Bhatabandha Tahsil Nimapada Dist. Puri, Puri, Odisha",True,Puri,two_wheeler,IOCL,LEV AC Charge point,Puri
+530,IOCL - Taraboi Sasan Nimapara District Puri Odisha (Puri),20.044119,85.906345,AC,3.3,1,Taraboi Sasan Nimapara District Puri Odisha,True,Puri,two_wheeler,IOCL,LEV AC Charge point,Puri
+531,BPCL - Ganesh Bazar (Puri),20.06504,85.997815,DC,60.0,2,"Ganesh Bazar, Nimapara, Puri, Odisha",True,Nimapara,car,BPCL,CCS,Puri
+532,BPCL - Ganesh Bazar (Puri),20.06504,85.997815,AC,3.0,1,"Ganesh Bazar, Nimapara, Puri, Odisha",True,Nimapara,two_wheeler,BPCL,Bharat AC,Puri
+533,IOCL - Bhatabanda Nimapara (Puri),20.110208,85.979558,AC,3.3,1,"Bhatabanda Nimapara Dist. Puri, Puri, Odisha",True,Puri,two_wheeler,IOCL,LEV AC Charge point,Puri
+534,IOCL - Khata No (Puri),20.142568,85.839796,AC,3.3,1,"Khata No. 727 Plot No. 441 Siula Pipili Tahasil, Puri, Odisha",True,Puri,two_wheeler,IOCL,LEV AC Charge point,Puri
+535,BPCL - Uttara Chhak,20.193901,85.859992,DC,30.0,1,"Uttara Chhak, Uttara, Bhubaneswar",True,Bhubaneswar,car,BPCL,CCS,Puri
+536,BPCL - Gunupur (Rayagada),19.063924,83.910897,AC,3.0,1,"Gunupur, Rayagada, Odisha",True,Rayagada,two_wheeler,BPCL,Bharat AC,Rayagada
+537,IOCL - Gunupur (Rayagada),19.076946,83.815541,AC,3.3,1,At/Po - Gunupur Dist - Rayagada Orissa Pin-765022,True,Rayagada,two_wheeler,IOCL,LEV AC Charge point,Rayagada
+538,IOCL - Gunupur (Rayagada),19.079037,83.807455,AC,3.3,1,Gunupur Dist. Rayagada Orissa,True,Rayagada,two_wheeler,IOCL,LEV AC Charge point,Rayagada
+539,IOCL - Dambasara (Rayagada),19.174484,83.831884,AC,3.3,1,Indian Oil Retail Outlet At/Po- Dambasara Tahasil-Gunupur Dist-Rayagada Odisha Pin-765033,True,Rayagada,two_wheeler,IOCL,LEV AC Charge point,Rayagada
+540,IOCL - Siriguda (Rayagada),19.17602,83.390997,AC,3.3,1,At-Siriguda Po-Rayagada Dist-Rayagada Odisha Pin- 765001,True,Rayagada,two_wheeler,IOCL,LEV AC Charge point,Rayagada
+541,BPCL - Rayagada (Rayagada),19.177354,83.384317,DC,60.0,2,"Sh-4 Kotalaguda, Rayagada, Odisha",True,Rayagada,car,BPCL,CCS,Rayagada
+542,IOCL - Rayagada (Rayagada),19.183014,83.414784,AC,3.3,1,Sh-4 At/Po-Rayagada Dist- Rayagada Orissa Pin-765001,True,Rayagada,two_wheeler,IOCL,LEV AC Charge point,Rayagada
+543,BPCL - & Po Komtalpeta (Rayagada),19.234138,83.422854,AC,3.0,1,"At & Po Komtalpeta, Jk Pur Road, Rayagada, Odisha",True,Rayagada,two_wheeler,BPCL,Bharat AC,Rayagada
+544,IOCL - Amalabhata Junction (Rayagada),19.25492,83.4292,AC,3.3,1,At- Amalabhata Junction Po- J.K.Pur Dist- Rayagada Odisha,True,Rayagada,two_wheeler,IOCL,LEV AC Charge point,Rayagada
+545,IOCL - Penta (Rayagada),19.266447,83.426987,AC,3.3,1,At- Penta Po- J.K.Pur Dist- Rayagada Odisha,True,Rayagada,two_wheeler,IOCL,LEV AC Charge point,Rayagada
+546,IOCL - Gudari (Rayagada),19.35264,83.78174,AC,3.3,1,At/Po-Gudari Ps-Gudari Dist- Rayagada Odisha Pin-765026,True,Rayagada,two_wheeler,IOCL,LEV AC Charge point,Rayagada
+547,IOCL - Bhatapur (Rayagada),19.376183,83.446915,AC,7.4,1,At-Bhatapur Ps-Bissam Cuttack Tahasil-Bissam Cuttack Dist-Rayagada Odisha-765019,True,Rayagada,car,IOCL,Type-II AC,Rayagada
+548,IOCL - Kalyansinghpur (Rayagada),19.508825,83.313303,AC,3.3,1,"Indian Oil Retail Outlet At/Po-Kalyansinghpur Dist-Rayagada, Rayagada, Odisha",True,Rayagada,two_wheeler,IOCL,LEV AC Charge point,Rayagada
+549,IOCL - Patamunda (Rayagada),19.544963,83.494458,AC,3.3,1,At- Patamunda Po-Bissamcuttack Ps/Tah-Bissamcuttack Dist-Rayagada Odisha-765019,True,Rayagada,two_wheeler,IOCL,LEV AC Charge point,Rayagada
+550,IOCL - Rayagada (Rayagada),19.62308,83.50335,AC,3.3,1,Sh-6 At/Po-Muniguda Dist: Rayagada Orissa Pin: 765 020,True,Rayagada,two_wheeler,IOCL,LEV AC Charge point,Rayagada
+551,IOCL - Rayagada (Rayagada),19.633873,83.485086,AC,3.3,1,Sh-6 At/Po-Munikhole Dist-Rayagada Orissa,True,Rayagada,two_wheeler,IOCL,LEV AC Charge point,Rayagada
+552,IOCL - Ambadala (Rayagada),19.81865,83.459943,AC,3.3,1,Indian Oil Retail Outlet At/Po/Ps-Ambadala Dist-Rayagada Odisha Pin-765021,True,Rayagada,two_wheeler,IOCL,LEV AC Charge point,Rayagada
+553,IOCL - Nuagaon (Sambalpur),21.27075,83.9243,AC,3.3,1,At-Nuagaon Po/Ps-Dhama Tah-Maneswar Dist-Sambalpur Odisha Pin-768113,True,Sambalpur,two_wheeler,IOCL,LEV AC Charge point,Sambalpur
+554,IOCL - Bargaon Sambalpur Orissa (Sambalpur),21.31318,83.948483,AC,3.3,1,Bargaon Sambalpur Orissa,True,Sambalpur,two_wheeler,IOCL,LEV AC Charge point,Sambalpur
+555,BPCL - Sambalpur (Sambalpur),21.366315,84.077935,DC,60.0,2,"Sambalpur, Sambalpur, Odisha",True,Jujomura,car,BPCL,CCS,Sambalpur
+556,BPCL - Bhawanipali (Sambalpur),21.379987,84.066279,DC,60.0,2,"At-Bhawanipali, Po-Jhankarpali, Nh-55, Sambalpur, Odisha",True,Sambalpur,car,BPCL,CCS,Sambalpur
+557,IOCL - Jhankarpali (Sambalpur),21.398309,84.053095,AC,7.4,1,At-Jhankarpali Po- Jujomura Dist-Sambalpur Odisha Pin-768005,True,Sambalpur,car,IOCL,Type-II AC,Sambalpur
+558,IOCL - Halipali (Sambalpur),21.408703,84.043413,AC,7.4,1,Indian Oil Retail Outlet At-Halipali Po/Ps-Maneswar Ps-Sadar Dist-Sambalpur Odisha-,True,Sambalpur,car,IOCL,Type-II AC,Sambalpur
+559,IOCL - Tumbesinghatahasil-Maneswar (Sambalpur),21.412296,84.040083,AC,3.3,1,At-Tumbesinghatahasil-Maneswar Dist- Sambalpur Odisha Odisha Pin-768005,True,Sambalpur,two_wheeler,IOCL,LEV AC Charge point,Sambalpur
+560,IOCL - Chaunrpur (Sambalpur),21.44106,83.95481,AC,3.3,1,At-Chaunrpur Po-Chaunrpur Tah/Dist-Sambalpur Odisha Pin-768005,True,Sambalpur,two_wheeler,IOCL,LEV AC Charge point,Sambalpur
+561,IOCL - Jayantpur (Sambalpur),21.448865,84.074095,AC,3.3,1,"At- Jayantpur Po- Jayantpur Dist-Sambalpur, Sambalpur, Odisha",True,Sambalpur,two_wheeler,IOCL,LEV AC Charge point,Sambalpur
+562,BPCL - Podiabahal (Sambalpur),21.449843,84.14781,DC,60.0,2,"At Po Podiabahal, Sambalpur, Odisha",True,Podiabahal,car,BPCL,CCS,Sambalpur
+563,BPCL - Govindtola (Sambalpur),21.450423,83.988474,AC,7.0,1,"At Govindtola, At Dhanupali, Sambalpur, Odisha",True,Dhanupalli,car,BPCL,Type II,Sambalpur
+564,BPCL - Sambalpur (Sambalpur),21.45965,83.974403,AC,7.0,1,"Po Sambalpur, Sambalpur, Odisha",True,Sambalpur,car,BPCL,Type II,Sambalpur
+565,BPCL - Ainthapalli (Sambalpur),21.494135,83.98229,DC,30.0,1,"Po Ainthapalli, Ainthapalli, Sambalpur, Odisha",True,Sambalpur,car,BPCL,CCS,Sambalpur
+566,BPCL - Sambalpur (Sambalpur),21.498151,83.881332,AC,7.0,1,"Po Sambalpur, Sambalpur, Odisha",True,Burla,car,BPCL,Type II,Sambalpur
+567,Tata Power - Tpwodl Technology Center (Sambalpur),21.501004,83.891308,DC,30.0,1,"Tpwodl Technology Center, Burla, Tentel Para, Sambalpur, Odisha 768006",True,Sambalpur,car,Tata Power,CCS-II,Sambalpur
+568,Tata Power - Tpwodl Technology Center (Sambalpur),21.501004,83.891308,DC,15.0,4,"Tpwodl Technology Center, Burla, Tentel Para, Sambalpur, Odisha 768006",True,Sambalpur,two_wheeler,Tata Power,Bharat AC-001 + Bharat DC-001,Sambalpur
+569,Tata Power - Lankeswari Motors Pvt Ltd (Sambalpur),21.510653,84.005841,DC,30.0,1,"Lankeswari Motors Pvt Ltd, Sambalpur, Pardhiapalli, Sh 10, Jharsuguda Road, Sambalpur Pin: 768005, Sambalpur, Odisha",True,Sambalpur,car,Tata Power,CCS-II,Sambalpur
+570,IOCL - Parmanpur (Sambalpur),21.521091,84.0965,AC,3.3,1,At/Po- Parmanpur Dist- Sambalpur Odisha Pin-768200,True,Sambalpur,two_wheeler,IOCL,LEV AC Charge point,Sambalpur
+571,IOCL - Debananda Bhusagar (Sambalpur),21.53584,84.398343,AC,3.3,1,Debananda Bhusagar Nh-6 Jamankira Sambalpur Orissa,True,Sambalpur,two_wheeler,IOCL,LEV AC Charge point,Sambalpur
+572,BPCL - Rampella (Sambalpur),21.629393,84.045603,AC,7.0,1,"At Rampella, Po Rengali, Sambalpur, Odisha",True,Rengali,car,BPCL,Type II,Sambalpur
+573,IOCL - Jhankarpali (Sambalpur),21.656174,84.147407,AC,3.3,1,At-Jhankarpali Po-Katarbaga Ps-Katarbaga Tah-Rengali Dist-Sambalpur Odisha,True,Sambalpur,two_wheeler,IOCL,LEV AC Charge point,Sambalpur
+574,IOCL - Gurupali (Sambalpur),21.702555,84.034325,AC,3.3,1,"At- Gurupali Po- Lapanga Dist- Sambalpur, Sambalpur, Odisha",True,Sambalpur,two_wheeler,IOCL,LEV AC Charge point,Sambalpur
+575,IOCL - Lapanga (Sambalpur),21.73055,84.01228,AC,3.3,1,At/Po-Lapanga Ps-Katarbaga Dist- Sambalpur Odisha Pin-768212,True,Sambalpur,two_wheeler,IOCL,LEV AC Charge point,Sambalpur
+576,IOCL - Laida (Sambalpur),21.7348,84.2434,AC,3.3,1,At/Po-Laida Ps- Katarbaga Dist-Sambalpur Odisha Pin-768214,True,Sambalpur,two_wheeler,IOCL,LEV AC Charge point,Sambalpur
+577,BPCL - Dhubenchhapal (Sambalpur),21.744596,84.00778,AC,7.0,1,"At Dhubenchhapal, Post Thelkuli, Sambalpur, Odisha",True,Thelkoi,car,BPCL,Type II,Sambalpur
+578,IOCL - Kundaposhi (Sambalpur),21.749753,84.362835,AC,3.3,1,"At - Kundaposhi Po - Kuchinda Dist - Sambalpur, Sambalpur, Odisha",True,Sambalpur,two_wheeler,IOCL,LEV AC Charge point,Sambalpur
+579,IOCL - Near Bhushan Steel Thelkoli (Sambalpur),21.770052,84.013203,AC,3.3,1,Near Bhushan Steel Thelkoli Dist-Sambalpur Orissa,True,Sambalpur,two_wheeler,IOCL,LEV AC Charge point,Sambalpur
+580,IOCL - Kesaibahal (Sambalpur),21.911404,84.387431,AC,3.3,1,At/Po-Kesaibahal Ps-Mahulpali Tah- Bamra Dist-Sambalpur Odisha Pin-768228,True,Sambalpur,two_wheeler,IOCL,LEV AC Charge point,Sambalpur
+581,IOCL - Lembupali (Sonepur),20.637638,83.631351,AC,3.3,1,At- Lembupali Po- Tarbha Dist-Sonepur Odisha Pin-767016,True,Sonapur,two_wheeler,IOCL,LEV AC Charge point,Sonepur
+582,BPCL - Sonepur (Sonepur),20.838893,83.899173,AC,7.0,1,"Sonepur, Sonepur, Odisha",True,Sonepur,car,BPCL,Type II,Sonepur
+583,IOCL - Haradokhol Sonepur (Sonepur),20.839475,83.803961,AC,3.3,1,At/Po-Haradokhol Sonepur Dist-Sonepur Odisha Pin-767017,True,Sonapur,two_wheeler,IOCL,LEV AC Charge point,Sonepur
+584,IOCL - Sonepur Town (Sonepur),20.847135,83.890747,AC,3.3,1,Indian Oil Retail Outlet At-Sonepur Town Po/Ps/Dist-Sonepur Odisha Pin-767,True,Sonapur,two_wheeler,IOCL,LEV AC Charge point,Sonepur
+585,IOCL - Bagbar (Sonepur),20.869176,84.100102,AC,3.3,1,At-Bagbar Po-Birmaharajpur Tahasil-Birmaharajpur Dist-Sonepur Odisha 767018,True,Sonapur,two_wheeler,IOCL,LEV AC Charge point,Sonepur
+586,IOCL - Hilung (Sonepur),20.88924,84.05494,AC,3.3,1,At/Po-Hilung Ps-Birmaharajpur Dist-Subarnapur Odisha Pin-767018,True,Sonapur,two_wheeler,IOCL,LEV AC Charge point,Sonepur
+587,BPCL - Bhagalpur (Sonepur),20.889242,83.916714,AC,7.0,1,"Bhagalpur, Sonepur, Odisha",True,Sonepur,car,BPCL,Type II,Sonepur
+588,IOCL - Seledi (Sonepur),20.952982,83.791717,AC,3.3,1,At- Seledi Po-Binka Dist-Sonepur Odisha Pin- 767019,True,Sonapur,two_wheeler,IOCL,LEV AC Charge point,Sonepur
+589,BPCL - Ulunda (Sonepur),20.969702,83.880625,AC,7.0,1,"At/Po - Ulunda, Vill - Ulunda, Sonepur, Odisha",True,Ulunda,car,BPCL,Type II,Sonepur
+590,HPCL - Binka (Sonepur),21.015241,83.804177,AC,3.3,1,"Binka, Sonepur, Odisha",True,Binka,two_wheeler,HPCL,Bharat AC-001,Sonepur
+591,BPCL - Binka (Sonepur),21.020716,83.811251,AC,7.0,1,"Binka, Sonepur, Odisha",True,Sonepur,car,BPCL,Type II,Sonepur
+592,IOCL - Baidupali (Sonepur),21.02092,83.548157,AC,3.3,1,Indian Oil Retail Outlet At-Baidupali Po/Ps-Dunguripali Dist-Sonepur Odisha Pin-767023,True,Sonapur,two_wheeler,IOCL,LEV AC Charge point,Sonepur
+593,IOCL - Matupali (Sonepur),21.059134,83.850642,AC,3.3,1,At-Matupali Ps-Sindhol Tah-Ullunda Dist-Sonepur Odisha Pin-767062,True,Sonapur,two_wheeler,IOCL,LEV AC Charge point,Sonepur
+594,BPCL - Dungripalli (Sonepur),21.059196,83.55444,DC,60.0,2,"Po Dungripalli, Dungripalli, Sonepur, Odisha",True,Dungripalli,car,BPCL,CCS,Sonepur
+595,IOCL - Kadlipali (Sonepur),21.064354,83.776341,AC,3.3,1,At-Kadlipali Po-Kadlipali Ps-Binka Dist-Subarnapur Odisha Pin-767019,True,Sonapur,two_wheeler,IOCL,LEV AC Charge point,Sonepur
+596,IOCL - Bankipali (Sonepur),21.081303,83.638615,AC,3.3,1,At/Po-Bankipali Ps-Dungripali Dist-Sonepur Odisha Pin-767023,True,Sonapur,two_wheeler,IOCL,LEV AC Charge point,Sonepur
+597,BPCL - Naikenpali (Sonepur),21.107399,83.673799,AC,7.0,1,"Naikenpali, Po S Rampur, Sonepur, Odisha",True,Rampur,car,BPCL,Type II,Sonepur
+598,IOCL - Hud (Sonepur),21.125346,83.868569,AC,3.3,1,At-Hud Po-Ulunda Ps-Sindhol Dist-Sonepur Odisha Pin-767062,True,Sonapur,two_wheeler,IOCL,LEV AC Charge point,Sonepur
+599,IOCL - Narendra (Sundargarh),21.828647,84.905018,AC,3.3,1,"At/Po-Narendra Via - Bonaigarh Ps-Bonaigarh Dist-Sundergarh, Sundargarh, Odisha",True,Sundargarh,two_wheeler,IOCL,LEV AC Charge point,Sundargarh
+600,IOCL - Durubaga (Sundargarh),21.96159,83.75121,AC,3.3,1,At-Durubaga Po-Durubaga Tah-Hemgir Dist-Sundargarh Odisha Pin-770013,True,Sundargarh,two_wheeler,IOCL,LEV AC Charge point,Sundargarh
+601,IOCL - Barpali (Sundargarh),22.0296,83.78,AC,3.3,1,At/Po- Barpali Ps-Hemgir Dist-Sundargarh Odisha Pin-770076,True,Sundargarh,two_wheeler,IOCL,LEV AC Charge point,Sundargarh
+602,IOCL - Bileimunda (Sundargarh),22.046,83.63,AC,3.3,1,At-Bileimunda Po- Bileimunda Ps-Hemgir Dist- Sundargarh Odisha Pin-770024,True,Sundargarh,two_wheeler,IOCL,LEV AC Charge point,Sundargarh
+603,IOCL - Kulabiraps-Lephripada (Sundargarh),22.0779,83.8384,AC,3.3,1,At/Po-Kulabiraps-Lephripada Dist-Sundargarh Odisha Pin-770012,True,Sundargarh,two_wheeler,IOCL,LEV AC Charge point,Sundargarh
+604,BPCL - Bhawanipur (Sundargarh),22.099183,84.047296,AC,7.0,1,"At Bhawanipur, Po Sankara, Sundargarh, Odisha",True,Sundergarh,car,BPCL,Type II,Sundargarh
+605,IOCL - Talsankara (Sundargarh),22.1027,84.0494,AC,3.3,1,At-Talsankara Po-Talsankara Ps/Tahasil/Dist-Sundargarh Odisha Pin-770001,True,Sundargarh,two_wheeler,IOCL,LEV AC Charge point,Sundargarh
+606,IOCL - Karamdihi (Sundargarh),22.146827,84.086932,AC,7.4,1,At/Po- Karamdihi Ps-Sadar Tahasil-Subdega Dist-Sundargarh Odisha-770002,True,Sundargarh,car,IOCL,Type-II AC,Sundargarh
+607,HPCL - Lhs Rani Bagicha (Sundargarh),22.147738,84.08907,AC,7.4,1,"Lhs Rani Bagicha, Sundargarh, Odisha",True,Lhs Rani Bagicha,car,HPCL,Type-II AC,Sundargarh
+608,BPCL - Karamdihi (Sundargarh),22.149793,84.101313,AC,7.0,1,"Karamdihi, Subdega, Sh 10, Sundargarh, Odisha",True,Sundergarh,car,BPCL,Type II,Sundargarh
+609,BPCL - Jalda (Sundargarh),22.190052,84.848137,DC,60.0,2,"Jalda, Sundargarh, Odisha",True,Jalda,car,BPCL,CCS,Sundargarh
+610,IOCL - Fertilizer Township Rourkela (Sundargarh),22.190931,84.848071,AC,3.3,1,"Fertilizer Township Rourkela Dist: Sundargarh, Sundargarh, Odisha",True,Sundargarh,two_wheeler,IOCL,LEV AC Charge point,Sundargarh
+611,IOCL - Rasrajpur Taluka- Subdega (Sundargarh),22.192621,84.112873,AC,3.3,1,"At-Rasrajpur Taluka- Subdega Dist-Sundargarh Pin-770002, Sundargarh, Odisha",True,Sundargarh,two_wheeler,IOCL,LEV AC Charge point,Sundargarh
+612,IOCL - Ranibandh (Sundargarh),22.209814,84.592101,AC,3.3,1,At-Ranibandh Po- Rajgangpur Dist- Sundargarh Odisha Pin-770017,True,Sundargarh,two_wheeler,IOCL,LEV AC Charge point,Sundargarh
+613,BPCL - Deogaon (Sundargarh),22.214908,84.815927,DC,60.0,2,"Deogaon, Sundargarh, Odisha",True,Deogaon,car,BPCL,CCS,Sundargarh
+614,IOCL - Telighanapo/Tah-Kutra (Sundargarh),22.224843,84.43452,AC,3.3,1,Indian Oil Retail Outlet At-Telighanapo/Tah-Kutra Dist-Sundargarh Odisha Pin770018,True,Sundargarh,two_wheeler,IOCL,LEV AC Charge point,Sundargarh
+615,IOCL - Brahmanitarang (Sundargarh),22.227594,84.790039,AC,3.3,1,At- Brahmanitarang Po-Raghunathpal Ps-Brahmanitarang Dist-Sundargarh Odisha-769041,True,Sundargarh,two_wheeler,IOCL,LEV AC Charge point,Sundargarh
+616,IOCL - Kutra (Sundargarh),22.2298,84.45467,AC,3.3,1,At/Po/Ps- Kutra Dist- Sundargarh Odisha Pin- 770018,True,Sundargarh,two_wheeler,IOCL,LEV AC Charge point,Sundargarh
+617,IOCL - Chhend Rourkela Unit No (Sundargarh),22.235577,84.808929,AC,3.3,1,Chhend Rourkela Unit No-39 Rourkela Dist- Sundargarh Odisha Pin-769004,True,Sundargarh,two_wheeler,IOCL,LEV AC Charge point,Sundargarh
+618,BPCL - Vedvyas (Sundargarh),22.236819,84.771624,AC,7.0,1,"At/Po Vedvyas, Sh 10, Sundargarh, Odisha",True,Rourkela,car,BPCL,Type II,Sundargarh
+619,BPCL - Chhend (Sundargarh),22.238077,84.83054,DC,60.0,3,"Chhend, Sundargarh, Odisha",True,Rourkela,car,BPCL,CCS + Type II,Sundargarh
+620,IOCL - Laing (Sundargarh),22.238435,84.640871,AC,3.3,1,"At/Po-Laing Via-Kansabahal Sundargarh, Sundargarh, Odisha",True,Sundargarh,two_wheeler,IOCL,LEV AC Charge point,Sundargarh
+621,BPCL - Rourkela (Sundargarh),22.252857,84.866271,AC,7.0,1,"Rourkela, Sundargarh, Odisha",True,Rourkela,car,BPCL,Type II,Sundargarh
+622,BPCL - Uparmabahal (Sundargarh),22.253449,84.880858,AC,7.0,1,"Uparmabahal, Sector 2, Koyal Nagar, Sundargarh, Odisha",True,Rourkela,car,BPCL,Type II,Sundargarh
+623,IOCL - Daraikela (Sundargarh),22.255625,84.999358,AC,3.3,1,At-Daraikela Po-Bisra Ps/Tah- Bisra Dist-Sundargarh Odisha Pin-770036,True,Sundargarh,two_wheeler,IOCL,LEV AC Charge point,Sundargarh
+624,IOCL - Kuarmunda (Sundargarh),22.285957,84.768727,AC,3.3,1,At/Po: Kuarmunda Dist: Sundargarh Orissa,True,Sundargarh,two_wheeler,IOCL,LEV AC Charge point,Sundargarh
+625,IOCL - Kuarmunda Sundergarh Orissa (Sundargarh),22.287828,84.765663,AC,3.3,1,Kuarmunda Sundergarh Orissa,True,Sundargarh,two_wheeler,IOCL,LEV AC Charge point,Sundargarh
+626,IOCL - Subdega (Sundargarh),22.3,84.102,AC,3.3,1,At-Subdega Po-Subdega Tah-Subdega Dist-Sundargarh Odisha Pin-770014,True,Sundargarh,two_wheeler,IOCL,LEV AC Charge point,Sundargarh
+627,IOCL - Purunapani (Sundargarh),22.40288,84.84666,AC,3.3,1,"At/Po- Purunapani Ps-Hatibari Dist-Sundergarh, Sundargarh, Odisha",True,Sundargarh,two_wheeler,IOCL,LEV AC Charge point,Sundargarh
