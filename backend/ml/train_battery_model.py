@@ -10,7 +10,7 @@ from ml.preprocess import generate_battery_training_data
 import joblib
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, classification_report
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 import pandas as pd
 import numpy as np
 
@@ -61,6 +61,12 @@ def train_battery_model(data_path: str, model_output_path: str):
     print(f"  Accuracy: {accuracy:.4f}")
     print(f"\nClassification Report:")
     print(classification_report(y_test, y_pred))
+    print(f"\nConfusion Matrix:")
+    print(confusion_matrix(y_test, y_pred))
+    print(f"\nModel Parameters:")
+    print(model.get_params())
+    print(f"\nFeature Importances:")
+    print(dict(zip(feature_columns, model.feature_importances_)))
     
     # Save model
     joblib.dump(model, model_output_path)

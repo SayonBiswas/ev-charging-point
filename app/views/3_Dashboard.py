@@ -266,35 +266,26 @@ if submitted:
                 is_recommended = i == 1
                 recommended_class = "recommended" if is_recommended else ""
                 badge_html = '<span class="badge badge-rec">Recommended</span>' if is_recommended else ''
+                maps_url = f"https://www.google.com/maps/dir/?api=1&destination={station['latitude']},{station['longitude']}"
 
-                st.markdown(f"""
-                <div class="station-card {recommended_class}">
-                    <div class="station-header">
-                        <div class="station-name">{station['name']}</div>
-                        {badge_html}
-                    </div>
-                    <div class="station-address">{station['address']}</div>
-                    <div class="station-specs">
-                        <div class="station-spec">
-                            <p class="t-micro">Distance</p>
-                            <p class="metric">{station['distance_from_car_km']} km</p>
-                        </div>
-                        <div class="station-spec">
-                            <p class="t-micro">Wait Time</p>
-                            <p class="metric">{station['wait_minutes']} min</p>
-                        </div>
-                        <div class="station-spec">
-                            <p class="t-micro">Charge Time</p>
-                            <p class="metric">{station['charge_time_min']} min</p>
-                        </div>
-                    </div>
-                    <div class="station-cost">₹{station['cost']}</div>
-                    <div class="row row-between">
-                        <span class="badge badge-{station['charger_type'].lower()}">{station['charger_type']}</span>
-                        <span class="badge badge-ac">{station['charger_rating_kw']} kW</span>
-                    </div>
-                </div>
-                """, unsafe_allow_html=True)
+                card_html = "".join([
+                    f'<div class="station-card {recommended_class}">',
+                    f'<div class="station-header"><div class="station-name">{station["name"]}</div>{badge_html}</div>',
+                    f'<div class="station-address">{station["address"]}</div>',
+                    '<div class="station-specs">',
+                    f'<div class="station-spec"><p class="t-micro">Distance</p><p class="metric">{station["distance_from_car_km"]} km</p></div>',
+                    f'<div class="station-spec"><p class="t-micro">Wait Time</p><p class="metric">{station["wait_minutes"]} min</p></div>',
+                    f'<div class="station-spec"><p class="t-micro">Charge Time</p><p class="metric">{station["charge_time_min"]} min</p></div>',
+                    '</div>',
+                    f'<div class="station-cost">₹{station["cost"]}</div>',
+                    '<div class="row row-between">',
+                    f'<span class="badge badge-{station["charger_type"].lower()}">{station["charger_type"]}</span>',
+                    f'<span class="badge badge-ac">{station["charger_rating_kw"]} kW</span>',
+                    '</div>',
+                    f'<a href="{maps_url}" target="_blank" class="btn btn-directions">Get Directions</a>',
+                    '</div>',
+                ])
+                st.markdown(card_html, unsafe_allow_html=True)
 
                 # Google Maps link
                 maps_url = f"https://www.google.com/maps/dir/?api=1&destination={station['latitude']},{station['longitude']}"

@@ -63,6 +63,10 @@ def train_demand_model(data_path: str, model_output_path: str):
     print(f"  Mean Absolute Error: {mae:.4f} minutes")
     print(f"  Mean Squared Error: {mse:.4f}")
     print(f"  R² Score: {r2:.4f}")
+    print(f"\nModel Parameters:")
+    print(model.get_params())
+    print(f"\nFeature Importances:")
+    print(dict(zip(feature_columns, model.feature_importances_)))
     
     # Save model
     joblib.dump(model, model_output_path)
